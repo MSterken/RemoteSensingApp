@@ -22,6 +22,8 @@ class _libraryListItemState extends State {
     return Container(
       height: 50,
       padding: const EdgeInsets.all(10),
+        margin: const EdgeInsets.all(5),
+        color: Colors.redAccent,
         child: Row(
         children: [
           Text(title),

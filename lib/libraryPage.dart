@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:remote_sensing_helper/dataManager.dart';
+import 'package:remote_sensing_helper/libraryItemPage.dart';
 import 'package:remote_sensing_helper/libraryListItem.dart';
 
 class libraryPage extends StatefulWidget{
@@ -28,8 +29,14 @@ class _libraryPageState extends State {
       child: ListView.builder(
           itemCount: d.libraryData.length ,
           itemBuilder: (BuildContext context, int index){
-        return LibraryListItem(d.libraryData.keys.elementAt(index), d.libraryData.values.elementAt(index));
-      }
+            return GestureDetector(
+                onTap: () { Navigator.push(context,
+                MaterialPageRoute(builder: (context) => LibraryItemPage(d.libraryData.keys.elementAt(index), d.libraryData.values.elementAt(index))));
+                  },
+                child: LibraryListItem(d.libraryData.keys.elementAt(index), d.libraryData.values.elementAt(index),
+            )
+          );
+        }
       ),
     ),
   );
