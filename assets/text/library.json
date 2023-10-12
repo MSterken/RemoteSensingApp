@@ -1,0 +1,10 @@
+{
+  "libraryObjects": [
+    { "title" : "test 1",
+      "info" : "hopefully this works"
+    },
+    { "title" : "test 2",
+      "info" : "hopefully this works too"
+    }
+  ]
+}

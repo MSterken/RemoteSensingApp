@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:remote_sensing_helper/fileReader.dart';
+import 'appTheme.dart';
 import 'libraryPage.dart';
 import 'mapPage.dart';
 
@@ -9,34 +12,29 @@ void main() {
 class RemoteSensingHelper extends StatelessWidget {
   const RemoteSensingHelper({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a blue toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ChangeNotifierProvider(
+      // 1. Provide AppTheme above the MaterialApp,
+      // so it will be available on all pages.
+      create: (_) => AppTheme(),
+      builder: (context, _) => MaterialApp(
+        title: 'Remote Sensing Helper',
+        // 2. Provide light theme.
+        theme: AppTheme.light,
+        // 3. Provide dark theme.
+        darkTheme: AppTheme.dark,
+        // 4. Watch AppTheme changes (ThemeMode).
+        themeMode: context.watch<AppTheme>().themeMode,
+        debugShowCheckedModeBanner: false,
+        home: const MyHomePage(title: 'Remote Sensing Helper'),
       ),
-      home: const MyHomePage(title: 'Remote Sensing Helper'),
     );
   }
+
 }
+
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -64,10 +62,12 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 
   late TabController _tabController;
 
+  FileReader fileReader = FileReader();
 
   @override
   void initState() {
     super.initState();
+    fileReader.getLibrary();
     _tabController = TabController(vsync: this, length: 3);
     _tabController.addListener(() {
       setState(() {
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+    return Scaffold(
       appBar: AppBar(
           bottom:  TabBar(
             controller: _tabController,
