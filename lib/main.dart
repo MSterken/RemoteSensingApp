@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:remote_sensing_helper/dataManager.dart';
 import 'package:remote_sensing_helper/fileReader.dart';
 import 'appTheme.dart';
 import 'libraryPage.dart';
@@ -62,12 +63,12 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 
   late TabController _tabController;
 
-  FileReader fileReader = FileReader();
+  DataManager m = DataManager();
 
   @override
   void initState() {
     super.initState();
-    fileReader.getLibrary();
+    m.createLibraryData();
     _tabController = TabController(vsync: this, length: 3);
     _tabController.addListener(() {
       setState(() {
@@ -108,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         children: [
           Text("Hier staat iets voorlopigs"),
           mapPage(),
-          libraryPage()
+          libraryPage(m)
         ],
       )
     );
