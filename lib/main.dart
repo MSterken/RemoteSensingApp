@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:remote_sensing_helper/dataManager.dart';
-import 'package:remote_sensing_helper/fileReader.dart';
 import 'appTheme.dart';
 import 'libraryPage.dart';
 import 'mapPage.dart';
+import 'formPage.dart';
 
 void main() {
   runApp(const RemoteSensingHelper());
@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       body: TabBarView(
         controller: _tabController,
         children: [
-          Text("Hier staat iets voorlopigs"),
+          FormPage(m),
           mapPage(),
           libraryPage(m)
         ],

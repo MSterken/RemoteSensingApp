@@ -26,7 +26,6 @@ class FileReader{
     List formData = form["questions"]!;
     final List<Question> l = [];
     for (var i = 0; i < formData.length; i++) {
-      print(i);
       Question q = Question(formData[i]["question"]);
       List answerData = formData[i]["answers"];
       Map<String, String> a = {};
@@ -34,10 +33,8 @@ class FileReader{
         a[answerData[j]["answer"]] = answerData[j]["answerExplanation"];
       }
       q.addAnswersWithResponses(a);
-      print(q.toString());
       l.add(q);
     }
-    print(l.toString());
     return l;
   }
 

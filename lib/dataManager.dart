@@ -20,7 +20,6 @@ class DataManager {
   Future<void> createFormData() async {
     await f.getFormData().then((value){
       _questionData.addAll(value as Iterable<Question>);
-      print(_questionData.toString() + "kaas");
     });
   }
 
