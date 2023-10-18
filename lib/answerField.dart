@@ -38,7 +38,9 @@ class _AnswerFieldState extends State {
         hint: Text("select"),
         icon: const Icon(Icons.arrow_downward),
         onChanged: (String? value) {
-           dropdownValue = value ?? "";
+           setState(() {
+             dropdownValue = value ?? "";
+           });
         },
         items: l.map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
