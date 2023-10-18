@@ -1,0 +1,36 @@
+{
+  "questions": [
+    { "question": "vraag 1",
+      "answers": [
+        { "answer": "antwoord 1",
+          "answerExplanation": "daarom dit"
+        },
+        { "answer": "antwoord 2",
+          "answerExplanation": "daarom dat"
+        },
+        { "answer": "antwoord 3",
+          "answerExplanation": "daarom zus"
+        },
+        { "answer": "antwoord 4",
+          "answerExplanation": "daarom zo"
+        }
+      ]
+    },
+    { "question": "vraag 2",
+      "answers": [
+        { "answer": "antwoord 1",
+          "answerExplanation": "daarom dit"
+        },
+        { "answer": "antwoord 2",
+          "answerExplanation": "daarom dat"
+        },
+        { "answer": "antwoord 3",
+          "answerExplanation": "daarom zus"
+        },
+        { "answer": "antwoord 4",
+          "answerExplanation": "daarom zo"
+        }
+      ]
+    }
+  ]
+}
