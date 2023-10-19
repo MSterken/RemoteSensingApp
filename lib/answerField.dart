@@ -1,32 +1,38 @@
 import 'package:flutter/material.dart';
 
+import 'adviceDataManager.dart';
+
 
 class AnswerField extends StatefulWidget{
 
   Map<String, String> answers = {};
   List<String> l = [];
+  AdviceDataManager adviceDataManager;
+  String question;
 
-  AnswerField(this.answers, {super.key});
+  AnswerField(this.answers,this.adviceDataManager,this.question, {super.key});
 
   @override
-  _AnswerFieldState createState() => _AnswerFieldState(answers);
+  _AnswerFieldState createState() => _AnswerFieldState(answers, adviceDataManager, question);
 
 
 
 }
 class _AnswerFieldState extends State {
 
-  Map<String, String> a = {};
+  Map<String, String> answers = {};
   List<String> l = [];
   String? dropdownValue;
+  AdviceDataManager adviceDataManager;
+  String question;
 
-  _AnswerFieldState(this.a);
+  _AnswerFieldState(this.answers, this.adviceDataManager,this.question);
 
   @override
   void initState() {
     super.initState();
-    for(var i = 0; i < a.length; i++ ){
-      l.add(a.keys.elementAt(i));
+    for(var i = 0; i < answers.length; i++ ){
+      l.add(answers.keys.elementAt(i));
     }
   }
 
@@ -40,6 +46,7 @@ class _AnswerFieldState extends State {
         onChanged: (String? value) {
            setState(() {
              dropdownValue = value ?? "";
+             adviceDataManager.addAdvice(question, answers[value]!);
            });
         },
         items: l.map<DropdownMenuItem<String>>((String value) {

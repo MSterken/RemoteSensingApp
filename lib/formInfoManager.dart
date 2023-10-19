@@ -4,7 +4,7 @@ import 'package:remote_sensing_helper/question.dart';
 
 class FormInfoManager{
 
-  List<Question> _questions = [];
+  final List<Question> _questions = [];
 
   FormInfoManager();
 

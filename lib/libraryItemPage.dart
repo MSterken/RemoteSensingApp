@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:remote_sensing_helper/libraryListItem.dart';
 
 class LibraryItemPage extends StatefulWidget {
   const LibraryItemPage(this.title, this.text ,{super.key});

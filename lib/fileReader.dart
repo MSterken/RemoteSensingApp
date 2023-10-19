@@ -9,7 +9,7 @@ class FileReader{
   Map<String, List<dynamic>> form = <String, List<dynamic>>{};
 
   Future<Map<String,String>?> getLibrary() async {
-    final String jsonString = await rootBundle.loadString('/text/library.json');
+    final String jsonString = await rootBundle.loadString('assets/text/library.json');
     library = Map.castFrom(json.decode(jsonString));
     List libraryData = library["libraryObjects"]!;
     final Map<String, String> m = {};
@@ -21,7 +21,7 @@ class FileReader{
   }
 
   Future<List<Question>?> getFormData() async {
-    final String jsonString = await rootBundle.loadString('/text/formQuestions.json');
+    final String jsonString = await rootBundle.loadString('assets/text/formQuestions.json');
     form = Map.castFrom(json.decode(jsonString));
     List formData = form["questions"]!;
     final List<Question> l = [];

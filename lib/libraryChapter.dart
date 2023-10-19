@@ -1,8 +1,8 @@
 
 
 class LibraryChapter {
-  String _title;
-  String _text;
+  final String _title;
+  final String _text;
 
   LibraryChapter(this._title, this._text);
 

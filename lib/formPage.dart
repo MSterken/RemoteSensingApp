@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:remote_sensing_helper/adviceDataManager.dart';
+import 'package:remote_sensing_helper/advicePage.dart';
 import 'package:remote_sensing_helper/answerField.dart';
 import 'package:remote_sensing_helper/question.dart';
 
@@ -19,23 +21,35 @@ class _FormPageState extends State {
 
   _FormPageState(this.d);
 
-
+  AdviceDataManager a = AdviceDataManager();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: ListView.builder(
-            itemCount: d.questionData.length,
-            itemBuilder: (BuildContext context, int index){
-              return Column(
-                children: <Widget>[
-                  Text(d.questionData.elementAt(index).question),
-                  AnswerField(d.questionData.elementAt(index).answersWithResponses)
-                ]
-              );
-            }
-        ),
+        child: Column(
+          children: [
+            Expanded(child :ListView.builder(
+                itemCount: d.questionData.length,
+                itemBuilder: (BuildContext context, int index){
+                  return Column(
+                      children: <Widget>[
+                        Text(d.questionData.elementAt(index).question),
+                        AnswerField(d.questionData.elementAt(index).answersWithResponses,a, d.questionData.elementAt(index).question)
+                      ]
+                  );
+                }
+            )),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AdvicePage(a))
+                );
+              },
+              child: Text("Get result"),
+              )
+          ],
+        )
       ),
     );
   }
