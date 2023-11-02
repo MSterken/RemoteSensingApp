@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:remote_sensing_helper/adviceDataManager.dart';
 import 'package:remote_sensing_helper/advicePage.dart';
 import 'package:remote_sensing_helper/answerField.dart';
-import 'package:remote_sensing_helper/question.dart';
-
 import 'dataManager.dart';
 
 class FormPage extends StatefulWidget{
 
-  DataManager manager;
+  final DataManager manager;
 
-  FormPage(this.manager, {super.key});
+  const FormPage(this.manager, {super.key});
   @override
   _FormPageState createState() => _FormPageState(manager);
 

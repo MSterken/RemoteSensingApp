@@ -3,9 +3,9 @@ import 'package:remote_sensing_helper/adviceDataManager.dart';
 
 class AdvicePage extends StatefulWidget {
 
-  AdviceDataManager a;
+  final AdviceDataManager a;
 
-  AdvicePage(this.a, {super.key});
+  const AdvicePage(this.a, {super.key});
 
   @override
   State<AdvicePage> createState() => _AdvicePageState(a);
@@ -19,6 +19,7 @@ class _AdvicePageState extends State<AdvicePage> {
 
   @override
   void initState() {
+    super.initState();
     for(var i = 0; i < a.adviceList.length; i++){
       advice.add(a.adviceList.values.elementAt(i));
     }
@@ -27,6 +28,9 @@ class _AdvicePageState extends State<AdvicePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: Text("Advies"),
+        ),
         body: Center(
         child: Column(
         children: [

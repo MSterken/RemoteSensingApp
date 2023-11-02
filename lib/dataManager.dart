@@ -4,8 +4,8 @@ import 'package:remote_sensing_helper/question.dart';
 
 class DataManager {
 
-  Map<String, String> _libraryData = {};
-  List<Question> _questionData = [];
+  final Map<String, String> _libraryData = {};
+  final List<Question> _questionData = [];
   final FileReader f = FileReader();
 
 
