@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:remote_sensing_helper/adviceDataManager.dart';
 import 'package:remote_sensing_helper/advicePage.dart';
 import 'package:remote_sensing_helper/answerField.dart';
+import 'package:remote_sensing_helper/remotesensingpalette.dart';
 import 'dataManager.dart';
 
 class FormPage extends StatefulWidget{
@@ -30,12 +31,21 @@ class _FormPageState extends State {
             Expanded(child :ListView.builder(
                 itemCount: d.questionData.length,
                 itemBuilder: (BuildContext context, int index){
-                  return Column(
+                  return Container(
+                      padding: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.only(bottom: 5, top: 5, left: 20, right: 20),
+                      decoration: BoxDecoration(
+                        color: remoteSensingPalette[100],
+                      borderRadius: BorderRadius.all(Radius.circular(20)
+                      )),
+                      child:Column(
                       children: <Widget>[
-                        Text(d.questionData.elementAt(index).question),
+                        Container(
+                            margin: const EdgeInsets.only(top:5 ,bottom: 5) ,
+                            child:Text(d.questionData.elementAt(index).question)),
                         AnswerField(d.questionData.elementAt(index).answersWithResponses,a, d.questionData.elementAt(index).question)
                       ]
-                  );
+                  ));
                 }
             )),
             ElevatedButton(
@@ -44,7 +54,7 @@ class _FormPageState extends State {
                     MaterialPageRoute(builder: (context) => AdvicePage(a))
                 );
               },
-              child: Text("Get result"),
+              child: const Text("Get result"),
               )
           ],
         )

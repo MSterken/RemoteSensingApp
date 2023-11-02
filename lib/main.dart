@@ -25,8 +25,8 @@ class RemoteSensingHelper extends StatelessWidget {
         title: 'Remote Sensing Helper',
         // 2. Provide light theme.
         theme: ThemeData(
-          primarySwatch: remotesensingpalette,
-          
+          primarySwatch: remoteSensingPalette,
+
         ),
 
         // 3. Provide dark theme.
@@ -85,13 +85,16 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
             controller: _tabController,
             tabs: const <Widget>[
               ImageIcon(
-                  AssetImage("assets/images/home.png")
+                  AssetImage("assets/images/hut.png"),
+                  size: 40,
               ),
               ImageIcon(
-                  AssetImage("assets/images/world.png")
+                  AssetImage("assets/images/map.png"),
+                  size: 40,
               ),
               ImageIcon(
-                  AssetImage("assets/images/book.png")
+                  AssetImage("assets/images/book.png"),
+                  size: 40
               )
             ],
           ),

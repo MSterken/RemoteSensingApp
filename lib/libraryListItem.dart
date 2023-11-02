@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:remote_sensing_helper/remotesensingpalette.dart';
 
 class LibraryListItem extends StatefulWidget{
 
@@ -20,16 +21,22 @@ class _libraryListItemState extends State {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      decoration: BoxDecoration(
+        color: remoteSensingPalette.shade100,
+          borderRadius: BorderRadius.all(Radius.circular(20))
+      ),
+      height: 70,
       padding: const EdgeInsets.all(10),
-        margin: const EdgeInsets.all(5),
-        color: Colors.redAccent,
-        child: Row(
-        children: [
-          Text(title),
-          Text(text)
-        ],
-    )
+        margin: const EdgeInsets.only(bottom: 5, top: 5, left: 20, right: 20),
+        child:
+          Center(
+            child: Container(
+              child:Text(title,
+              style: TextStyle(fontWeight: FontWeight.bold,
+              fontSize: 20),)
+
+            ),
+          ),
     );
   }
 
