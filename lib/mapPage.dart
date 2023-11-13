@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:remote_sensing_helper/mapChecker.dart';
+import 'package:remote_sensing_helper/mapWidget.dart';
+
+
 
 class mapPage extends StatefulWidget{
 
@@ -8,12 +12,67 @@ class mapPage extends StatefulWidget{
 }
 class _mapPageState extends State {
 
+  late MapChecker mapChecker;
+
+  showDrone() {
+    setState(() {
+      mapChecker.changeTrue("https://map.godrone.nl/#loc=52.1553994,5.3574833,12.9");
+    });
+  }
+
+  showAHN() {
+    setState(() {
+      mapChecker.changeTrue("https://ahn.arcgisonline.nl/ahnviewer/");
+    });
+  }
+
+  showOud() {
+    setState(() {
+      mapChecker.changeTrue("https://www.topotijdreis.nl/kaart/1938/@186007,319659,10.97");
+    });
+  }
+
+  @override
+  void initState() {
+    mapChecker = MapChecker();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Center(
-        child: Text("hier moet ook iets"),
+      body: Center(
+        child: Column(
+          children: [
+            Container(
+                height: 0.70 * (MediaQuery. of(context). size. height),
+                width: MediaQuery. of(context). size. width,
+                child: Stack(
+                  children: [
+                    MapWidget(mapChecker, "https://map.godrone.nl/#loc=52.1553994,5.3574833,12.9"),
+                    MapWidget(mapChecker, "https://ahn.arcgisonline.nl/ahnviewer/"),
+                    MapWidget(mapChecker, "https://www.topotijdreis.nl/kaart/1938/@186007,319659,10.97")
+                  ],
+                )
+            ),
+            Row(
+              children: [
+                ElevatedButton(onPressed: () => showDrone(), child: Text("Drone"),
+                ),
+                ElevatedButton(onPressed: () => showAHN(), child: Text("AHN")),
+                ElevatedButton(onPressed: () => showOud(), child: Text("Oud"))
+              ],
+            ),
+            Row(
+
+            )
+          ],
+        ),
       ),
     );
   }
+
+
+
+
 }
