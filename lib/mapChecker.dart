@@ -26,5 +26,6 @@ class MapChecker{
       }
     }
     );
+    print(mapChecks.toString() );
   }
 }

@@ -1,34 +1,34 @@
 {
   "questions": [
-    { "question": "vraag 1",
+    { "question": "Wat is het weer vandaag?",
       "answers": [
-        { "answer": "antwoord 1",
-          "answerExplanation": "daarom dit"
+        { "answer": "Stralend zonnetje",
+          "answerExplanation": "Lekker buiten zitten, of maak een wandeling"
         },
-        { "answer": "antwoord 2",
-          "answerExplanation": "daarom dat"
+        { "answer": "Regen",
+          "answerExplanation": "Ga binnen lekker schoonmaken, je huis is smerig"
         },
-        { "answer": "antwoord 3",
-          "answerExplanation": "daarom zus"
+        { "answer": "Sneeuw",
+          "answerExplanation": "Maak een sneeuwpop"
         },
-        { "answer": "antwoord 4",
-          "answerExplanation": "daarom zo"
+        { "answer": "Storm",
+          "answerExplanation": "Ga voor de tv zitten en kijk het nieuws"
         }
       ]
     },
-    { "question": "vraag 2",
+    { "question": "Wat voor eten heb je zin in?",
       "answers": [
-        { "answer": "antwoord 1",
-          "answerExplanation": "daarom dit"
+        { "answer": "Pizza",
+          "answerExplanation": "Er zit een leuke italiaan op de hoek, ga daar pizza eten"
         },
-        { "answer": "antwoord 2",
-          "answerExplanation": "daarom dat"
+        { "answer": "Sushi",
+          "answerExplanation": "Bestel lekker sushi"
         },
-        { "answer": "antwoord 3",
-          "answerExplanation": "daarom zus"
+        { "answer": "Donuts",
+          "answerExplanation": "Ga even langs de bakker voor wat zoets"
         },
-        { "answer": "antwoord 4",
-          "answerExplanation": "daarom zo"
+        { "answer": "Iets gezonds",
+          "answerExplanation": "Gezond is overrated, je bent al veel te lang niet bij de McDonalds geweest"
         }
       ]
     }

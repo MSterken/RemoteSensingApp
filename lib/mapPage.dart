@@ -32,6 +32,19 @@ class _mapPageState extends State {
     });
   }
 
+  showOndergrond() {
+    setState(() {
+      print('reaches');
+      mapChecker.changeTrue("https://www.dinoloket.nl/ondergrondgegevens");
+    });
+  }
+
+  showOndergrond2() {
+    setState(() {
+      mapChecker.changeTrue("https://www.dinoloket.nl/ondergrondmodellen/kaart");
+    });
+  }
+
   @override
   void initState() {
     mapChecker = MapChecker();
@@ -64,7 +77,11 @@ class _mapPageState extends State {
               ],
             ),
             Row(
-
+            children: [
+            ElevatedButton(onPressed: () => showOndergrond(), child: Text("Ondergrond"),
+            ),
+            ElevatedButton(onPressed: () => showOndergrond2(), child: Text("Ondergrond2"))
+            ],
             )
           ],
         ),

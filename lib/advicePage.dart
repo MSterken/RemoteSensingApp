@@ -39,7 +39,8 @@ class _AdvicePageState extends State<AdvicePage> {
           itemBuilder: (BuildContext context, int index){
             return Column(
             children: <Widget>[
-            Text(advice.elementAt(index))
+            Text(advice.elementAt(index),
+            style: TextStyle(fontSize: 25),)
             ]);
           }
           )),
