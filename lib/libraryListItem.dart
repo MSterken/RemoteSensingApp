@@ -4,19 +4,17 @@ import 'package:remote_sensing_helper/remotesensingpalette.dart';
 class LibraryListItem extends StatefulWidget{
 
   String title;
-  String text;
 
 
-  LibraryListItem(this.title, this.text);
+  LibraryListItem(this.title);
 
   @override
-  _libraryListItemState createState() => _libraryListItemState(title, text);
+  _libraryListItemState createState() => _libraryListItemState(title);
 
 }
 class _libraryListItemState extends State {
 
   String title;
-  String text;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +38,7 @@ class _libraryListItemState extends State {
     );
   }
 
-  _libraryListItemState(this.title, this.text);
+  _libraryListItemState(this.title);
 
 
 }

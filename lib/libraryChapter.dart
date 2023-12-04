@@ -2,11 +2,11 @@
 
 class LibraryChapter {
   final String _title;
-  final String _text;
+  final List<String> _paragraphs;
 
-  LibraryChapter(this._title, this._text);
+  LibraryChapter(this._title, this._paragraphs);
 
-  String get text => _text;
+  List<String> get paragraphs => _paragraphs;
 
   String get title => _title;
 }

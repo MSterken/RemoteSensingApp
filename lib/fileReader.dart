@@ -8,14 +8,20 @@ class FileReader{
   Map<String, List<dynamic>> library = <String, List<dynamic>>{};
   Map<String, List<dynamic>> form = <String, List<dynamic>>{};
 
-  Future<Map<String,String>?> getLibrary() async {
+  Future<Map<String,List<String>>?> getLibrary() async {
     final String jsonString = await rootBundle.loadString('assets/text/library.json');
     library = Map.castFrom(json.decode(jsonString));
     List libraryData = library["libraryObjects"]!;
-    final Map<String, String> m = {};
+    final Map<String, List<String>> m = {};
     for(var i = 0; i < libraryData.length; i++ ){
-      LibraryChapter l = LibraryChapter(libraryData[i]["title"] as String, libraryData[i]["info"] as String);
-      m[l.title] = l.text;
+      String title = libraryData[i]["title"];
+      List paragraphsRaw = libraryData[i]["paragraphs"];
+      List<String> paragraphs = [];
+      for (var j = 0; j < paragraphsRaw.length; j++){
+        paragraphs.add(paragraphsRaw[j]["text"]);
+      }
+      LibraryChapter l = LibraryChapter(title, paragraphs );
+      m[l.title] = l.paragraphs;
     }
     return m;
   }

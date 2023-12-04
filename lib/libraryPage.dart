@@ -33,7 +33,7 @@ class _libraryPageState extends State {
                 onTap: () { Navigator.push(context,
                 MaterialPageRoute(builder: (context) => LibraryItemPage(d.libraryData.keys.elementAt(index), d.libraryData.values.elementAt(index))));
                   },
-                child: LibraryListItem(d.libraryData.keys.elementAt(index), d.libraryData.values.elementAt(index),
+                child: LibraryListItem(d.libraryData.keys.elementAt(index),
             )
           );
         }

@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
 class LibraryItemPage extends StatefulWidget {
-  const LibraryItemPage(this.title, this.text ,{super.key});
+  const LibraryItemPage(this.title, this.paragraphs ,{super.key});
 
   final String title;
-  final String text;
+  final List<String> paragraphs;
 
   @override
-  State<LibraryItemPage> createState() => _LibraryItemPageState(title, text);
+  State<LibraryItemPage> createState() => _LibraryItemPageState(title, paragraphs);
 }
 
 class _LibraryItemPageState extends State<LibraryItemPage> {
 
 String title;
-String text;
+List<String> paragraphs;
 
-  _LibraryItemPageState(this.title,this.text);
+  _LibraryItemPageState(this.title,this.paragraphs);
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +23,15 @@ String text;
       appBar: AppBar(
         title: Text(title),
       ),
-      body: Center(
-        child:  Text(text),
+      body: Container(
+        child: ListView.builder(
+          itemCount: paragraphs.length ,
+          itemBuilder: (BuildContext context, int index){
+            return Container(
+                child : Text(paragraphs.elementAt(index))
+              );
+          }
+      ),
       ),
     );
   }
