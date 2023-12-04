@@ -65,8 +65,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   @override
   void initState() {
     super.initState();
-    m.createLibraryData();
-    m.createFormData();
+    loadDataFromFiles();
     _tabController = TabController(vsync: this, length: 3);
     _tabController.addListener(() {
       setState(() {
@@ -74,6 +73,11 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       });
     });
   }
+
+  void loadDataFromFiles() async {
+    await m.createFormData();
+    await m.createLibraryData();
+}
 
 
   @override
