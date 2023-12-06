@@ -6,7 +6,7 @@ import 'package:flutter/gestures.dart';
 // import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:webviewx/webviewx.dart';
 
-import 'mapChecker.dart';
+import '../mapChecker.dart';
 
 class MapWidget extends StatefulWidget {
   String url;

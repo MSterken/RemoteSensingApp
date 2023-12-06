@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:remote_sensing_helper/adviceDataManager.dart';
+import 'package:remote_sensing_helper/advicepage/liDARAdvicePage.dart';
+import 'package:remote_sensing_helper/advicepage/multiSpecAdvicePage.dart';
+
+import 'luchtFotoAdvicePage.dart';
 
 class AdvicePage extends StatefulWidget {
 
@@ -44,9 +48,22 @@ class _AdvicePageState extends State<AdvicePage> {
             ]);
           }
           )),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              ElevatedButton(onPressed: (){ Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => luchtFotoAdvicePage())
+              );}, child: Text("Luchtfoto")),
+              ElevatedButton(onPressed: (){ Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => multiSpecAdvicePage())
+              );}, child: Text("Multispectraal")),
+              ElevatedButton(onPressed: (){ Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => liDARAdvicePage())
+              );}, child: Text("LiDAR"))
+            ],
+          ),
         ]))
         );
   }
-
 
 }

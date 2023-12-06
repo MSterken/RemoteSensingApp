@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:remote_sensing_helper/mapChecker.dart';
-import 'package:remote_sensing_helper/mapWidget.dart';
+import 'package:remote_sensing_helper/mappage/mapWidget.dart';
 
 
 

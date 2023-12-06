@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:remote_sensing_helper/dataManager.dart';
-import 'package:remote_sensing_helper/libraryItemPage.dart';
-import 'package:remote_sensing_helper/libraryListItem.dart';
+import 'package:remote_sensing_helper/librarypage/libraryItemPage.dart';
+import 'package:remote_sensing_helper/librarypage/libraryListItem.dart';
 
 class libraryPage extends StatefulWidget{
 

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:remote_sensing_helper/dataManager.dart';
 import 'appTheme.dart';
-import 'libraryPage.dart';
-import 'mapPage.dart';
-import 'formPage.dart';
+import 'librarypage/libraryPage.dart';
+import 'mappage/mapPage.dart';
+import 'formpage/formPage.dart';
 import 'remotesensingpalette.dart';
 
 void main() {
