@@ -3,32 +3,80 @@
     { "question": "Wat is het weer vandaag?",
       "answers": [
         { "answer": "Stralend zonnetje",
-          "answerExplanation": "Lekker buiten zitten, of maak een wandeling"
+          "advice": "Lekker buiten zitten, of maak een wandeling",
+          "adviceLiDAR": "a",
+          "adviceLuchtfoto": "b",
+          "adviceMultiSpec": "c",
+          "scoreLiDAR": 1,
+          "scoreLuchtfoto": 2,
+          "scoreMultiSpec": 3
         },
         { "answer": "Regen",
-          "answerExplanation": "Ga binnen lekker schoonmaken, je huis is smerig"
+          "advice": "Ga binnen lekker schoonmaken, je huis is smerig",
+          "adviceLiDAR": "a",
+          "adviceLuchtfoto": "b",
+          "adviceMultiSpec": "c",
+          "scoreLiDAR": 1,
+          "scoreLuchtfoto": 2,
+          "scoreMultiSpec": 3
         },
         { "answer": "Sneeuw",
-          "answerExplanation": "Maak een sneeuwpop"
+          "advice": "Maak een sneeuwpop",
+          "adviceLiDAR": "a",
+          "adviceLuchtfoto": "b",
+          "adviceMultiSpec": "c",
+          "scoreLiDAR": 1,
+          "scoreLuchtfoto": 2,
+          "scoreMultiSpec": 3
         },
         { "answer": "Storm",
-          "answerExplanation": "Ga voor de tv zitten en kijk het nieuws"
+          "advice": "Ga voor de tv zitten en kijk het nieuws",
+          "adviceLiDAR": "a",
+          "adviceLuchtfoto": "b",
+          "adviceMultiSpec": "c",
+          "scoreLiDAR": 1,
+          "scoreLuchtfoto": 2,
+          "scoreMultiSpec": 3
         }
       ]
     },
     { "question": "Wat voor eten heb je zin in?",
       "answers": [
         { "answer": "Pizza",
-          "answerExplanation": "Er zit een leuke italiaan op de hoek, ga daar pizza eten"
+          "advice": "Er zit een leuke italiaan op de hoek, ga daar pizza eten",
+          "adviceLiDAR": "a",
+          "adviceLuchtfoto": "b",
+          "adviceMultiSpec": "c",
+          "scoreLiDAR": 1,
+          "scoreLuchtfoto": 2,
+          "scoreMultiSpec": 3
         },
         { "answer": "Sushi",
-          "answerExplanation": "Bestel lekker sushi"
+          "advice": "Bestel lekker sushi",
+          "adviceLiDAR": "a",
+          "adviceLuchtfoto": "b",
+          "adviceMultiSpec": "c",
+          "scoreLiDAR": 1,
+          "scoreLuchtfoto": 2,
+          "scoreMultiSpec": 3
         },
         { "answer": "Donuts",
-          "answerExplanation": "Ga even langs de bakker voor wat zoets"
+          "advice": "Ga even langs de bakker voor wat zoets",
+          "adviceLiDAR": "a",
+          "adviceLuchtfoto": "b",
+          "adviceMultiSpec": "c",
+          "scoreLiDAR": 1,
+          "scoreLuchtfoto": 2,
+          "scoreMultiSpec": 3
         },
         { "answer": "Iets gezonds",
-          "answerExplanation": "Gezond is overrated, je bent al veel te lang niet bij de McDonalds geweest"
+          "advice": "Gezond is overrated, je bent al veel te lang niet bij de McDonalds geweest",
+          "adviceLiDAR": "a",
+          "adviceLuchtfoto": "b",
+          "adviceMultiSpec": "c",
+          "scoreLiDAR": 1,
+          "scoreLuchtfoto": 2,
+          "scoreMultiSpec": 3
         }
       ]
     }

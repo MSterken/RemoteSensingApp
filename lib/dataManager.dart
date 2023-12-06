@@ -1,4 +1,5 @@
 
+import 'package:remote_sensing_helper/adviceDataManager.dart';
 import 'package:remote_sensing_helper/fileReader.dart';
 import 'package:remote_sensing_helper/question.dart';
 
@@ -7,6 +8,7 @@ class DataManager {
   final Map<String, List<String>> _libraryData = {};
   final List<Question> _questionData = [];
   final FileReader f = FileReader();
+  final AdviceDataManager adviceDataManager = AdviceDataManager();
 
 
   DataManager();

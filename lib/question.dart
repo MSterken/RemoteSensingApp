@@ -1,16 +1,18 @@
 
 
+import 'advice.dart';
+
 class Question{
   String _question;
-  Map<String, String> _answersWithResponses = {};
+  Map<String, Advice> _answersWithResponses = {};
 
   Question(this._question);
 
-  Map<String, String> get answersWithResponses => _answersWithResponses;
+  Map<String, Advice> get answersWithResponses => _answersWithResponses;
 
   String get question => _question;
 
-  void addAnswersWithResponses(Map<String, String> a){
+  void addAnswersWithResponses(Map<String, Advice> a){
     _answersWithResponses.addAll(a);
   }
 

@@ -10,6 +10,10 @@ class luchtFotoAdvicePage extends StatefulWidget {
 class _luchtFotoAdvicePageState extends State<luchtFotoAdvicePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Advies Luchtfoto's"),
+      ),
+    );
   }
 }

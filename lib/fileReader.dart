@@ -1,6 +1,7 @@
 
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:remote_sensing_helper/advice.dart';
 import 'package:remote_sensing_helper/libraryChapter.dart';
 import 'package:remote_sensing_helper/question.dart';
 
@@ -34,9 +35,17 @@ class FileReader{
     for (var i = 0; i < formData.length; i++) {
       Question q = Question(formData[i]["question"]);
       List answerData = formData[i]["answers"];
-      Map<String, String> a = {};
+      Map<String, Advice> a = {};
+
       for (var j = 0; j < answerData.length; j++){
-        a[answerData[j]["answer"]] = answerData[j]["answerExplanation"];
+        Advice advice = Advice(answerData[j]["scoreLiDAR"],
+            answerData[j]["scoreLuchtfoto"],
+            answerData[j]["scoreMultiSpec"],
+            answerData[j]["advice"],
+            answerData[j]["adviceLiDAR"],
+            answerData[j]["adviceLuchtfoto"],
+            answerData[j]["adviceMultiSpec"]);
+        a[answerData[j]["answer"]] = advice;
       }
       q.addAnswersWithResponses(a);
       l.add(q);

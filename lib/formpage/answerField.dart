@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../advice.dart';
 import '../adviceDataManager.dart';
 
 
 class AnswerField extends StatefulWidget{
 
-  Map<String, String> answers = {};
+  Map<String, Advice> answers = {};
   List<String> l = [];
   AdviceDataManager adviceDataManager;
   String question;
@@ -20,7 +21,7 @@ class AnswerField extends StatefulWidget{
 }
 class _AnswerFieldState extends State {
 
-  Map<String, String> answers = {};
+  Map<String, Advice> answers = {};
   List<String> l = [];
   String? dropdownValue;
   AdviceDataManager adviceDataManager;

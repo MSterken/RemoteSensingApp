@@ -10,6 +10,10 @@ class multiSpecAdvicePage extends StatefulWidget {
 class _multiSpecAdvicePageState extends State<multiSpecAdvicePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Advies Multispectraal"),
+      ),
+    );
   }
 }

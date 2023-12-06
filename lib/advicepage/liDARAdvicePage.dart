@@ -10,6 +10,10 @@ class liDARAdvicePage extends StatefulWidget {
 class _liDARAdvicePageState extends State<liDARAdvicePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Advies LiDAR"),
+      ),
+    );
   }
 }
