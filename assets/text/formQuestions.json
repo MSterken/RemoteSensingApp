@@ -7,36 +7,36 @@
           "adviceLiDAR": "a",
           "adviceLuchtfoto": "b",
           "adviceMultiSpec": "c",
-          "scoreLiDAR": 1,
-          "scoreLuchtfoto": 2,
-          "scoreMultiSpec": 3
+          "scoreLiDAR": 10,
+          "scoreLuchtfoto": 3,
+          "scoreMultiSpec": 0
         },
         { "answer": "Regen",
           "advice": "Ga binnen lekker schoonmaken, je huis is smerig",
           "adviceLiDAR": "a",
           "adviceLuchtfoto": "b",
           "adviceMultiSpec": "c",
-          "scoreLiDAR": 1,
-          "scoreLuchtfoto": 2,
-          "scoreMultiSpec": 3
+          "scoreLiDAR": 10,
+          "scoreLuchtfoto": 3,
+          "scoreMultiSpec": 0
         },
         { "answer": "Sneeuw",
           "advice": "Maak een sneeuwpop",
           "adviceLiDAR": "a",
           "adviceLuchtfoto": "b",
           "adviceMultiSpec": "c",
-          "scoreLiDAR": 1,
-          "scoreLuchtfoto": 2,
-          "scoreMultiSpec": 3
+          "scoreLiDAR": 0,
+          "scoreLuchtfoto": 3,
+          "scoreMultiSpec": 10
         },
         { "answer": "Storm",
           "advice": "Ga voor de tv zitten en kijk het nieuws",
           "adviceLiDAR": "a",
           "adviceLuchtfoto": "b",
           "adviceMultiSpec": "c",
-          "scoreLiDAR": 1,
+          "scoreLiDAR": 0,
           "scoreLuchtfoto": 2,
-          "scoreMultiSpec": 3
+          "scoreMultiSpec": 10
         }
       ]
     },
@@ -47,36 +47,36 @@
           "adviceLiDAR": "a",
           "adviceLuchtfoto": "b",
           "adviceMultiSpec": "c",
-          "scoreLiDAR": 1,
-          "scoreLuchtfoto": 2,
-          "scoreMultiSpec": 3
+          "scoreLiDAR": 0,
+          "scoreLuchtfoto": 10,
+          "scoreMultiSpec": 10
         },
         { "answer": "Sushi",
           "advice": "Bestel lekker sushi",
           "adviceLiDAR": "a",
           "adviceLuchtfoto": "b",
           "adviceMultiSpec": "c",
-          "scoreLiDAR": 1,
+          "scoreLiDAR": 10,
           "scoreLuchtfoto": 2,
-          "scoreMultiSpec": 3
+          "scoreMultiSpec": 0
         },
         { "answer": "Donuts",
           "advice": "Ga even langs de bakker voor wat zoets",
           "adviceLiDAR": "a",
           "adviceLuchtfoto": "b",
           "adviceMultiSpec": "c",
-          "scoreLiDAR": 1,
+          "scoreLiDAR": 10,
           "scoreLuchtfoto": 2,
-          "scoreMultiSpec": 3
+          "scoreMultiSpec": 0
         },
         { "answer": "Iets gezonds",
           "advice": "Gezond is overrated, je bent al veel te lang niet bij de McDonalds geweest",
           "adviceLiDAR": "a",
           "adviceLuchtfoto": "b",
           "adviceMultiSpec": "c",
-          "scoreLiDAR": 1,
+          "scoreLiDAR": 0,
           "scoreLuchtfoto": 2,
-          "scoreMultiSpec": 3
+          "scoreMultiSpec": 10
         }
       ]
     }

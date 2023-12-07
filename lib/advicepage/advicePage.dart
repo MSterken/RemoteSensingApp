@@ -25,7 +25,7 @@ class _AdvicePageState extends State<AdvicePage> {
   void initState() {
     super.initState();
     for(var i = 0; i < a.adviceList.length; i++){
-      advice.add(a.adviceList.values.elementAt(i));
+      advice.add(a.adviceList.values.elementAt(i).advice);
     }
   }
 
@@ -51,16 +51,39 @@ class _AdvicePageState extends State<AdvicePage> {
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              ElevatedButton(onPressed: (){ Navigator.push(context,
+              OutlinedButton(onPressed: (){ Navigator.push(context,
                   MaterialPageRoute(builder: (context) => luchtFotoAdvicePage())
-              );}, child: Text("Luchtfoto")),
-              ElevatedButton(onPressed: (){ Navigator.push(context,
+              );}, child: Text("Luchtfoto"),
+                style: OutlinedButton.styleFrom(
+                  side: BorderSide(
+                    width: 5.0,
+                    color: a.getLuchtfotoColorAdvice(),
+                    style: BorderStyle.solid,
+                  ),
+                ),
+              ),
+              OutlinedButton(onPressed: (){ Navigator.push(context,
                   MaterialPageRoute(builder: (context) => multiSpecAdvicePage())
-              );}, child: Text("Multispectraal")),
-              ElevatedButton(onPressed: (){ Navigator.push(context,
+              );}, child: Text("Multispectraal"),
+                style: OutlinedButton.styleFrom(
+                  side: BorderSide(
+                    width: 5.0,
+                    color: a.getMultiSpecColorAdvice(),
+                    style: BorderStyle.solid,
+                  ),
+                ),
+              ),
+              OutlinedButton(onPressed: (){ Navigator.push(context,
                   MaterialPageRoute(builder: (context) => liDARAdvicePage())
-              );}, child: Text("LiDAR"))
-            ],
+              );}, child: Text("LiDAR"),
+                style: OutlinedButton.styleFrom(
+                  side: BorderSide(
+                    width: 5.0,
+                    color: a.getLiDARColorAdvice(),
+                    style: BorderStyle.solid,
+                  ),
+              )
+              )],
           ),
         ]))
         );
