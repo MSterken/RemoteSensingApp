@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:remote_sensing_helper/dataManager.dart';
+import 'package:remote_sensing_helper/splash_screen.dart';
 import 'appTheme.dart';
 import 'librarypage/libraryPage.dart';
 import 'mappage/mapPage.dart';
@@ -34,7 +35,7 @@ class RemoteSensingHelper extends StatelessWidget {
         // 4. Watch AppTheme changes (ThemeMode).
         themeMode: context.watch<AppTheme>().themeMode,
         debugShowCheckedModeBanner: false,
-        home: const MyHomePage(title: 'Remote Sensing Helper'),
+        home: const SplashScreen(),
       ),
     );
   }

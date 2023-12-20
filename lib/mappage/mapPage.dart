@@ -35,7 +35,7 @@ class _mapPageState extends State {
   showOndergrond() {
     setState(() {
       print('reaches');
-      mapChecker.changeTrue("https://www.dinoloket.nl/ondergrondgegevens");
+      mapChecker.changeTrue("https://app.pdok.nl/viewer/#x=80264.72&y=404994.45&z=5.4543&background=BRT-A%20standaard&layers=d9cc67ba-5491-4640-86ac-b8d392250270;soilarea");
     });
   }
 
@@ -47,6 +47,7 @@ class _mapPageState extends State {
 
   @override
   void initState() {
+    super.initState();
     mapChecker = MapChecker();
   }
 
@@ -64,7 +65,9 @@ class _mapPageState extends State {
                   children: [
                     MapWidget(mapChecker, "https://map.godrone.nl/#loc=52.1553994,5.3574833,12.9"),
                     MapWidget(mapChecker, "https://ahn.arcgisonline.nl/ahnviewer/"),
-                    MapWidget(mapChecker, "https://www.topotijdreis.nl/kaart/1938/@186007,319659,10.97")
+                    MapWidget(mapChecker, "https://www.topotijdreis.nl/kaart/1938/@186007,319659,10.97"),
+                    MapWidget(mapChecker, "https://app.pdok.nl/viewer/#x=80264.72&y=404994.45&z=5.4543&background=BRT-A%20standaard&layers=d9cc67ba-5491-4640-86ac-b8d392250270;soilarea"),
+                    MapWidget(mapChecker, "https://www.dinoloket.nl/ondergrondmodellen/kaart")
                   ],
                 )
             ),
