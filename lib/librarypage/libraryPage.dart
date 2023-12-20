@@ -32,9 +32,9 @@ class _libraryPageState extends State {
             return GestureDetector(
                 onTap: () { Navigator.push(context,
                 MaterialPageRoute
-                  (builder: (context) => LibraryItemPage(d.libraryData.keys.elementAt(index), d.libraryData.values.elementAt(index))));
+                  (builder: (context) => LibraryItemPage(d.libraryData.elementAt(index))));
                   },
-                child: LibraryListItem(d.libraryData.keys.elementAt(index),
+                child: LibraryListItem(d.libraryData.elementAt(index).title,
             )
           );
         }

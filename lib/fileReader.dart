@@ -1,30 +1,45 @@
 
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'package:remote_sensing_helper/SubjectParagraph.dart';
 import 'package:remote_sensing_helper/advice.dart';
 import 'package:remote_sensing_helper/libraryChapter.dart';
+import 'package:remote_sensing_helper/libraryMinorSubject.dart';
+import 'package:remote_sensing_helper/librarySubject.dart';
 import 'package:remote_sensing_helper/question.dart';
 
 class FileReader{
   Map<String, List<dynamic>> library = <String, List<dynamic>>{};
   Map<String, List<dynamic>> form = <String, List<dynamic>>{};
 
-  Future<Map<String,List<String>>?> getLibrary() async {
+  Future<List<LibrarySubject>?> getLibrary() async {
     final String jsonString = await rootBundle.loadString('assets/text/library.json');
     library = Map.castFrom(json.decode(jsonString));
     List libraryData = library["libraryObjects"]!;
-    final Map<String, List<String>> m = {};
+    final List<LibrarySubject> list = [];
     for(var i = 0; i < libraryData.length; i++ ){
       String title = libraryData[i]["title"];
-      List paragraphsRaw = libraryData[i]["paragraphs"];
-      List<String> paragraphs = [];
-      for (var j = 0; j < paragraphsRaw.length; j++){
-        paragraphs.add(paragraphsRaw[j]["text"]);
+      LibrarySubject subject = LibrarySubject(title);
+      List subTitlesRaw = libraryData[i]["sub-texts"];
+      for(var k = 0; k <subTitlesRaw.length; k++){
+        String subTitle = subTitlesRaw[k]["sub-title"];
+        List paragraphsRaw = subTitlesRaw[k]["paragraphs"];
+        LibraryMinorSubject minor = LibraryMinorSubject(subTitle);
+        for (var j = 0; j < paragraphsRaw.length; j++){
+            String text = paragraphsRaw[j]["text"];
+            String imagePath = "";
+            print(paragraphsRaw[j]);
+            print(paragraphsRaw[j]["image"]);
+          if(paragraphsRaw[j]["image"] != null){
+              imagePath = paragraphsRaw[j]["image"];
+            }
+            minor.addParagraph(text, imagePath);
+          }
+        subject.addMinorSubject(minor);
       }
-      LibraryChapter l = LibraryChapter(title, paragraphs );
-      m[l.title] = l.paragraphs;
+      list.add(subject);
     }
-    return m;
+    return list;
   }
 
   Future<List<Question>?> getFormData() async {

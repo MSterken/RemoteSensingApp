@@ -1,37 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:remote_sensing_helper/librarySubject.dart';
+import 'package:remote_sensing_helper/librarypage/librarySubPage.dart';
+
+import 'libraryListItem.dart';
 
 class LibraryItemPage extends StatefulWidget {
-  const LibraryItemPage(this.title, this.paragraphs ,{super.key});
+  const LibraryItemPage(this.subject ,{super.key});
 
-  final String title;
-  final List<String> paragraphs;
+  final LibrarySubject subject;
 
   @override
-  State<LibraryItemPage> createState() => _LibraryItemPageState(title, paragraphs);
+  State<LibraryItemPage> createState() => _LibraryItemPageState(subject);
 }
 
 class _LibraryItemPageState extends State<LibraryItemPage> {
 
-String title;
-List<String> paragraphs;
+  LibrarySubject subject;
 
-  _LibraryItemPageState(this.title,this.paragraphs);
+  _LibraryItemPageState(this.subject);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(subject.title),
       ),
-      body: Container(
+      body: Center(
         child: ListView.builder(
-          itemCount: paragraphs.length ,
-          itemBuilder: (BuildContext context, int index){
-            return Container(
-                child : Text(paragraphs.elementAt(index))
+            itemCount: subject.libraryMinorSubjects.length ,
+            itemBuilder: (BuildContext context, int index){
+              return GestureDetector(
+                  onTap: () { Navigator.push(context,
+                      MaterialPageRoute
+                        (builder: (context) => LibrarySubPage(subject.libraryMinorSubjects.elementAt(index))));
+                  },
+                  child: LibraryListItem(subject.libraryMinorSubjects.elementAt(index).subTitle,
+                  )
               );
-          }
-      ),
+            }
+        ),
       ),
     );
   }
