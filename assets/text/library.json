@@ -159,6 +159,27 @@
               "text" : "Qgis is een gratis gis programma heel erg handig van het maken van kaarten. Het heeft veel opties voor het visualiseren van data waaronder het visualiseren van LiDAR data. Hiervoor moet de LAStools plug-in geïnstalleerd worden in de volgende link staat hoe(https://rapidlasso.de/lastools-as-qgis-plugin/). Bedenk wel hierbij dat Qgis een relatief zwaar programma kan zijn dus een computer die wat krachtiger is valt aan te raden.   \nHierna valt aan te raden om hoofdstuk 14.8 van het training manual van Qgis te gebruiken voor het uitwerken van je gegevens. Dit hoofdstuk gaat over het maken van een Digital Elevation Model (DEM). De link naar dit document staat hier (https://docs.qgis.org/3.28/nl/docs/training_manual/forestry/basic_lidar.html). Het legt in detail uit hoe je de LAZ-data omzet naar een kaart die bruikbaar is voor een onderzoek. Wel moet hier duidelijk bij worden gezegd dat er nog veel meer manieren en methodes zijn voor het uitwerken van LAZ-data. Dit is alleen een introductie tot een LiDAR uitwerkingswereld die erg complex kan zijn. Maar deze uitwerkingsmethode geeft je een simpele eerste introductie in het uitwerken van de data. "
             }
           ]
+        },
+        {"sub-title" :  "Visualisatie met DSM Digital Terrain Model ",
+          "paragraphs" : [
+            {
+              "text" : "Een DSM valt het best te beschrijven als de rauwe data van een LiDAR survey. Het laat namelijk alle ingevlogen LiDAR punten zien. Dus van bladeren tot hoog gras en gebouwen. Voor archeologie wordt een DSM als niet enorm handig gezien, de data die je namelijk wil krijgen (de maaiveld hoogte) is vaak niet zichtbaar op een DSM kaart. Dit komt omdat deze punten worden geblokkeerd door de vegetatie(Štular et al., 2021)."
+            }
+          ]
+        },
+        {"sub-title" :  "Visualisatie met DTM Digital Surface Model ",
+          "paragraphs" : [
+            {
+              "text" : "Bij een DTM worden alle laser punten geclassificeerd. Door deze classificatie kan een accurate maaiveld hoogte worden vastgesteld. Dit kan omdat nu alle lazerpunten een klasse hebben gekregen zoals vegetatie en gebouw. Door nu de punten uit te zetten zoals vegetatie krijg je een grondprofiel die niet wordt geblokkeerd door vegetatie. LiDAR kan natuurlijk niet door solide objecten heen kijken dus op plaatsen waar gebouwen staan komt vaak niks te staan. Een DTM is meestal het best bruikbare middel voor archeologische onderzoeken het maakt namelijk archeologische fenomenen onder de grond zichtbaar zelfs als er vegetatie over zit(Štular et al., 2021)."
+            }
+          ]
+        },
+        {"sub-title" :  "Visualisatie met DFM Digital Feature Model",
+          "paragraphs" : [
+            {
+              "text" : "Een DFM is een specifieke manier van LiDAR data uitwerken en valt te verglijken met een DTM,  alleen nu gemaakt voor archeologen. Wat archeologen namelijk willen zien is het maaiveld, maar ook structuren die er boven uit zouden steken. Hiervoor is dan ook een DFM bedoeld. Het komt erop neer dat bij het uitwerken van de LiDAR data structuren en het maaiveld overlaat zodat zoveel mogelijk archeologische data zichtbaar wordt op de kaart. Een DFM is de beste manier van uitwerken voor archeologen, om meer te weten te komen over hoe een DFM wordt gemaakt, valt de volgende bron goed te benaderen (Štular et al., 2021)."
+            }
+          ]
         }
       ]
     },
