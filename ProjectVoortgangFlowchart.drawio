@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-10T12:03:47.115Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="c5X4bnryKusjs_jLAVCB" version="22.1.18" type="gitlab">
+<mxfile host="app.diagrams.net" modified="2024-01-10T12:12:05.420Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="0q4030xLMh0__ZnWMcSF" version="22.1.18" type="gitlab">
   <diagram name="Pagina-1" id="hC3suqmQke7wl9KMhECB">
     <mxGraphModel dx="3054" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -132,7 +132,7 @@
         <mxCell id="HLW4yrqOA1MUcVgEDOPn-224" value="" style="group" parent="HLW4yrqOA1MUcVgEDOPn-115" vertex="1" connectable="0">
           <mxGeometry x="-30" width="280" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="HLW4yrqOA1MUcVgEDOPn-14" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Contacten voor interviews gelegd en deze voorbereidt&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="HLW4yrqOA1MUcVgEDOPn-224" vertex="1">
+        <mxCell id="HLW4yrqOA1MUcVgEDOPn-14" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Contacten voor interviews gelegd en deze voorbereid&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="HLW4yrqOA1MUcVgEDOPn-224" vertex="1">
           <mxGeometry width="280" height="140" as="geometry" />
         </mxCell>
         <mxCell id="HLW4yrqOA1MUcVgEDOPn-47" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;4C&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="HLW4yrqOA1MUcVgEDOPn-224" vertex="1">
