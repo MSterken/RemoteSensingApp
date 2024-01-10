@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-01-10T12:02:40.402Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="DHvvggRhi4KNaVcgIaU3" version="22.1.18" type="gitlab">
+<mxfile host="app.diagrams.net" modified="2024-01-10T12:03:47.115Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="c5X4bnryKusjs_jLAVCB" version="22.1.18" type="gitlab">
   <diagram name="Pagina-1" id="hC3suqmQke7wl9KMhECB">
-    <mxGraphModel dx="3563" dy="1013" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3054" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -127,16 +127,16 @@
           <mxGeometry x="90" y="113.33" width="140" height="48.57" as="geometry" />
         </mxCell>
         <mxCell id="HLW4yrqOA1MUcVgEDOPn-115" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="460" y="975" width="260" height="180" as="geometry" />
+          <mxGeometry x="462.63" y="965" width="260" height="180" as="geometry" />
         </mxCell>
         <mxCell id="HLW4yrqOA1MUcVgEDOPn-224" value="" style="group" parent="HLW4yrqOA1MUcVgEDOPn-115" vertex="1" connectable="0">
           <mxGeometry x="-30" width="280" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="HLW4yrqOA1MUcVgEDOPn-14" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Contacten voor interviews gelegd en voorbereidt&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="HLW4yrqOA1MUcVgEDOPn-224" vertex="1">
+        <mxCell id="HLW4yrqOA1MUcVgEDOPn-14" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Contacten voor interviews gelegd en deze voorbereidt&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="HLW4yrqOA1MUcVgEDOPn-224" vertex="1">
           <mxGeometry width="280" height="140" as="geometry" />
         </mxCell>
         <mxCell id="HLW4yrqOA1MUcVgEDOPn-47" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;4C&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;" parent="HLW4yrqOA1MUcVgEDOPn-224" vertex="1">
-          <mxGeometry x="14" y="10" width="50" height="40" as="geometry" />
+          <mxGeometry x="14" width="46" height="30" as="geometry" />
         </mxCell>
         <mxCell id="HLW4yrqOA1MUcVgEDOPn-103" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;HB, FH, HP, MT&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="HLW4yrqOA1MUcVgEDOPn-224" vertex="1">
           <mxGeometry x="160" y="110" width="120" height="30" as="geometry" />
@@ -780,7 +780,7 @@
         <mxCell id="HLW4yrqOA1MUcVgEDOPn-71" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;6B&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;strokeWidth=0;" parent="1" vertex="1">
           <mxGeometry x="-356.6666666666667" y="1220" width="66.66666666666666" height="64.44444444444444" as="geometry" />
         </mxCell>
-        <mxCell id="gSdVtLXF7Y3HtHSrEjIK-2" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="HLW4yrqOA1MUcVgEDOPn-122" target="HLW4yrqOA1MUcVgEDOPn-14">
+        <mxCell id="gSdVtLXF7Y3HtHSrEjIK-2" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="HLW4yrqOA1MUcVgEDOPn-122" target="HLW4yrqOA1MUcVgEDOPn-14">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="570" y="850" as="sourcePoint" />
             <mxPoint x="460" y="1140" as="targetPoint" />
