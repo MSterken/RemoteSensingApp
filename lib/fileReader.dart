@@ -28,8 +28,6 @@ class FileReader{
         for (var j = 0; j < paragraphsRaw.length; j++){
             String text = paragraphsRaw[j]["text"];
             String imagePath = "";
-            print(paragraphsRaw[j]);
-            print(paragraphsRaw[j]["image"]);
           if(paragraphsRaw[j]["image"] != null){
               imagePath = paragraphsRaw[j]["image"];
             }

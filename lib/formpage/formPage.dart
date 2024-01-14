@@ -22,10 +22,15 @@ class _FormPageState extends State {
 
   AdviceDataManager a = AdviceDataManager();
 
+  changeQuestion(String question, bool visibility){
+    setState(() {
+      d.checker.setVisibilityQuestion(question, visibility);
+    });
+
+  }
 
   @override
   void initState() {
-
   }
 
   @override
@@ -37,7 +42,9 @@ class _FormPageState extends State {
             Expanded(child :ListView.builder(
                 itemCount: d.questionData.length,
                 itemBuilder: (BuildContext context, int index){
-                  return Container(
+                  return Visibility(
+                    visible: d.checker.questionChecks[d.questionData.elementAt(index).question]!,
+                      child: Container(
                       padding: const EdgeInsets.all(10),
                       margin: const EdgeInsets.only(bottom: 5, top: 5, left: 20, right: 20),
                       decoration: BoxDecoration(
@@ -46,12 +53,19 @@ class _FormPageState extends State {
                       )),
                       child:Column(
                       children: <Widget>[
-                        Container(
+                        Column(
+                          children: [
+                            Container(
                             margin: const EdgeInsets.only(top:5 ,bottom: 5) ,
-                            child:Text(d.questionData.elementAt(index).question)),
-                        AnswerField(d.questionData.elementAt(index).answersWithResponses,a, d.questionData.elementAt(index).question)
+                              child:Text(d.questionData.elementAt(index).question)),
+                            AnswerField( changeQuestion, d.questionData.elementAt(index).answersWithResponses,a, d.questionData.elementAt(index).question,d)
+                          ],
+                        )
+
                       ]
-                  ));
+                  )
+                  )
+                  );
                 }
             )),
             ElevatedButton(

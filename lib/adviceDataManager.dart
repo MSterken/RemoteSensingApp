@@ -16,6 +16,8 @@ class AdviceDataManager{
   int _luchtFotoScore = 0;
   int _multiSpectraalScore = 0;
 
+  int _questionAmount = 0;
+
   Color goodChoice = Colors.green;
   Color mediocreChoice = Colors.orange;
   Color badChoice = Colors.red;
@@ -28,6 +30,10 @@ class AdviceDataManager{
       _multiSpectraalScore = _multiSpectraalScore - _adviceList[question]!.multiSpectraalScore;
       _luchtFotoScore = _luchtFotoScore - _adviceList[question]!.luchtFotoScore;
 
+    }else{
+      print(adviceList.toString());
+      print(_questionAmount);
+      _questionAmount++;
     }
     _adviceList[question] = advice;
     _liDARAdviceList[question] = advice.adviceLiDAR;
@@ -38,14 +44,18 @@ class AdviceDataManager{
     _luchtFotoScore = _luchtFotoScore + advice.luchtFotoScore;
     _multiSpectraalScore = _multiSpectraalScore + advice.multiSpectraalScore;
 
+    print("Lidarscore = ");
+    print(_liDARScore);
   }
 
   Map<String, Advice> get adviceList => _adviceList;
 
   Color getLiDARColorAdvice(){
-    if(_liDARScore > 10){
+    double average = getAverageScore(_liDARScore);
+    print(average);
+    if(average > 3.5){
       return goodChoice;
-    } else if (_liDARScore <= 10 && _liDARScore > 5){
+    } else if (average <= 3.5 && average > 2.5){
       return mediocreChoice;
     } else {
       return badChoice;
@@ -53,9 +63,10 @@ class AdviceDataManager{
   }
 
   Color getLuchtfotoColorAdvice(){
-    if(_luchtFotoScore > 10){
+    double average = getAverageScore(_multiSpectraalScore);
+    if(average > 3.5){
       return goodChoice;
-    } else if (_luchtFotoScore <= 10 && _luchtFotoScore > 5){
+    } else if (average <= 3.5 && average > 2.5){
       return mediocreChoice;
     } else {
       return badChoice;
@@ -63,13 +74,22 @@ class AdviceDataManager{
   }
 
   Color getMultiSpecColorAdvice(){
-    if(_multiSpectraalScore > 10){
+    double average = getAverageScore(_multiSpectraalScore);
+    if(average > 3.5){
       return goodChoice;
-    } else if (_multiSpectraalScore <= 10 && _multiSpectraalScore > 5){
+    } else if (average <= 3.5 && average > 2.5){
       return mediocreChoice;
     } else {
       return badChoice;
     }
+  }
+
+  double getAverageScore(int score){
+    double averageScore = score/_questionAmount;
+    print(score);
+    print(_questionAmount);
+    print(averageScore);
+    return score/_questionAmount;
   }
 
 }
