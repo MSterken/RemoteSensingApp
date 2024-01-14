@@ -51,15 +51,33 @@ class _AnswerFieldState extends State {
         icon: const Icon(Icons.arrow_downward),
         onChanged: (String? value) {
            setState(() {
-             if(value == "Regen"){
+             if(value == "Bebouwing"){
                for(var i = 0; i < manager.checker.questionChecks.length; i++){
                  if(question != manager.checker.questionChecks.keys.elementAt(i)){
                    changeQuestion(manager.checker.questionChecks.keys.elementAt(i), false);
                  }
                }
-             }else{
+             } else if("Wat is het landgebruik in het onderzoeksgebied? " == question ) {
                for(var i = 0; i < manager.checker.questionChecks.length; i++){
-                 changeQuestion(manager.checker.questionChecks.keys.elementAt(i), true);
+                   changeQuestion(manager.checker.questionChecks.keys.elementAt(i), true);
+               }
+             }
+             if (value == "Bos"){
+               if(manager.checker.questionChecks["Wat is de dichtheid van vegetatie?"] == false){
+                 changeQuestion("Wat is de dichtheid van vegetatie?", true);
+               }
+               for(var i = 0; i < manager.checker.questionChecks.length; i++){
+                 if(manager.checker.questionChecks.keys.elementAt(i) == "Welke gewassen zijn er aanwezig in het onderzoeksgebied? ") {
+                   changeQuestion(manager.checker.questionChecks.keys.elementAt(i), false);
+                 }
+               }
+             }else if(value == "Akker"){
+               if(manager.checker.questionChecks["Welke gewassen zijn er aanwezig in het onderzoeksgebied? "] == false){
+                 changeQuestion("Welke gewassen zijn er aanwezig in het onderzoeksgebied? ", true);
+               }
+               for(var i = 0; i < manager.checker.questionChecks.length; i++){
+                 if(manager.checker.questionChecks.keys.elementAt(i) == "Wat is de dichtheid van vegetatie?")
+                   changeQuestion(manager.checker.questionChecks.keys.elementAt(i), false);
                }
              }
              dropdownValue = value ?? "";

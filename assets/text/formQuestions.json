@@ -2,7 +2,7 @@
   "questions": [
     { "question": "Wat is het landgebruik in het onderzoeksgebied? ",
       "answers": [
-        { "answer": "bebouwing",
+        { "answer": "Bebouwing",
           "advice": "",
           "adviceLiDAR": "LiDAR kan niet door menselijke bebouwing en wegen heen kijken, dus is niet bruikbaar voor onderzoeken die uitgevoerd worden met een LiDAR sensor. Soms kan het lijken op het AHN dat LiDAR wel door gebouwen kijkt maar dat is het programma die de huizen verwijderd en deze plek een hoogte geeft.",
           "adviceLuchtfoto":"Luchtfoto’s binnen de remote sensing zijn afhankelijk van crop marks, soil marks, shadow marks en snow/frost marks. Geen van allen zijn mogelijk op verharde ondergrond en gebouwen." ,

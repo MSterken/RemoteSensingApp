@@ -52,7 +52,7 @@ class _AdvicePageState extends State<AdvicePage> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               OutlinedButton(onPressed: (){ Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => luchtFotoAdvicePage())
+                  MaterialPageRoute(builder: (context) => luchtFotoAdvicePage(a.luchtFotoAdviceList))
               );}, child: Text("Luchtfoto"),
                 style: OutlinedButton.styleFrom(
                   side: BorderSide(
@@ -63,7 +63,7 @@ class _AdvicePageState extends State<AdvicePage> {
                 ),
               ),
               OutlinedButton(onPressed: (){ Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => multiSpecAdvicePage())
+                  MaterialPageRoute(builder: (context) => multiSpecAdvicePage(a.multiSpecAdviceList))
               );}, child: Text("Multispectraal"),
                 style: OutlinedButton.styleFrom(
                   side: BorderSide(
@@ -74,7 +74,7 @@ class _AdvicePageState extends State<AdvicePage> {
                 ),
               ),
               OutlinedButton(onPressed: (){ Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => liDARAdvicePage())
+                  MaterialPageRoute(builder: (context) => liDARAdvicePage(a.liDARAdviceList))
               );}, child: Text("LiDAR"),
                 style: OutlinedButton.styleFrom(
                   side: BorderSide(

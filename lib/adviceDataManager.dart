@@ -92,6 +92,11 @@ class AdviceDataManager{
     return score/_questionAmount;
   }
 
+  Map<String, String> get multiSpecAdviceList => _multiSpecAdviceList;
+
+  Map<String, String> get luchtFotoAdviceList => _luchtFotoAdviceList;
+
+  Map<String, String> get liDARAdviceList => _liDARAdviceList;
 }
 
 
