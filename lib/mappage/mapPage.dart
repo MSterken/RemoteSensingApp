@@ -73,17 +73,17 @@ class _mapPageState extends State {
             ),
             Row(
               children: [
-                ElevatedButton(onPressed: () => showDrone(), child: Text("Drone"),
+                ElevatedButton(onPressed: () => showDrone(), child: Text("Vliegkaart"),
                 ),
-                ElevatedButton(onPressed: () => showAHN(), child: Text("AHN")),
-                ElevatedButton(onPressed: () => showOud(), child: Text("Oud"))
+                ElevatedButton(onPressed: () => showAHN(), child: Text("Hoogtekaart")),
+                ElevatedButton(onPressed: () => showOud(), child: Text("Historische kaart"))
               ],
             ),
             Row(
             children: [
-            ElevatedButton(onPressed: () => showOndergrond(), child: Text("Ondergrond"),
+            ElevatedButton(onPressed: () => showOndergrond(), child: Text("Ondergrond kaart web"),
             ),
-            ElevatedButton(onPressed: () => showOndergrond2(), child: Text("Ondergrond2"))
+            ElevatedButton(onPressed: () => showOndergrond2(), child: Text("Ondergrond kaart app"))
             ],
             )
           ],

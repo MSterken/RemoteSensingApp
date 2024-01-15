@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class liDARAdvicePage extends StatefulWidget {
-  final Map<String, String> liDARAdviceList;
+  Map<String, String> liDARAdviceList;
 
   liDARAdvicePage(this.liDARAdviceList, {super.key});
 
@@ -30,8 +30,11 @@ class _liDARAdvicePageState extends State<liDARAdvicePage> {
                 itemBuilder: (BuildContext context, int index){
                   return Column(
                       children: <Widget>[
-                        Text(liDARAdviceList.values.elementAt(index),
-                          style: TextStyle(fontSize: 25),)
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(liDARAdviceList.values.elementAt(index),
+                            style: TextStyle(fontSize: 25),),
+                        )
                       ]);
                 }
             ))

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class luchtFotoAdvicePage extends StatefulWidget {
-  final Map<String, String> luchtFotoAdviceList;
+  Map<String, String> luchtFotoAdviceList;
 
   luchtFotoAdvicePage(this.luchtFotoAdviceList, {super.key});
 
@@ -29,8 +29,11 @@ class _luchtFotoAdvicePageState extends State<luchtFotoAdvicePage> {
                   itemBuilder: (BuildContext context, int index){
                     return Column(
                         children: <Widget>[
-                          Text(luchtFotoAdviceList.values.elementAt(index),
-                            style: TextStyle(fontSize: 25),)
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(luchtFotoAdviceList.values.elementAt(index),
+                              style: TextStyle(fontSize: 25),),
+                          )
                         ]);
                   }
               ))

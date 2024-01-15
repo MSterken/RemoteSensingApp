@@ -29,9 +29,12 @@ class _FormPageState extends State {
 
   }
 
-  @override
-  void initState() {
+  clearAdvices(){
+    setState(() {
+      d.adviceDataManager.clearAdvices();
+    });
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +61,7 @@ class _FormPageState extends State {
                             Container(
                             margin: const EdgeInsets.only(top:5 ,bottom: 5) ,
                               child:Text(d.questionData.elementAt(index).question)),
-                            AnswerField( changeQuestion, d.questionData.elementAt(index).answersWithResponses,a, d.questionData.elementAt(index).question,d)
+                            AnswerField(clearAdvices, changeQuestion, d.questionData.elementAt(index).answersWithResponses,a, d.questionData.elementAt(index).question,d)
                           ],
                         )
 

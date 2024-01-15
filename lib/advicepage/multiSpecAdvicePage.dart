@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class multiSpecAdvicePage extends StatefulWidget {
-  final Map<String, String> multiSpecAdviceList;
-  const multiSpecAdvicePage(this.multiSpecAdviceList, {super.key});
+   Map<String, String> multiSpecAdviceList;
+   multiSpecAdvicePage(this.multiSpecAdviceList, {super.key});
 
   @override
   State<multiSpecAdvicePage> createState() => _multiSpecAdvicePageState(multiSpecAdviceList);
@@ -28,8 +28,11 @@ class _multiSpecAdvicePageState extends State<multiSpecAdvicePage> {
                       itemBuilder: (BuildContext context, int index){
                         return Column(
                             children: <Widget>[
-                              Text(multiSpecAdviceList.values.elementAt(index),
-                                style: TextStyle(fontSize: 25),)
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(multiSpecAdviceList.values.elementAt(index),
+                                  style: TextStyle(fontSize: 25),),
+                              )
                             ]);
                       }
                   ))

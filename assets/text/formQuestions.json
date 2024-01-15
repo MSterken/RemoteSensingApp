@@ -16,27 +16,27 @@
           "adviceLiDAR": "LiDAR kan door bladeren en vegetatie heen kijken. Dit maakt het ideaal voor archeologische fenomenen op te zoeken in beboste gebieden.",
           "adviceLuchtfoto": "Alleen in uiterst ideale omstandigheden zullen verkleuringen zichtbaar zijn in de bladeren van de bomen. Shadow,- frost/snow en soil marks zullen niet zichtbaar zijn. ",
           "adviceMultiSpec": "Bomen hebben minder last van stress als andere soort planten. De wortels zullen makkelijker om archeologie heen groeien. Hierdoor is er met multispectrale analyses geen verschil te zien tussen bodem met archeologie en zonder archeologie.",
-          "scoreLiDAR": 5,
-          "scoreLuchtfoto": 1,
-          "scoreMultiSpec": 1
+          "scoreLiDAR": 15,
+          "scoreLuchtfoto": 3,
+          "scoreMultiSpec": 3
         },
         { "answer": "Akker",
           "advice": "",
           "adviceLiDAR": "Akkerland is niet ideaal voor LiDAR. Omdat de grond vaak wordt omgeploegd verdwijnen de hoogte verschillen van archeologische fenomenen. LiDAR werkt het best op land dat niet actief wordt gebruikt. ",
-          "adviceLuchtfoto": "Akkerland is erg geschikt voor multispectrale analyses. In de periode dat planten groeien, dan zullen ze de meeste stress ervaren. Omdat de gewassen op akkers vaak grote gebieden bedekken wordt de kans op zichtbaarheid vergroot. Het extra voordeel van akkers is dat de groeiperiode van de gewassen vaak te voorspellen/te plannen is. Waardoor de meest effectieve periode van vliegen bekend is. ",
-          "adviceMultiSpec": "Op akkers kunnen cropmarks tijdens droge periodes goed te zien zijn in droge periodes. Wanneer de grond geploegd is, zullen soil marks ook duidelijk naar boven komen. Ook bij geploegde akkers zullen shadow marks mogelijk zichtbaar worden en tijdens de groeiperiode van de gewassen. Snow/frost marks zullen het beste resultaat geven voor te ontkieming en na de oogst. ",
-          "scoreLiDAR": 3,
-          "scoreLuchtfoto": 5,
-          "scoreMultiSpec": 5
+          "adviceLuchtfoto": "Op akkers kunnen cropmarks tijdens droge periodes goed te zien zijn in droge periodes. Wanneer de grond geploegd is, zullen soil marks ook duidelijk naar boven komen. Ook bij geploegde akkers zullen shadow marks mogelijk zichtbaar worden en tijdens de groeiperiode van de gewassen. Snow/frost marks zullen het beste resultaat geven voor te ontkieming en na de oogst. ",
+          "adviceMultiSpec": "Akkerland is erg geschikt voor multispectrale analyses. In de periode dat planten groeien, dan zullen ze de meeste stress ervaren. Omdat de gewassen op akkers vaak grote gebieden bedekken wordt de kans op zichtbaarheid vergroot. Het extra voordeel van akkers is dat de groeiperiode van de gewassen vaak te voorspellen/te plannen is. Waardoor de meest effectieve periode van vliegen bekend is. ",
+          "scoreLiDAR": 9,
+          "scoreLuchtfoto": 15,
+          "scoreMultiSpec": 15
         },
         { "answer": "Weiland",
           "advice": "",
           "adviceLiDAR": "LiDAR is ideaal voor onderzoeken op weilanden. Er zijn weinig obstructies en de grond is niet actief. Weilanden zijn de beste plek om een LiDAR onderzoek te verrichten",
           "adviceLuchtfoto": "De gewassen die op weilanden groeien zijn gevoelig voor stress. Hierdoor kan er met behulp van crop marks wel duidelijk mogelijke structuren herkent worden. Shadow marks kunnen hier ook effectief zijn, al zijn ze lastiger te herkennen dan op een akker. Soil marks zullen hier niet te zien zijn, tenzij de grond wordt geploegd. Snow/frost marks hebben hier een geringe kans.",
           "adviceMultiSpec": "Weilanden zijn erg geschikt voor multispectrale analyses. In de periode dat de planten groeien, dan zullen ze de meeste stress ervaren. Omdat de vegetatie op weilanden vaak grote gebieden bedekken wordt de kans op zichtbaarheid vergroot. ",
-          "scoreLiDAR": 5,
-          "scoreLuchtfoto": 4,
-          "scoreMultiSpec": 4
+          "scoreLiDAR": 15,
+          "scoreLuchtfoto": 12,
+          "scoreMultiSpec": 12
         }
       ]
     },
@@ -49,7 +49,7 @@
           "adviceMultiSpec": "Voor multispectrale analyses is vegetatie nodig. Als er dus geen vegetatie aanwezig is in het plangebied, dan is multispectrale analyse ook niet mogelijk. ",
           "scoreLiDAR": 5,
           "scoreLuchtfoto": 3,
-          "scoreMultiSpec": 1
+          "scoreMultiSpec": -1000
         },
         { "answer": "licht dekkende vegetatie",
           "advice": "",
@@ -72,8 +72,8 @@
         { "answer": "Dicht dekkende vegetatie",
           "advice": "",
           "adviceLiDAR": "LiDAR kan ook door dikke vegetatie heen kijken maar het kan goed zijn dan nu minder lazers de grond gaan bereiken. Het valt aan te raden om een tijden te vliegen dat deze dichte vegetatie er niet is.  ",
-          "adviceLuchtfoto": "Voor multispectrale analyses is vegetatie nodig. En het liefste een algehele bedekking ervan. Wanneer er dus dicht dekkende vegetatie is (in de vorm van grassen voornamelijk) dan is multispectrale analyse erg geschikt voor dit onderzoeksgebied. ",
-          "adviceMultiSpec": " Dit kan zeer geschikt zijn voor het ontdekken van crop marks. Het licht er echter wel aan welke gewassen hier staan. Onder het kopje luchtfoto’s staan welke gewassen het gevoeligst zijn voor crop marks. Door dicht dekkende vegetaties zouden ook shadowmarks een mogelijkheid bieden. Soil marks zouden echter niet te zien zijn, en snow/frost marks zouden hier ook geen kans hebben.  ",
+          "adviceLuchtfoto": "Dit kan zeer geschikt zijn voor het ontdekken van crop marks. Het licht er echter wel aan welke gewassen hier staan. Onder het kopje luchtfoto’s staan welke gewassen het gevoeligst zijn voor crop marks. Door dicht dekkende vegetaties zouden ook shadowmarks een mogelijkheid bieden. Soil marks zouden echter niet te zien zijn, en snow/frost marks zouden hier ook geen kans hebben.  ",
+          "adviceMultiSpec": "Voor multispectrale analyses is vegetatie nodig. En het liefste een algehele bedekking ervan. Wanneer er dus dicht dekkende vegetatie is (in de vorm van grassen voornamelijk) dan is multispectrale analyse erg geschikt voor dit onderzoeksgebied. ",
           "scoreLiDAR": 3,
           "scoreLuchtfoto": 5,
           "scoreMultiSpec": 5
@@ -85,7 +85,7 @@
         { "answer": "Mais",
           "advice": "",
           "adviceLiDAR": "Mais is niet handig voor Lidar. Het is een dicht gewas met dikke stelen en dikke bladeren. Verder is akkerland in het algemeen natuurlijk niet handig voor LiDAR er kan beter worden gewagt totdat het weer braak licht. ",
-          "adviceLuchtfoto": "suikerbiet, aardappel en mais zijn niet geschikt voor crop marks. Deze gewassen zijn goed bestand tegen vegetatiestress. Daarnaast staan deze gewassen uit elkaar, hierdoor is het überhaupt erg lastig wordt om structuren te herkennen. Voor soil en snow/frost marks zijn deze gewassen ook niet geschikt.",
+          "adviceLuchtfoto": "Suikerbiet, aardappel en mais zijn niet geschikt voor crop marks. Deze gewassen zijn goed bestand tegen vegetatiestress. Daarnaast staan deze gewassen uit elkaar, hierdoor is het überhaupt erg lastig wordt om structuren te herkennen. Voor soil en snow/frost marks zijn deze gewassen ook niet geschikt.",
           "adviceMultiSpec": "Mais is een gewas met een grote dekking. Dit zorgt ervoor dat eventuele verschillen in stress door archeologie beter opgepakt worden dan gewassen met een kleinere/lichtere dekking. Hierdoor is mais erg geschikt voor multispectrale analyse.  ",
           "scoreLiDAR": 2,
           "scoreLuchtfoto": 1,
@@ -94,7 +94,7 @@
         { "answer": "Aardappel",
           "advice": "",
           "adviceLiDAR": "Aardappelvelden zijn heel onhandig voor LiDAR. Dit omdat boeren een richel aanleggen voor de aardappels en dus de bovengrond compleet aanpassen. Dit maakt deze velden erg onhandig voor archeologische fenomenen te herkennen.  ",
-          "adviceLuchtfoto": "suikerbiet, aardappel en mais zijn niet geschikt voor crop marks. Deze gewassen zijn goed bestand tegen vegetatiestress. Daarnaast staan deze gewassen uit elkaar, hierdoor is het überhaupt erg lastig wordt om structuren te herkennen. Voor soil en snow/frost marks zijn deze gewassen ook niet geschikt.",
+          "adviceLuchtfoto": "Suikerbiet, aardappel en mais zijn niet geschikt voor crop marks. Deze gewassen zijn goed bestand tegen vegetatiestress. Daarnaast staan deze gewassen uit elkaar, hierdoor is het überhaupt erg lastig wordt om structuren te herkennen. Voor soil en snow/frost marks zijn deze gewassen ook niet geschikt.",
           "adviceMultiSpec": "Aardappels zijn planten die vaak relatief ver uit elkaar staan met veel haperingen ertussen. Hierdoor is het moeilijker om grote verschillen tussen bodem met of zonder archeologie waar te nemen. Hierdoor is multispectrale analyse minder geschikt om uit te voeren bij akkers met aardappelen. ",
           "scoreLiDAR": 1,
           "scoreLuchtfoto": 1,
@@ -103,7 +103,7 @@
         { "answer": "Suikerbiet",
           "advice": "",
           "adviceLiDAR": "Anders dan dat een suikerbiedveld natuurlijk geploegd is wat niet handig is voor LiDAR, is het gewas niet erg obstructief voor LiDAR",
-          "adviceLuchtfoto": "suikerbiet, aardappel en mais zijn niet geschikt voor crop marks. Deze gewassen zijn goed bestand tegen vegetatiestress. Daarnaast staan deze gewassen uit elkaar, hierdoor is het überhaupt erg lastig wordt om structuren te herkennen. Voor soil en snow/frost marks zijn deze gewassen ook niet geschikt. ",
+          "adviceLuchtfoto": "Suikerbiet, aardappel en mais zijn niet geschikt voor crop marks. Deze gewassen zijn goed bestand tegen vegetatiestress. Daarnaast staan deze gewassen uit elkaar, hierdoor is het überhaupt erg lastig wordt om structuren te herkennen. Voor soil en snow/frost marks zijn deze gewassen ook niet geschikt. ",
           "adviceMultiSpec": " Suikerbieten staan niet heel dicht op elkaar. Dit zorgt ervoor dat het moeilijker is om stress goed in kaart te brengen. Hierdoor kan er wel multispectrale analyse uitgevoerd worden op akkers met suikerbieten, maar het is niet ideaal.",
           "scoreLiDAR": 2,
           "scoreLuchtfoto": 1,
@@ -166,11 +166,11 @@
         { "answer": "Braak",
           "advice": "",
           "adviceLiDAR": "Dit is het beste voor LiDAR op akker velden. Vooral als het al een tijdje braak licht. Hierdoor kunnen weer inklinkingen in het maaiveld ontstaan en worden archeologische fenomenen weer zichtbaar.  ",
-          "adviceLuchtfoto": "",
+          "adviceLuchtfoto": "Bij een braakliggend terrein zal er geen kans zijn op cropmarks. Soil marks hebben hier de meeste kans. Er groeien geen gewassen die de bodem bedekken. Snow/frost marks hebben hier ook kans om sporen aan te geven. Shadow marks zullen hier de slechtste optie zijn vanwege de  geringe hoogteverschillen die mogelijk aanwezig zijn. ",
           "adviceMultiSpec": "Voor multispectrale analyse is vegetatie nodig. Er kan geen stress van planten gemeten worden wanneer akkerland braak ligt. Hierdoor zijn akkers die braak liggen niet geschikt voor multispectrale analyses. ",
           "scoreLiDAR": 3,
-          "scoreLuchtfoto": 1,
-          "scoreMultiSpec": 3
+          "scoreLuchtfoto": 3,
+          "scoreMultiSpec": -1000
         }
       ]
     },
@@ -321,7 +321,7 @@
           "adviceMultiSpec": "Voor multispectrale analyses zijn er gewassen en/of vegetatie nodig. Als deze niet aanwezig zijn, dan is een multispectrale analyse niet geschikt voor dit onderzoeksgebied. ",
           "scoreLiDAR": 5,
           "scoreLuchtfoto": 4,
-          "scoreMultiSpec": 1
+          "scoreMultiSpec": -1000
         },
         { "answer": "Groeiperiode",
           "advice": "",

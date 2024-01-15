@@ -35,57 +35,99 @@ class _AdvicePageState extends State<AdvicePage> {
         appBar: AppBar(
           title: Text("Advies"),
         ),
-        body: Center(
-        child: Column(
-        children: [
-          Expanded(child :ListView.builder(
-          itemCount: advice.length,
-          itemBuilder: (BuildContext context, int index){
-            return Column(
-            children: <Widget>[
-            Text(advice.elementAt(index),
-            style: TextStyle(fontSize: 25),)
-            ]);
-          }
-          )),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              OutlinedButton(onPressed: (){ Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => luchtFotoAdvicePage(a.luchtFotoAdviceList))
-              );}, child: Text("Luchtfoto"),
-                style: OutlinedButton.styleFrom(
-                  side: BorderSide(
-                    width: 5.0,
-                    color: a.getLuchtfotoColorAdvice(),
-                    style: BorderStyle.solid,
-                  ),
-                ),
-              ),
-              OutlinedButton(onPressed: (){ Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => multiSpecAdvicePage(a.multiSpecAdviceList))
-              );}, child: Text("Multispectraal"),
-                style: OutlinedButton.styleFrom(
-                  side: BorderSide(
-                    width: 5.0,
-                    color: a.getMultiSpecColorAdvice(),
-                    style: BorderStyle.solid,
-                  ),
-                ),
-              ),
-              OutlinedButton(onPressed: (){ Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => liDARAdvicePage(a.liDARAdviceList))
-              );}, child: Text("LiDAR"),
-                style: OutlinedButton.styleFrom(
-                  side: BorderSide(
-                    width: 5.0,
-                    color: a.getLiDARColorAdvice(),
-                    style: BorderStyle.solid,
-                  ),
-              )
-              )],
-          ),
-        ]))
+        body:
+        Container(
+          alignment: Alignment.center,
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // Expanded(child :ListView.builder(
+            // itemCount: advice.length,
+            // itemBuilder: (BuildContext context, int index){
+            //   return Column(
+            //   children: <Widget>[
+            //   Text(advice.elementAt(index),
+            //   style: TextStyle(fontSize: 25),)
+            //   ]);
+            // }
+            // )),
+            Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        child:SizedBox(
+                            width: 200,
+                            height: 200,
+                            child:
+                            OutlinedButton(onPressed: (){ Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => luchtFotoAdvicePage(a.luchtFotoAdviceList))
+                            );}, child: Text("Luchtfoto",
+                              style: TextStyle(fontSize: 20),),
+                              style: OutlinedButton.styleFrom(
+                                side: BorderSide(
+                                  width: 15.0,
+                                  color: a.getLuchtfotoColorAdvice(),
+                                  style: BorderStyle.solid,
+                                ),
+                              ),
+                            )
+                        ) ,
+                      ),
+                    )
+
+                    ,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(child:
+                      SizedBox(
+                          width: 200,
+                          height: 200,
+                          child:
+                          OutlinedButton(onPressed: (){ Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => multiSpecAdvicePage(a.multiSpecAdviceList))
+                          );}, child: Text("Multispectraal",
+                              style: TextStyle(fontSize: 20)),
+                            style: OutlinedButton.styleFrom(
+                              side: BorderSide(
+                                width: 15.0,
+                                color: a.getMultiSpecColorAdvice(),
+                                style: BorderStyle.solid,
+                              ),
+                            ),
+                          ))
+                      ),
+                    )
+                    ,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        child:SizedBox(
+                            width: 200,
+                            height: 200,
+                            child:
+                            OutlinedButton(onPressed: (){ Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => liDARAdvicePage(a.liDARAdviceList))
+                            );}, child: Text("LiDAR",
+                                style: TextStyle(fontSize: 20)),
+                                style: OutlinedButton.styleFrom(
+                                  side: BorderSide(
+                                    width: 15.0,
+                                    color: a.getLiDARColorAdvice(),
+                                    style: BorderStyle.solid,
+                                  ),
+                                )
+                            ))
+                      ),
+                    )
+                    ],
+                )
+
+,
+          ]),
+        )
         );
   }
 

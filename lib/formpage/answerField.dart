@@ -13,11 +13,12 @@ class AnswerField extends StatefulWidget{
   String question;
   DataManager manager;
   Function changeQuestion;
+  Function clearAdvices;
 
-  AnswerField(this.changeQuestion, this.answers,this.adviceDataManager,this.question,this.manager, {super.key});
+  AnswerField(this.clearAdvices, this.changeQuestion, this.answers,this.adviceDataManager,this.question,this.manager, {super.key});
 
   @override
-  _AnswerFieldState createState() => _AnswerFieldState(changeQuestion,answers, adviceDataManager, question, manager);
+  _AnswerFieldState createState() => _AnswerFieldState(clearAdvices, changeQuestion,answers, adviceDataManager, question, manager);
 
 
 
@@ -31,8 +32,9 @@ class _AnswerFieldState extends State {
   AdviceDataManager adviceDataManager;
   String question;
   Function changeQuestion;
+  Function clearAdvices;
 
-  _AnswerFieldState(this.changeQuestion,this.answers, this.adviceDataManager,this.question,this.manager);
+  _AnswerFieldState(this.clearAdvices, this.changeQuestion,this.answers, this.adviceDataManager,this.question,this.manager);
 
   @override
   void initState() {
@@ -52,17 +54,24 @@ class _AnswerFieldState extends State {
         onChanged: (String? value) {
            setState(() {
              if(value == "Bebouwing"){
+               clearAdvices();
                for(var i = 0; i < manager.checker.questionChecks.length; i++){
                  if(question != manager.checker.questionChecks.keys.elementAt(i)){
                    changeQuestion(manager.checker.questionChecks.keys.elementAt(i), false);
                  }
                }
+
+
              } else if("Wat is het landgebruik in het onderzoeksgebied? " == question ) {
+               print("aantal vragen");
+               print(manager.adviceDataManager.questionAmount);
+               //manager.adviceDataManager.increaseQuestionAmount(2);
+               print(manager.adviceDataManager.questionAmount);
                for(var i = 0; i < manager.checker.questionChecks.length; i++){
                    changeQuestion(manager.checker.questionChecks.keys.elementAt(i), true);
                }
              }
-             if (value == "Bos"){
+             if (value == "Bos" || value == "Weiland"){
                if(manager.checker.questionChecks["Wat is de dichtheid van vegetatie?"] == false){
                  changeQuestion("Wat is de dichtheid van vegetatie?", true);
                }

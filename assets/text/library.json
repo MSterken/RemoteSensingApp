@@ -197,6 +197,32 @@
               "text" : "Multiband sensoren zijn zodanig geproduceerd dat er meerdere sensoren aanwezig zijn op het apparaat die tegelijkertijd alle banden kunnen waarnemen. Het voordeel van deze sensor is dat er maar één dronevlucht nodig is om alle banden te kunnen waarnemen. Ook is er de vrijheid mogelijk bij deze sensor om zelf nog de spectrale banden te combineren om zo het resultaat te krijgen wat gewild is."
             }
           ]
+        },
+        {
+          "sub-title" : "Wat heb je nodig?",
+          "paragraphs" : [
+            {
+              "text" : "De eerste paar dingen waar op gelet moet worden zijn de benodigdheden om met een drone wetenschappelijk onderzoek te kunnen uitvoeren (Drone met gps, gps en referentiepunten (targets)). Daarbuiten heb je voor specifiek multispectrale onderzoek natuurlijk een multispectrale sensor nodig (een aantal voorbeelden zijn in tabel 1 te zien). De meeste vegetation indices (zie later hoofdstuk) hebben de nabij-infrarood (NIR), rood (R) en de groene (G) banden nodig. Een enkele (bijvoorbeeld de SARVI) heeft ook de blauwe band nodig (Αγαπίου et al., 2012). ",
+              "image" : "TABELMULTISPECTRALESENSOREN.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Hoe werkt de sensor?",
+          "paragraphs" : [
+            {
+              "text" : "Een multispectrale sensor verzamelt golflengtes van licht (rood, groen en blauw). Wat deze sensoren uniek maakt tegenover gewone camera’s, is dat deze sensoren zowel het zichtbare spectrum als het niet zichtbare spectrum van licht kunnen verzamelen. Deze golflengtes kunnen tussen objecten binnen de verzamelde data vergeleken worden met elkaar om zo verschillen waar te nemen.  Multispectrale sensoren hebben 3 tot 5 banden. Ook bestaan de sensoren uit twee categorieën: Aangepast en multiband (PrecisionHawk, Z.D.). "
+            },
+            {
+              "text" : ""
+            },
+            {
+              "text" : ""
+            },
+            {
+              "text" : ""
+            }
+          ]
         }
       ]
     },

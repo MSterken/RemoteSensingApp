@@ -16,7 +16,7 @@ class AdviceDataManager{
   int _luchtFotoScore = 0;
   int _multiSpectraalScore = 0;
 
-  int _questionAmount = 0;
+  int _questionAmount = 2;
 
   Color goodChoice = Colors.green;
   Color mediocreChoice = Colors.orange;
@@ -31,9 +31,9 @@ class AdviceDataManager{
       _luchtFotoScore = _luchtFotoScore - _adviceList[question]!.luchtFotoScore;
 
     }else{
-      print(adviceList.toString());
       print(_questionAmount);
       _questionAmount++;
+      print(_questionAmount);
     }
     _adviceList[question] = advice;
     _liDARAdviceList[question] = advice.adviceLiDAR;
@@ -97,6 +97,23 @@ class AdviceDataManager{
   Map<String, String> get luchtFotoAdviceList => _luchtFotoAdviceList;
 
   Map<String, String> get liDARAdviceList => _liDARAdviceList;
+
+  void clearAdvices(){
+    _adviceList.clear();
+    _liDARAdviceList.clear();
+    _luchtFotoAdviceList.clear();
+    _multiSpecAdviceList.clear();
+
+    print(_adviceList.toString() + _luchtFotoAdviceList.toString() + _multiSpecAdviceList.toString() + _liDARAdviceList.toString());
+  }
+
+  int get questionAmount => _questionAmount;
+
+  void increaseQuestionAmount(int value) {
+    print(_questionAmount);
+    _questionAmount = _questionAmount + value;
+    print(_questionAmount);
+  }
 }
 
 

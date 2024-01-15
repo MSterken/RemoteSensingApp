@@ -31,14 +31,24 @@ class _LibrarySubPageState extends State<LibrarySubPage> {
           child: ListView.builder(
               itemCount: minor.paragraphs.length ,
               itemBuilder: (BuildContext context, int index){
-                return Container(
-                    child : Column(
-                      children: [
-                        Text(minor.paragraphs.elementAt(index).text),
-                        if (minor.paragraphs.elementAt(index).imagePath != "")
-                          Image(image: AssetImage("assets/images/${minor.paragraphs.elementAt(index).imagePath}"))
-                      ],
-                    )
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      child : Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(minor.paragraphs.elementAt(index).text,
+                            style: TextStyle(fontSize: 15),),
+                          ),
+                          if (minor.paragraphs.elementAt(index).imagePath != "")
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image(image: AssetImage("assets/images/${minor.paragraphs.elementAt(index).imagePath}")),
+                            )
+                        ],
+                      )
+                  ),
                 );
               }
           ),
