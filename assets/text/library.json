@@ -1,0 +1,656 @@
+{
+  "libraryObjects": [
+    { "title" : "LiDAR",
+      "sub-texts" : [
+        {"sub-title" : "Inleiding",
+          "paragraphs" : [
+            {
+              "text" : "LiDAR (Light Detection And Ranging) is een remote sensing techniek die inmiddels wereldwijd wordt toegepast door archeologen. Het is enorm handig bij het opsporen van archeologische waarde die voorheen nog verborgen lagen onder de grond. Inmiddels wordt het in zekere maten in elk archeologisch onderzoek toegepast in Nederland. Het Actueel Hoogte bestand Nederland of wel AHN genoemd is gemaakt met LiDAR en kan niet meer missen in archeologische onderzoeken. De kansen die LiDAR biedt voor niet ingrijpende archeologische onderzoeken zijn enorm. Maar het zelf gebruiken van LiDAR kan moeilijk zijn. Wat kun je er nu precies mee en wat zijn de kansen en valkuilen bij het gebruik van LiDAR. Dit is waar dit hoofdstuk diep op zal ingaan met de hoop dat het gebruiken van LiDAR zo meteen als makkelijker bevonden gaat worden.",
+              "image" : "book.png"
+            }
+          ]
+        },
+        {"sub-title" :  "Wat is LiDAR?",
+          "paragraphs" : [
+            {
+              "text" : "Volgens Theunissen et al. (2021) is LiDAR een remote sensing techniek die gebruik maakt van laserpulsen. Het apparaat schiet een laser naar de grond en meet hoe snel de weerkaatsing van de laser weer terugkomt naar het apparaat. Dit wordt gedaan met een berekening, waar de verte van de lezer berekend wordt met de snelheid van het licht. Dus het maakt gebruik van het principe dat licht snelheid altijd even snel is en door deze snelheid te delen door de tijd krijg je de afstand. Theunissen et al., 2021 zij op pagina 93 dat het erg verglijkbaar is met radar, radar maakt alleen gebruik van golven. Het is hetzelfde principe al LiDAR alleen nu worden radiogolven weerkaats van de grond en daarna wordt de snelheid daarvan gebruikt om de afstand te meten. Voor LiDAR zijn er nog twee extra stappen nodig om zeker te zijn van de accuraatheid van de meting. Dit is GPS (Global positioning system) en de INS (Inertial navigation system). GPS-positionering is gebaseerd op trilateratie van satellieten, Door minstens drie maar liever meer satellieten te gebruiken om de afstand te berekenen tot een punt, kan met hoge accuraatheid de locatie van een punt worden weergeven (Blewitt, 1997). INS is een intern meetsysteem op een voertuig die dankzij inputs van snelheid, hoogte en graden accuraat kan bereken waar het voertuig zich nu bevindt (What Is an Inertial Navigation System?, n.d.) Samen kunnen ze heel accuraat bereken wat de positie van het voertuig is waardoor de locatie van de LiDAR lezer accuraat kan worden gemeten. Verder wordt altijd nog een (liever meer) accuraat grondmeetpunt gebruikt. Van dit grondpunt moeten de exacte coördinaten bekend zijn, zodat het gebruikt kan worden om de accuraatheid van de data te toetsen. Uiteindelijk levert deze data een enorm accuraat hoogteprofiel van de ondergrond, die goed gebruikt kan worden om verstopte archeologische waarde te vinden en bekende archeologische waarde in te scannen voor onderzoeken."
+            }
+          ]
+        },
+        {"sub-title" :  "Ontstaansgeschiedenis LiDAR",
+          "paragraphs" : [
+            {
+              "text" : "LiDAR-systemen werden ontwikkeld in de jaren 1960 en vonden hun eerste toepassingen voornamelijk in terreinkartering voor de lucht- en ruimtevaart. In de jaren '70 concentreerde op lasers gebaseerde remote sensing zich op de inzet van luchtsensoren, waarbij topografische kartering van bossen, ijsvlaktes, oceanen en de atmosfeer werd uitgevoerd."
+            },
+            {
+              "text" : "De ontwikkeling van LiDAR verliep traag. Tot de jaren '80 werd de verspreiding van LiDAR's belemmerd door een gebrek aan commerciële GPS-systemen die nodig waren voor de inzet van luchtsensoren. Toen later GPS-oplossingen en efficiënte satellietcommunicatie voor gegevensoverdracht beschikbaar kwamen, werd luchtfotogrammetrie mogelijk en werd de weg geëffend voor breed gebruik van LiDAR in de lucht. In de daaropvolgende jaren werd LiDAR, vanwege zijn uitstekende resolutie, vooral populair voor het berekenen van nauwkeurige geogegevens en voor inzet in meteorologie en atmosferisch onderzoek. De korte golflengte van laserlicht, die de detectie van kleine objecten zoals deeltjes van wolken en aerosolen mogelijk maakt, is cruciaal voor luchten terreinkartering."
+            },
+            {
+              "text" : "De eerste commerciële LiDAR's met 2.000 tot 25.000 pulsen per seconde werden halverwege de jaren '90 vervaardigd en geleverd voor topografische doeleinden. Deze sensoren bevestigden het geloof dat LiDAR-technologie de toekomst was voor alle karteringstoepassingen. Hoewel destijds nog primitief, waren geospatiale gebruikers geïnteresseerd in de dichte gegevens voor oppervlaktekartering die door LiDAR's werden gegenereerd. Aangezien de gronddekking van luchtsensoren dicht bij die van luchtcamera's lag, kon hoogwaardige kartering van terreinen uitgevoerd door LiDAR's worden vergezeld door het gebruik van fotogrammetrie voor objectgegevens en vluchtplanning. "
+            },
+            {
+              "text" : "LiDAR heeft verschillende andere technologieën verdrongen die niet nauwkeurig genoeg waren in hun omgevingsdetectie en gegevenscaptatie. Voor diverse uitdagingen, zoals scannen tussen bomen, bood LiDAR een snelle, nauwkeurige en directe - niet-inferentiële - procedure voor 3D-kartering met zeer nauwkeurige vastgelegde gegevens en goede mogelijkheden om ze te interpreteren. Deze voordelen maakten van LiDAR een prestatievere alternatief dan bijvoorbeeld fotogrammetrische technieken, die moeilijkheden met zich meebrachten voor de interpretatie van bodemhoogtes. Met LiDAR-sensorica werd natuurlijke interpretatie minder verstoord en konden de kosten van karteringscreatie worden verlaagd. Later, met stabiliserende prijzen, werd LiDAR een aantrekkelijk middel voor 3D-kartering. (Florian, 2020)"
+            }
+          ]
+        },
+        {"sub-title" :  "Ontstaansgeschiedenis en gebruik van LiDAR Nederland",
+          "paragraphs" : [
+            {
+              "text" : "In Nederland gaat het gebruik van LiDAR terug naar de jaren negentig. In deze tijd werd voor het eerst een lasersysteem geïntroduceerd waarmee hoogtemetingen vanuit de lucht konden worden genomen. Rijkswaterstaat besloot daarom in 1996 om een digitaal hoogtebestand te maken van Nederland. Dit project vond plaats tussen 1997 en 2004 en leidde tot het AHN1. Dit duurde zolang omdat alleen in de bladloze seizoenen gevlogen kon worden. Verder was de apparatuur nog niet zo geavanceerd dan nu. Ook grond meetpunten werden nog niet met GPS ingemeten, deze punten moesten nog handmatig ingemeten worden. Het uiteindelijke resultaat was een AHN met een puntenwolk van 1 punt per vierkant meter. (Theunissen et al., 2021) \n"
+            },
+            {
+              "text" : "Tussen 2007 en 2021 vonden de meting plaats voor het AHN2. Er was behoefte gekomen aan een verbeterde versie van het AHN en dankzij verbeterde meetapparatuur kon dit ook. Dit leidde uiteindelijk tot een punten wolk van 6 tot 10 punten per vierkante meter. Dit zorgde voor een veel accurater beeld van het landschap. (Theunissen et al., 2021) \n"
+            },
+            {
+              "text" : "Hierna werd de AHN3 ingevlogen. De accuraatheid tussen AHN3 en AHN2 is even hoog. Wel bracht de verbetering zoals een betere classificatie. Maar de grootte winst was dat het AHN vanaf 2014 nu gratis online beschikbaar was. Dit maakte het ideaal voor archeologische onderzoeken en prospectie. Inmiddels zijn we bij de AHN4 beland, deze is accurater dan de AHN3 en kon ook sneller uitgevoerd worden omdat de sensoren zijn verbeterd. (Theunissen et al., 2021) "
+            }
+          ]
+        },
+        {"sub-title" :  "Een blik naar het AHN en gebruiksmogelijkheden",
+          "paragraphs" : [
+            {
+              "text" : "Het Actueel hoogtebestand Nederland is de hoogte kaart van Nederland. Het bestaat uit geclassificeerde puntenwolken gemaakt door LiDAR. Dit houdt in dat elk ingemeten punt is toegerekend aan een klasse. Deze klasses zijn: Maaiveld, Bebouwing, water, kunstwerk en overig. Uiteindelijk wordt de ingevlogen data uitgewerkt in een DSM en een DTM deze vallen beiden onder de benaming DEM. DEM staat voor Digital Elevatiën Model, dit is een overkoepelende term voor DSM, DFM en DTM's. DSM staat voor Digital Surface Model en laat het complete ingemeten gebied zien inclusief bomen, huizen en andere structuren. DTM staat voor Digital Terrain Model en laat alleen het maaiveld zien, het haalt dus bomen en structuren eruit (Štular & Lozić, 2022). Over DEM’s staat meer informatie bij het kopje soort data."
+            },
+            {
+              "text" : "Uiteindelijk wordt uit deze geclassificeerde puntenwolk meerdere modellen gemaakt voor het AHN, deze zijn: Hillshade DSM, Hillshade DTM, blauwgroen oranje statisch DSM, blauwgroen oranje dynamisch DSM, blauwgroen oranje statisch DTM en blauwgroen oranje dynamisch DTM. Blauwgroen oranje kaarten op het AHN laten de exacte hoogteverschillen zien in een terrein, hillshade laat niet de exacte hoogte zien maar wel abrupte verschillen in hoogte (Hillshade Function—ArcGIS Pro | Documentation, n.d.).  \n"
+            },
+            {
+              "text" : "Voor archeologie is het AHN ideaal voor prospectie, historische fenomenen die onder de grond nog aanwezig zijn zorgen vaak in de bovengrond kleine hoogte verschillen. Hierdoor kunnen ze op het AHN opgespoord worden. De accuraatheid van het AHN is 0,5m wat het tevens perfect maakt voor prospectie, namelijk “The optimal point density of the LiDAR data for archaeology should therefore be sufficient to produce highly accurate 0.25 to 0.5 m grid (Štular & Lozić, 2022, p. 252). De accuraatheid kan natuurlijk nog hoger voor nog betere accuraatheid van de data, maar je komt dan vaak al aan te hoge TB aan data. Dit terwijl 0,25 tot 0,5 meter goed genoeg blijkt te zijn voor archeologische prospectie."
+            }
+          ]
+        },
+        {"sub-title" :  "LiDAR en Drones",
+          "paragraphs" : [
+            {
+              "text" : "In de afgelopen 15 jaar is men begonnen met het gebruiken van drones met LiDAR sensoren eronder. Aan het begin was het grootte probleem dat de laser sensoren enorm zwaar waren. Dit zorgde ervoor dat enorm zware drones gebruikt moesten worden voor het vliegen. Dit zorgde er tevens voor dat het enorm duur werd. Gezien dat de archeologische industrie niet een enorm rijk was/is verliep en verloopt het gebruiken van LiDAR drones stroef. Andere industrieën zoals de bosbouw begonnen daarom ook eerder met het gebruiken van LiDAR drones (Wallace et al., 2012). Dit geeft nu archeologen de kans om LiDAR goedkoper en vaker in te zetten in het veld (Risbøl & Gustavsen, 2018). \n"
+            },
+            {
+              "text" : " LiDAR wordt natuurlijk al veel gebruikt voor prospectie in Nederland. Het AHN is inmiddels een verplichting bij het uitvoeren van een goed archeologisch bureauonderzoek. Maar waarom zou je dan nog een drone LiDAR onderzoek willen uitvoeren als 0,25 tot 0,5 meter goed genoeg blijkt te zijn voor archeologische prospectie (Štular & Lozić, 2022). Het gaat allemaal over de accuraatheid van de data die je wil krijgen. 0,25 tot 0,5 meter accuraatheid zal zeker genoeg zijn voor grotere archeologische sporen op te sporen. Maar door de accuraatheid en de hoeveelheid van de laser punten per vierkante meter te vergroten zullen meer verborgen archeologische fenomenen gevonden kunnen worden. De hoeveelheid laserpunten per vierkante meter kan objecten namelijk veel scherper maken en maakt herkenning een stuk makkelijker. Dit werd ook goed duidelijk bij een onderzoek van Risbøl & Gustavsen, zij konden door de accuraatheid en de laserpunten hoeveelheid per vierkant meter nog verder te verhogen 13 nieuwe archeologische fenomenen ontdekken, eerder niet gevonden met een lagere resolutie van twee punten per vierkante meter (2018). Dit kregen ze voor elkaar door 22 laserpunten per vierkante meter te gebruiken, als referentie de AHN gebruikt maar 10 tot 12(Theunissen et al., 2021). Ook geeft het een grotere kans om archeologische fenomenen door dichte bossen te herkennen. Het kan daarom heel goed gebruikt worden om archeologische objecten heel accuraat in te scannen. Hierdoor kunnen archeologische onderzoekers veel betere informatie vergaren terwijl er geen destructief onderzoek hoeft te worden uitgevoerd."
+            },
+            {
+              "text" : "Ook geeft het de kans om al bekende archeologische fenomenen goed te monitoren, door kleine veranderingen in het hoogte profiel waar te nemen over tijd. Er moet wel ook bij worden gezegd dat ook Risbøl & Gustavsen geen grote meerwaarde zagen van het gebruiken van de 22 punten per vierkante meter, 5 tot 10 punten was al genoeg een conclusie die (Štular & Lozić, 2022) ook al trok. De uiteindelijke conclusie die ze trokken is het volgende “It seems the positive effect of flying at low altitude with drones and thus collecting ground points with narrow footprints as compared to the use of fixed‐wing aeroplanes or helicopter platforms, does not occur to any great extent” (Risbøl & Gustavsen, 2018, p. 6). Vertaald staat hier dus dat het gebruiken van specifiek drone LiDAR data niet tot enorm betere archeologische onderzoek data leidt. Wel lijkt de hogere puntenconcentratie nog betere data te verzamelen door dichte vegetatie. Maar voor nu is dit nog erg marginaal, het is meer dat in de toekomst hier nog goeie kansen liggen voor LiDAR (Risbøl & Gustavsen, 2018).  \n"
+            },
+            {
+              "text" : "Het Nederlandse landschap veranderd veel elk jaar en er zijn maar weinig terreinen in Nederland die geen verandering hebben. Dit zorgt ervoor dat informatie constant veranderd. Het AHN laat maar 2 moment opnames zien, dit zijn de AHN 3 en 4. Dit terwijl het landschap natuurlijk constant veranderd, daarom is het vliegen met LiDAR drones in Nederland toch heel erg praktisch. Door meer momentopnames te nemen van een specifiek archeologisch terrein kun je veel meer informatie achterhalen over de archeologie die hier zit. Dit maakte het toch nog een handig hulpmiddel voor de archeologie. Ook is belangrijk om te weten dat de rauwe data van het AHN niet meer openbaar is voor gebruikers. Dus fouten die in het AHN staan kunnen niet door iemand die er zelf mee bezig is opgelost worden. Een eigen vlucht is dan van belang om te verrichten om de rauwe data op te halen. \nToch is er nog een groot probleem met het gebruiken van LiDAR, de prijs. De laser scanner en drone zijn beiden nog heel erg duur. Dit komt omdat een zware drone gebruikt moet worden voor het vliegen. Uiteindelijk lopen de kosten voor een LiDAR systeem aan te schaffen op tot 120 duizend euro (Photogrammetry vs. LIDAR, 2023). "
+            }
+          ]
+        },
+        {"sub-title" :  "Landgebruik Valkuilen",
+          "paragraphs" : [
+            {
+              "text" : "LiDAR werkt het best op landschappen waar geen landbouw op wordt verricht. Landbouw maakt namelijk het maaiveld even waardoor hoogteverschillen verdwijnen. Wel is het bijzonder goed in beboste gebieden, de lasers kunnen namelijk om bomen heen buigen. “Airborne LiDAR is the first remote sensing method that can be successfully and systematically applied in heavily forested areas. Forests are important for two reasons: better preservation of archaeological features and a poorer existing archaeological record”(Štular & Lozić, 2022, p. 249). LiDAR is dus de beste optie als je archeologische data uit beboste gebieden wil halen met remote sensing. Wel moet hierbij worden gezegd dat het nog steeds niet de meest accurate data dan gaat leveren. Bomen blokkeren de lasers namelijk ook vaak, hierdoor krijg je toch uiteindelijk een minder goed beeld van de ondergrond dan bijvoorbeeld op een heide. "
+            },
+            {
+              "text" : "LiDAR kan door vegetatie vaak heen kijken, de laser kan namelijk om de plant heen buigen of als de laser krachtig genoeg is door bladeren heen schijnen (Devereux et al., 2005). Dan krijg je twee metingen. De eerste meting die je krijgt is de reflectie van de laser op het blad, hiermee krijg je een accuraat beeld van de vegetatie (DTM). Na deze puls zal de 2de puls zichtbaar worden, dit is de laser die weerkaats op de grond, Hiermee kan dus een accurate locatie van de bodem worden weergeven (DSM). Dit maakt LiDAR natuurlijk zo een goed middel om verborgen archeologische objecten terug te vinden onder beboste locaties. Toch is het niet het wondermiddel waardoor je door alle vegetatie heen kan kijken en daarmee een accuraatheid grondbeeld te vormen. Een dichte vegetatie dus een gebied waar veel balderen of strijken op elkaar staan gaat inaccurate data opleveren. De vegetatie wordt dan te dik voor de laser om erdoorheen te kijken en dit levert data die niet meer gebruikt kan worden voor een accurate DTM. Uiteindelijk valt de conclusie te trekken, hoe minder vegetatie des te accurater word je LiDAR data. "
+            },
+            {
+              "text" : "LiDAR kan door velen soorten gewassen heen kijken. Hierbij moet wel worden gedacht aan de dikte van de gewassen. Als het gewas veel bladeren heeft of dicht op elkaar staat gaat LiDAR moeite hebben met een accurate DTM te maken. Ook moet er goed gedacht worden of met LiDAR over gewassen te vliegen wel een goed idee is. LiDAR kan namelijk de beste data ophalen als het geen onderbrekingen heeft tijdens het scannen. Met onderbrekingen wordt bedoeld dat er een blad of tak tussen de laser en de grond zit. Het kan hierdoorheen scannen maar het is handiger om natuurlijk hier niet door heen te scannen. Het valt daarom aan te raden om velden met LiDAR te bekijken in tijden dat er geen hoge gewassen staan om de kwaliteit van de scan te waarborgen.  \nOok moet hier duidelijk bij worden gezegd dat geploegde velden waar LiDAR op staat sowieso kleine archeologische fenomenen gaan verbergen, de ploeg egaliseert namelijk het terrein. Daarom is het handig om in periodes te vliegen wanneer de grond al een tijdje niet is geploegd. Hierdoor is er een grotere kans dat kleine inklinkingen van archeologische sporen weer tevoorschijn zijn gekomen. "
+            },
+            {
+              "text" : "Bij LiDAR valt niet echt te spreken over de effecten van verschillende geologische lagen zoals zand, silt en Lutum. Wat wel echt belangrijk is, is of het over een geologisch actief of inactief laag gaat (van der Meulen et al., 2020). Denk aan het deltagebied Nederland, in het verleden is dit een zeer actief landschap geweest. Constant aan het veranderen dankzij de vele rivieren die hier stromen. Hierdoor zijn veel archeologische terreinen verdwenen onder een diepe laag van nieuw sediment. De kans is daarom ook een stuk kleiner dat je deze terreinen nog zou kunnen herkennen met LiDAR, het neemt namelijk alleen exacte hoogte data’s op.  \nNatuurlijk werkt dit ook tegenovergesteld, denk hierbij aan raatakkers uit de ijzertijd (Meylemans et al., 2015). Deze velden zijn bestaan uit relatief kleine akkers met wallen eromheen. Vaak aangelegd op hogere zandruggen. Deze zandruggen zijn sinds de ijzertijd geologisch inactieve lagen, hierdoor zijn ze nog erg duidelijk zichtbaar op LiDAR data. Dit is dan ook het belangrijke met het werken met LiDAR, er moet goed worden nagedacht over de ouderdom van de bodem. Hierdoor weet je wat voor een data zou kunnen worden opgehaald met een LiDAR onderzoek."
+            },
+            {
+              "text" : "Er is zover ik heb kunnen lezen niet veel bekend over de effecten van het grondwater op LiDAR. Tenminste heb ik niks weten te vinden hier zou dus later verder naar gekeken moeten worden."
+            }
+          ]
+        },
+        {"sub-title" :  "Vegetatie Valkuilen",
+          "paragraphs" : [
+            {
+              "text" : "LiDAR kan door vegetatie vaak heen kijken, de laser kan namelijk om de plant heen buigen of als de laser krachtig genoeg is door bladeren heen schijnen (Devereux et al., 2005). Dan krijg je twee metingen. De eerste meting die je krijgt is de reflectie van de laser op het blad, hiermee krijg je een accuraat beeld van de vegetatie (DTM). Na deze puls zal de 2de puls zichtbaar worden, dit is de laser die weerkaats op de grond, Hiermee kan dus een accurate locatie van de bodem worden weergeven (DSM). Dit maakt LiDAR natuurlijk zo een goed middel om verborgen archeologische objecten terug te vinden onder beboste locaties. Toch is het niet het wondermiddel waardoor je door alle vegetatie heen kan kijken en daarmee een accuraatheid grondbeeld te vormen. Een dichte vegetatie dus een gebied waar veel balderen of strijken op elkaar staan gaat inaccurate data opleveren. De vegetatie wordt dan te dik voor de laser om erdoorheen te kijken en dit levert data die niet meer gebruikt kan worden voor een accurate DTM. Uiteindelijk valt de conclusie te trekken, hoe minder vegetatie des te accurater word je LiDAR data. "
+            }
+          ]
+        },
+        {"sub-title" :  "Valkuilen Gewassen",
+          "paragraphs" : [
+            {
+              "text" : "LiDAR kan door velen soorten gewassen heen kijken. Hierbij moet wel worden gedacht aan de dikte van de gewassen. Als het gewas veel bladeren heeft of dicht op elkaar staat gaat LiDAR moeite hebben met een accurate DTM te maken. Ook moet er goed gedacht worden of met LiDAR over gewassen te vliegen wel een goed idee is. LiDAR kan namelijk de beste data ophalen als het geen onderbrekingen heeft tijdens het scannen. Met onderbrekingen wordt bedoeld dat er een blad of tak tussen de laser en de grond zit. Het kan hierdoorheen scannen maar het is handiger om natuurlijk hier niet door heen te scannen. Het valt daarom aan te raden om velden met LiDAR te bekijken in tijden dat er geen hoge gewassen staan om de kwaliteit van de scan te waarborgen.  \\nOok moet hier duidelijk bij worden gezegd dat geploegde velden waar LiDAR op staat sowieso kleine archeologische fenomenen gaan verbergen, de ploeg egaliseert namelijk het terrein. Daarom is het handig om in periodes te vliegen wanneer de grond al een tijdje niet is geploegd. Hierdoor is er een grotere kans dat kleine inklinkingen van archeologische sporen weer tevoorschijn zijn gekomen. \""
+            }
+          ]
+        },
+        {"sub-title" :  "Valkuilen Geomorfologie en Geologie",
+          "paragraphs" : [
+            {
+              "text" : "Bij LiDAR valt niet echt te spreken over de effecten van verschillende geologische lagen zoals zand, silt en Lutum. Wat wel echt belangrijk is, is of het over een geologisch actief of inactief laag gaat (van der Meulen et al., 2020). Denk aan het deltagebied Nederland, in het verleden is dit een zeer actief landschap geweest. Constant aan het veranderen dankzij de vele rivieren die hier stromen. Hierdoor zijn veel archeologische terreinen verdwenen onder een diepe laag van nieuw sediment. De kans is daarom ook een stuk kleiner dat je deze terreinen nog zou kunnen herkennen met LiDAR, het neemt namelijk alleen exacte hoogte data’s op.  \n"
+            },
+            {
+              "text" : "Natuurlijk werkt dit ook tegenovergesteld, denk hierbij aan raatakkers uit de ijzertijd (Meylemans et al., 2015). Deze velden zijn bestaan uit relatief kleine akkers met wallen eromheen. Vaak aangelegd op hogere zandruggen. Deze zandruggen zijn sinds de ijzertijd geologisch inactieve lagen, hierdoor zijn ze nog erg duidelijk zichtbaar op LiDAR data. Dit is dan ook het belangrijke met het werken met LiDAR, er moet goed worden nagedacht over de ouderdom van de bodem. Hierdoor weet je wat voor een data zou kunnen worden opgehaald met een LiDAR onderzoek. "
+            }
+          ]
+        },
+        {"sub-title" :  "Valkuilen Grondwatertrap",
+          "paragraphs" : [
+            {
+              "text" : "Er is weinig bekend over de effecten van de grondwatertrap op LiDAR. Er valt te zeggen dat een hoge grondwatertrap die invloed heeft op de loop van het maaiveld natuurlijk effect gaat hebben op de LiDAR data. Maar hier spreken we over een veld dat eigenlijk al onder water staat. Het valt aan te raden om in periodes te vliegen wanneer het weinig geregend heeft. Hoe inactiever de bodem des te accurater word je data."
+            }
+          ]
+        },
+        {"sub-title" :  "Valkuilen Diepteligging",
+          "paragraphs" : [
+            {
+              "text" : "LiDAR is niet een middel waarmee je door de grond kan kijken of archeologische fenomenen kan herkennen die onder de grond liggen. Het herkent exacte hoogte profielen met enorme hoge accuraatheid. Dus voor diepe ondergrondse sporen te herkennen zijn er andere tools nodig zoals Ground Penetrating Radar (GPR). LiDAR is zeker bruikbaar voor ondergrondse sporen te herkennen zolang deze sporen de bovengrond weten te beïnvloeden. Dit kan door bijvoorbeeld inklinking van de bodem waar een archeologisch fenomeen licht. Het maaiveld verzakt dan omdat de grond eronder steeds verder verzakt. Dit ziet LiDAR natuurlijk erg goed omdat het accurate hoogte profielen meet. Maar je gaat niet zoiets krijgen als met infrarood, waar de diepte van wortels compleet verborgen archeologische fenomenen kan vinden, simpelweg omdat planten het beter of slechter doen op locaties. LiDAR heeft gewoon verschillen nodig in het hoogte profiel van het maaiveld."
+            }
+          ]
+        },
+        {"sub-title" :  "Valkuilen bij Verstoringen",
+          "paragraphs" : [
+            {
+              "text" : "LiDAR heeft kan niet door verstoringen heen kijken. Als een moderne laag is aangebracht over een archeologisch fenomeen kan LiDAR dit fenomeen niet meer zien. Hier zou nog verder naar gekeken kunnen worden in onderzoeken want heb niks weten te vinden in de doorgelezen documenten. "
+            }
+          ]
+        },
+        {"sub-title" :  "Valkuilen Klimaat",
+          "paragraphs" : [
+            {
+              "text" : "Er is weinig bekend over de effecten van klimaat op LiDAR. Het is belangrijk om wel te denken dat het klimaat invloed heeft op de flora en fauna van een regio. Daarom is het belangrijk om aan de vegetatie te denken per klimaatzone.  "
+            }
+          ]
+        },
+        {"sub-title" :  "Valkuilen Jaargetijden",
+          "paragraphs" : [
+            {
+              "text" : "Met LiDAR kun je het hele jaar door goed vliegen, alleen sneeuw en een te hoge waterstand kunnen ervoor zorgen dat geen data kan worden opgehaald. Wel valt het aan te raden om te vliegen in het jaargetijde dat er minder vegetatie aanwezig is. Hoe minder vegetatie namelijk des te minder lasers worden geblokkeerd door planten. Hierdoor wordt de data die je krijgt accurater. Dus het valt aan te raden te vliegen in winter- en herfstmaanden. Al moet dan ook worden nagedacht over bladeren die op het maaiveld dan liggen. Dit kan een dikke laag vormen die weer de laser blokkeert. Maar uiteindelijk is de situatie simpel vliegen in tijden dat er minder vegetatie is valt aan te raden.   "
+            }
+          ]
+        },
+        {"sub-title" :  "Benodigde Software voor Uitwerking",
+          "paragraphs" : [
+            {
+              "text" : "Qgis is een gratis gis programma heel erg handig van het maken van kaarten. Het heeft veel opties voor het visualiseren van data waaronder het visualiseren van LiDAR data. Hiervoor moet de LAStools plug-in geïnstalleerd worden in de volgende link staat hoe(https://rapidlasso.de/lastools-as-qgis-plugin/). Bedenk wel hierbij dat Qgis een relatief zwaar programma kan zijn dus een computer die wat krachtiger is valt aan te raden.   \nHierna valt aan te raden om hoofdstuk 14.8 van het training manual van Qgis te gebruiken voor het uitwerken van je gegevens. Dit hoofdstuk gaat over het maken van een Digital Elevation Model (DEM). De link naar dit document staat hier (https://docs.qgis.org/3.28/nl/docs/training_manual/forestry/basic_lidar.html). Het legt in detail uit hoe je de LAZ-data omzet naar een kaart die bruikbaar is voor een onderzoek. Wel moet hier duidelijk bij worden gezegd dat er nog veel meer manieren en methodes zijn voor het uitwerken van LAZ-data. Dit is alleen een introductie tot een LiDAR uitwerkingswereld die erg complex kan zijn. Maar deze uitwerkingsmethode geeft je een simpele eerste introductie in het uitwerken van de data. "
+            }
+          ]
+        },
+        {"sub-title" :  "Visualisatie met DSM Digital Terrain Model ",
+          "paragraphs" : [
+            {
+              "text" : "Een DSM valt het best te beschrijven als de rauwe data van een LiDAR survey. Het laat namelijk alle ingevlogen LiDAR punten zien. Dus van bladeren tot hoog gras en gebouwen. Voor archeologie wordt een DSM als niet enorm handig gezien, de data die je namelijk wil krijgen (de maaiveld hoogte) is vaak niet zichtbaar op een DSM kaart. Dit komt omdat deze punten worden geblokkeerd door de vegetatie(Štular et al., 2021)."
+            }
+          ]
+        },
+        {"sub-title" :  "Visualisatie met DTM Digital Surface Model ",
+          "paragraphs" : [
+            {
+              "text" : "Bij een DTM worden alle laser punten geclassificeerd. Door deze classificatie kan een accurate maaiveld hoogte worden vastgesteld. Dit kan omdat nu alle lazerpunten een klasse hebben gekregen zoals vegetatie en gebouw. Door nu de punten uit te zetten zoals vegetatie krijg je een grondprofiel die niet wordt geblokkeerd door vegetatie. LiDAR kan natuurlijk niet door solide objecten heen kijken dus op plaatsen waar gebouwen staan komt vaak niks te staan. Een DTM is meestal het best bruikbare middel voor archeologische onderzoeken het maakt namelijk archeologische fenomenen onder de grond zichtbaar zelfs als er vegetatie over zit(Štular et al., 2021)."
+            }
+          ]
+        },
+        {"sub-title" :  "Visualisatie met DFM Digital Feature Model",
+          "paragraphs" : [
+            {
+              "text" : "Een DFM is een specifieke manier van LiDAR data uitwerken en valt te verglijken met een DTM,  alleen nu gemaakt voor archeologen. Wat archeologen namelijk willen zien is het maaiveld, maar ook structuren die er boven uit zouden steken. Hiervoor is dan ook een DFM bedoeld. Het komt erop neer dat bij het uitwerken van de LiDAR data structuren en het maaiveld overlaat zodat zoveel mogelijk archeologische data zichtbaar wordt op de kaart. Een DFM is de beste manier van uitwerken voor archeologen, om meer te weten te komen over hoe een DFM wordt gemaakt, valt de volgende bron goed te benaderen (Štular et al., 2021)."
+            }
+          ]
+        }
+      ]
+    },
+    { "title" : "Multispectraal",
+      "sub-texts" : [
+        {"sub-title" :  "Infrarood - Sensor aanpassen",
+          "paragraphs" : [
+            {
+              "text" : "Een multispectrale sensor verzamelt golflengtes van licht (rood, groen en blauw). Wat deze sensoren uniek maakt tegenover gewone camera’s, is dat deze sensoren zowel het zichtbare spectrum als het niet zichtbare spectrum van licht kunnen verzamelen. Deze golflengtes kunnen tussen objecten binnen de verzamelde data vergeleken worden met elkaar om zo verschillen waar te nemen. Multispectrale sensoren hebben 3 tot 5 banden. Ook bestaan de sensoren uit twee categorieën: Aangepast en multiband."
+            },
+            {
+              "text" : "Aangepaste sensoren zijn sensoren waarbij bepaalde filters zijn geplaats. Deze filters zorgen ervoor dat maar een deel van de golflengtes verzamelt worden door de sensor. Een vrij bekende filter zijn degene die één band opofferen om zo een nabij-infrarood (NIR) beeld te krijgen. Een voorbeeld hiervan is een R-G-NIR filter. Dit filter offert de blauwe banden op om zo het NIR beeld te krijgen. Als er maar 1 soort band van licht nodig is voor het doel, dan is dit een geschikte methode om alleen de data te krijgen die nodig is."
+            },
+            {
+              "text" : "Multiband sensoren zijn zodanig geproduceerd dat er meerdere sensoren aanwezig zijn op het apparaat die tegelijkertijd alle banden kunnen waarnemen. Het voordeel van deze sensor is dat er maar één dronevlucht nodig is om alle banden te kunnen waarnemen. Ook is er de vrijheid mogelijk bij deze sensor om zelf nog de spectrale banden te combineren om zo het resultaat te krijgen wat gewild is."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Wat heb je nodig?",
+          "paragraphs" : [
+            {
+              "text" : "De eerste paar dingen waar op gelet moet worden zijn de benodigdheden om met een drone wetenschappelijk onderzoek te kunnen uitvoeren (Drone met gps, gps en referentiepunten (targets)). Daarbuiten heb je voor specifiek multispectrale onderzoek natuurlijk een multispectrale sensor nodig (een aantal voorbeelden zijn in tabel 1 te zien). De meeste vegetation indices (zie later hoofdstuk) hebben de nabij-infrarood (NIR), rood (R) en de groene (G) banden nodig. Een enkele (bijvoorbeeld de SARVI) heeft ook de blauwe band nodig (Αγαπίου et al., 2012). ",
+              "image" : "TABELMULTISPECTRALESENSOREN.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Hoe werkt de sensor?",
+          "paragraphs" : [
+            {
+              "text" : "Een multispectrale sensor verzamelt golflengtes van licht (rood, groen en blauw). Wat deze sensoren uniek maakt tegenover gewone camera’s, is dat deze sensoren zowel het zichtbare spectrum als het niet zichtbare spectrum van licht kunnen verzamelen. Deze golflengtes kunnen tussen objecten binnen de verzamelde data vergeleken worden met elkaar om zo verschillen waar te nemen.  Multispectrale sensoren hebben 3 tot 5 banden. Ook bestaan de sensoren uit twee categorieën: Aangepast en multiband (PrecisionHawk, Z.D.). "
+            },
+            {
+              "text" : "Aangepaste sensoren zijn sensoren waarbij bepaalde filters zijn geplaats. Deze filters zorgen ervoor dat maar een deel van de golflengtes verzamelt worden door de sensor. Een vrij bekende filter zijn degene die één band opofferen om zo een nabij-infrarood (NIR) beeld te krijgen. Een voorbeeld hiervan is een R-G-NIR filter. Dit filter offert de blauwe banden op om zo het NIR beeld te krijgen. Als er maar 1 soort band van licht nodig is voor het doel, dan is dit een geschikte methode om alleen de data te krijgen die nodig is (PrecisionHawk, Z.D.)."
+            },
+            {
+              "text" : "Multiband sensoren zijn zodanig geproduceerd dat er meerdere sensoren aanwezig zijn op het apparaat die tegelijkertijd alle banden kunnen waarnemen. Het voordeel van deze sensor is dat er maar één dronevlucht nodig is om alle banden te kunnen waarnemen. Ook is er de vrijheid mogelijk bij deze sensor om na de vlucht nog de spectrale banden te combineren om zo het resultaat te krijgen wat gewild is (PrecisionHawk, Z.D.)."
+            },
+            {
+              "text" : "Niet zichtbaar licht wordt ook uitgezonden bij planten wanneer ze stress ervaren. Deze stress kan onder andere ontstaan door schommelingen in het toegang krijgen tot voedingsstoffen door archeologie. Geroerde grond, zoals grachten, zorgen in sommige gevallen voor dit verschil. Dit soort grond houdt water langer vast, en zorgt voor betere voeding bij planten dan in de directe omgeving. Het tegenovergestelde gebeurt als er bijvoorbeeld een stenen muur in de grond zit. Dit verhindert toegang tot voedingstoffen en zorgt voor hogere stress. Dit wordt geuit namens een verschil in de hoeveelheid groen pigment dat de plant aanmaakt en de hoeveelheid infrarood licht wat de plant uitstraalt. Deze verschillen kunnen aan de hand van multispectrale beelden zichtbaar gemaakt worden (Agapiou et al. 2012, 3892-3898).  \n \n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Wat voor data krijg je?",
+          "paragraphs" : [
+            {
+              "text" : "De soort data die je krijgt kan verschillen aan de hand van de sensor die gebruik is voor het verzamelen van de multispectrale data. Voor de aangepaste sensoren is te zien dat de uitput een JPEG, DNG of JPEG+DNG is. Voor de multiband sensor is te zien dat de uitput kan bestaan uit een RAW TIFF of GEOTIFF. Deze data kan in een GIS programma omgezet worden in een orthomozaïek om de data leesbaar te maken. Hierna kunnen vegetation indices gebruikt worden om de data verder te filteren op plantengezondheid en stress (PrecisionHawk, Z.D.).",
+              "image" : "TABELMULTISPECTRALESENSOREN.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Wat kan je er mee? (wat zie je?)",
+          "paragraphs" : [
+            {
+              "text" : "Met multispectrale sensoren zijn over het algemeen twee fenomenen zichtbaar: archeologie die groei van planten bevordert en archeologie die groei van planten verhindert. Het is vooral het verschil in gezondheid tussen grond waar wel en waar geen archeologie zit die belangrijk zijn voor remote sensing. Archeologie zoals greppels en grachten bevorderen plantengroei door het vasthouden van water en voedingsstoffen. Hiertegenover zorgt archeologie als stenen funderingen, muren en andere vaste objecten er voor dat plantengroei verhindert. De vegetation indices die deze fenomenen op verschillende manieren weergeven zorgen ervoor dat dit verschil in gezondheid zichtbaar gemaakt wordt (Rensink et al., 2022)."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Valkuilen",
+          "paragraphs" : [
+            {
+              "text" : "Voor multispectrale onderzoeken zijn velden met vegetatie nodig. Deze vegetatie stralen delen van het lichtspectrum uit die de multispectrale sensor in beeld brengt. Om deze rede is het belangrijk dat het onderzoekgebied niet vol bebouwd is. Hierbuiten moet het onderzoeksgebied ook vol staan met vegetatie (zie hieronder). Dichte vegetatie zoals bomen is minder geschikt voor het detecteren van archeologie namens multispectrale sensoren (Rensink et al., 2022)."
+            },
+            {
+              "text" : "De vegetatie is een belangrijke factor voor het in kaart brengen van plantenstress. Vegetatie zoals grassen en gewassen (graan, mais, etc.) geven hierin de meest duidelijke beelden. Door het grote oppervlakte wat deze gewassen vaak bedekken komen er geen haperingen in de verhoogde stress wanneer dit fenomeen ontstaat. Ook worden deze soort planten makkelijker beïnvloed door archeologische resten in de bodem (Rensink et al., 2022)."
+            },
+            {
+              "text" : "Na het uitvoeren van een literatuur onderzoek is er geen informatie gevonden over hoe/of geomorfologie impact heeft over het gebruik van multispectrale fotografie voor remote-sensing."
+            },
+            {
+              "text" : "De bodem heeft voornamelijk impact op twee manieren. Ten eerste hebben verschillende bodemsoorten verschillende maten van invloed op planten. De textuur, water vasthoudendheid en verschil in voedingsstoffen bij archeologische grond tegenover de natuurlijke grond is hiervoor belangrijk. Zandgronden tonen namelijk een groot contrast in deze kenmerken tussen de natuurlijke bodem en de archeologie. Op löss gronden is dit contrast minder sterk aanwezig dan op zandgronden. Op klei en veengronden (zware en voedselrijke bodems) is ook een enorm laag contrast tussen de natuurlijke bodem en de archeologie. Dit betekend dat zand- en lössgronden het meest geschikt zijn voor het gebruik van multispectrale analyses (Hejcman & Smrž, 2010)."
+            },
+            {
+              "text" : "De bodemvochtigheid is een grote factor die meespeelt in het zichtbaar maken van verschillen in plantengroei. Dit bepaalt vrij direct de gezondheid en groei van de planten. Als er bijvoorbeeld een gedempte gracht onder het maaiveld aanwezig is. Dan zal dit in droge periodes langer water vasthouden. Dit zorgt voor een verschil in gezondheid tussen de planten die boven deze archeologie groeien en de directe omgeving, en daarbij ook de straling die de planten uitzenden. Dit fenomeen zal voornamelijk in gang gaan na periodes van langere droogte. Dit zijn voornamelijk de zomermaanden bij grasland of akkers met gewassen. Het voorjaar is hiervoor echter een minder geschikte tijd om deze verschillen in plantengezondheid waar te nemen. Om een volledig en goed beeld te krijgen van de plantenstress wordt het aangeraden om in meerdere tijden van het jaar het onderzoek uit te voeren. Hierdoor zijn de verschillen die ook in de verschillende jaargetijden goed te gebruiken om de plantenstress veroorzaakt door archeologie te monitoren (Rensink et al., 2022)."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Soort archeologische site",
+          "paragraphs" : [
+            {
+              "text" : "Omvang\nDe omvang van de archeologische site heeft ook invloed op de zichtbaarheid hiervan. Kleinere sites zijn over het algemeen moeilijker te zien. En grotere sites zijn makkelijker te zien. De resolutie van de sensor die gebruikt wordt is hier ook van belang. Hoe beter de resolutie, hoe kleiner de archeologische restanten die gevonden kunnen worden. Lange lijnelementen zijn ook voordelig voor het detecteren van archeologische restanten namens multispectrale analyses. Voorbeelden hiervan zijn raatakkers, gebieden met grindwinningskuilen en weg- en slootpatronen (Rensink et al., 2022).\n"
+            },
+            {
+              "text" : "Type archeologische restanten\nOok de soort archeologie is belangrijk voor de zichtbaarheid van de vindplaats. Als de vindplaats alleen maar kleine en ondiepe sporen bevat, dan zullen deze minder snel zichtbaar zijn op de multispectrale beelden. Het tegenovergestelde hiervan zijn vindplaatsen die veel lange, brede en/of diepe sporen bevatten. Specifieke voorbeelden hiervan zijn greppels, grachten, sloten, muurresten, natuurstenen funderingen, bakstenenfunderingen, uitbraaksleuven, puinwaaiers, steenzetingen en keien vloeren. Deze sporen zijn daarbuiten ook beter zichtbaar omdat ze een ander materiaal zijn tegenover de natuurlijke bodem. Door deze andere aard zullen de planten die er boven groeien ook een andere toegang tot voedingsstoffen ontvangen (meer of minder) dan de overige natuurlijke bodem. Dit zorgt voor de plantenstress die op multispectrale beelden zichtbaar is. Uit case studies valt op dat bij multispectrale onderzoeken grote structuurcomplexen, uit bijvoorbeeld de late Middeleeuwen en de Nieuwe tijd, meer opvallen dan kleine opeenstaande sporen. Denk hierbij aan: kasteelgrachten, loopgraven en verdedigingslinies (Rensink et al., 2022).\n"
+            },
+            {
+              "text" : "Vorm\nDe vorm van de multispectrale fenomenen is ook erg belangrijk voor het herkennen van archeologie namens multispectrale analyses. Niet natuurlijke vormen die patronen vormen zullen meer opvallen dan op zich staande sporen. De meest opvallende vormen zijn scherpe hoeken (bv. tankgrachten en grachtvullingen), rechte lijnen (bv. verkaveling en oude routes), cirkels (bv. grafheuvels, galgenberg en bomkraters) en grote patronen (bv. grafvelden en raatakkers. Hier moet dus ook op gelet worden tijdens het analyseren van multispectrale beelden (Rensink et al., 2022).\n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Diepteligging",
+          "paragraphs" : [
+            {
+              "text" : "De diepteligging van de archeologische restanten hebben ook invloed op de zichtbaarheid hiervan namens multispectrale analyses. De hoofdregel is dat hoe dieper het ligt hoe minder goed zichtbaar het is. De meeste zichtbare archeologische restanten zijn degene die (dicht) op het oppervlak liggen en niet bedekt zijn door een laag natuurlijk sediment of antropogene afdekkingslagen (Rensink et al., 2022)."
+            },
+            {
+              "text" : "Daarbuiten is het zo dat de verschillen in stress die planten ervaren door de aanwezigheid van archeologie ook afhankelijk zijn van hoe diep de wortels van de planten groeien. Dit is afhankelijk van een aantal dingen, waaronder het soort plant/gewas, de diepte waar water zit en de hardheid van de grond. Wanneer er geen water te vinden is bij planten, dan zullen ze dieper hun wortels laten groeien. Dit betekend ook dat als het water van gedempte grachten ondieper ligt dan het overige water van de bodem, dan zullen de planten boven deze grachten eerder bij het water komen dan in de directe omgeving. Als er iets ondoordringbaars in de weg zit (zoals archeologische restanten), dan kunnen planten eerst horizontaal verder groeien, dit betekend ook dat in dit geval het langer duurt voordat planten bij de voedingstofrijke bodem komen en in de groeiperiode meer stress zullen ervaren. Het grootste probleem wat kan voorkomen is wanneer de maximale worteldiepte van een plant of gewas minder diep in de bodem komt dan de archeologie die in de bodem zit (Pring, 2016). "
+            }
+          ]
+        },
+        {
+          "sub-title" : "Atmosfeer",
+          "paragraphs" : [
+            {
+              "text" : "Wanneer er multispectrale data verzamelt wordt vanuit de lucht (hoe verder hoe meer) dan wordt hiervan een niet direct beeld weergegeven van het uitgezonde licht. Hier zit lucht tussen wat het licht kan vervormen. Daarom kan het gebeuren dat archeologie die zorgt voor multispectrale verschillen in het uitgezonden licht minder goed opgepakt wordt door de sensor. Als er met vegetation indexes gewerkt wordt(zie Bewerken van data) dan zal deze verstoorde data ervoor zorgen dat het gemaakte beeld geen goede representatie is van de werkelijkheid. Dit probleem kan opgelost worden namens een atmosferische correctie van de data. Eén voorbeeld hiervan is de Darkest Pixel methode. Echter lijkt de SARVI vegetation index vrijwel geen last te hebben van atmosferische verstoring. Deze is beide accuraat voor en na een eventuele atmosferische correctie en heeft de voorkeur boven een aparte atmosferische correctie (Hadjimitsis et al., 2010)."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Klimaat",
+          "paragraphs" : [
+            {
+              "text" : "Iets wat het verschil in gezondheid door archeologie ook beter zichtbaar maakt zijn periodes van droogte. Voornamelijk als er in een gebied net een periode van droogte ontstaan, dan zal de vegetatie waar archeologie onder zit eerder reageren op deze verandering van klimaat. Archeologie die plantengroei bevordert zal de planten erboven langer gezond laten, terwijl archeologie die plantengroei belemmert eerder tekens laat zien van droogte. Deze tekens van verschil in gezondheid kunnen door een multispectrale sensor gefotografeerd worden, en met vegetation indices zichtbaar gemaakt worden (Hejcman & Smrž, 2010)."}
+          ]
+        },
+        {
+          "sub-title" : "Jaargetijde",
+          "paragraphs" : [
+            {
+              "text": "Voor multispectrale onderzoeken zijn de jaargetijden voornamelijk belangrijk als het gaat om de groeiseizoenen van de gewassen waar het onderzoek over gedaan wordt. De meeste vegetation indices werken het beste of zelfs alleen wanneer de planten in (het begin van) hun groeiseizoen zitten. Dit komt voornamelijk omdat de processen die de indices visualiseren in deze periode plaatsvinden (Αγαπίου et al., 2012).",
+              "image": "TABELGROEIENDEGEWASSEN.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Methode van uitwerking ",
+          "paragraphs" : [
+            {
+              "text": "Programma voor uitwerking\nVoor analyseren van de data moet eerst een orthomozaïek gemaakt worden. Een orthomozaïek is een collectie van luchtfoto’s die samen worden gevoegd als één grote foto. De extra bonus die hier bijkomt is dat geometrische data en kleurverschillen over elkaar worden getrokken waardoor een naadloze overgang tussen de verschillende foto’s gemaakt word. Dit zorgt ervoor dat er nauwkeurige foto’s gemaakt kunnen worden van onderzoeksgebieden die erg groot zijn (Generate an Orthomosaic using the Orthomosaic wizard—ArcGIS Pro | Documentation, z.d.).\n"
+            },
+            {
+              "text": "Bewerken van data\nOm de orthomozaïek van de multispectrale data beter te kunnen analyseren worden vegetation indices gebruikt. Vegetation indices zijn formules die bedoelt zijn om de spectrale eigenschappen van planten te filteren. Hiermee kan de grote hoeveelheid data die verzameld wordt namens de multispectrale camera gefilterd worden op het deel van het lichtspectrum waar onderzoek naar wordt gedaan. De meest gebruikte indices voor archeologie is de Normalized Difference Vegetation Index (NDVI). Deze vegetation index filtert bijvoorbeeld de infrarood data die uitgestraald wordt door planten wanneer ze stress ervaren. Om deze vegetation indices vaak te kunnen gebruiken is het makkelijk om deze één keer per computer als vooraf bepaalde expressies in te stellen bij de raster calculator in QGIS.\n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Stappenplan QGIS vegetation indices",
+          "paragraphs" : [
+            {
+              "text": "1.\tOpen QGIS en maak een nieuw project aan zoals gewoonlijk en voeg alle dronedata toe;\n2.\tOpen de raster calculator via de zoekfunctie (Ctr.+ k en zoek op “raster calculator”);\n3.\tDan komt het volgende scherm in beeld;\n",
+              "image": "RASTERCALCMENU.jpg"
+            },
+            {
+              "text":"4.\tIn het vak “Expressie”, voer de formule in van de vegetation index zoals aangegeven in de volgende alinea’s. Bijvoorbeeld voor NDVI: ([NIR] - [R]) / ([NIR] + [R]);\n5.\tKlik hierna op “opslaan” bij vooraf gedefinieerde expressies;\n6.\tCheck op het nieuwe pop-up scherm of de formule nog klopt, en bij “naam” de afkorting van de vegetation Index. Zie afbeelding hieronder voor voorbeeld van NDVI;\n",
+              "image":"NIEUWEEXPRESSIEOPSLAAN.jpg"
+            },
+            {
+              "text":"7.\tKlik op ok. Nu is er een nieuwe vooraf gedefinieerde expressie toegevoegd aan QGIS, deze werkt in alle aangemaakte projecten. Als dit dus één keer aangemaakt wordt dan kan er altijd mee gewerkt worden;\n8.\tSoms moet de raster calculator na het opslaan eerst afgesloten worden en opnieuw opgestart worden om de opgeslagen expressie weer te geven;\n9.\tWanneer er nu bij “vooraf gedefinieerde expressies” op de drop-down menu word geklikt, dan zal de toegevoegde expressie in de lijst staan;\n10.\tKlik op de gewenste expressie en klik naast de drop down op “toevoegen”;\n11.\tVoor NDVI komt dan het volgende scherm in beeld;\n",
+              "image":"DATATOEVOEGEN.jpg"
+            },
+            {
+              "text": "12.\tIn de vakken “R” en “NIR” moeten respectievelijk de rode (R) en nabij-infrarode (NIR) banden toegevoegd worden;\n13.\tWanneer dit ingevoerd is zal de formule ook toegevoegd zijn in het vak “Expressie”;\n14.\tScrol naar beneden om bij “output” en geschikte locatie aan te wijzen waar de nieuwe kaart-laag opgeslagen word. Geef het gelijk een passende naam zoals: “NDVI_naamonderzoeksgebied”;\n15.\tKlik hierna op “uitvoeren” en wacht het proces af;\n16.\tNu wordt de nieuwe kaart-laag toegevoegd aan het project en kan het gebruikt worden om te kijken of er archeologische sporen aanwezig zijn in het onderzoeksgebied;\n \n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Vegetation indices",
+          "paragraphs" : [
+            {
+              "text": "Hieronder staan een aantal vegetation indices beschreven, waar ze goed voor zijn en hoe de formule opgebouwd is. Over het algemeen geld dat de vegetation indices het beste werken wanneer de gewassen waarover gevlogen word beginnen met groeien (Αγαπίου et al., 2012) (zie tabel hieronder). ",
+              "image": "TABELGROEIENDEGEWASSEN.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Normalized Difference Vegetation Index (NDVI)",
+          "paragraphs" : [
+            {
+              "text": "Zoals eerder besproken berekend NDVI de hoeveelheid infrarood straling die planten uitstralen die ontstaan door stress. Dit is de meest gebruikte en bekende vegetation index. In QGIS is zelfs de NDVI al een bestaande vooraf gedefinieerde expressie die standaard toegevoegd is aan het programma. Voor het berekenen van de NDVI zijn de volgende banden nodig: nabij infrarood (NIR) en rood (R) (Αγαπίου et al., 2012).\nZo word de formule gepresenteerd:\nNDVI = (NIR – R) / (NIR + R)\nOm de vegetation index toe te voegen als vooraf gedefinieerde expressie, dan moet het als volgt opgeschreven worden (hij staat echter al geïnstalleerd in QGIS):\n([NIR] - [R]) / ([NIR] + [R])\n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Soil-Adjusted Vegetation Index (SARVI)",
+          "paragraphs" : [
+            {
+              "text": "De SARVI is een vegetation index die net als de NDVI plantengroei en stress kan waarnemen. Deze vegetation index heeft echter een extra functie. Het kan nog beter de verstoringen van de atmosfeer en bodem weg filteren uit de multispectrale data. Om dit te doen wordt de NDVI formule uitgebreid (met onder andere een blauwe band). De SARVI is nog steeds het meest effectief in het begin van de groeiperiode van gewassen, echter is volgens het onderzoek van  Αγαπίου et al. (2012) deze vegetation index ook erg bruikbaar tijdens het volledige groeiseizoen van gewassen. De benodigde banden zijn: nabij infrarood (NIR), rood (R) en blauw (B) (Αγαπίου et al., 2012). \nZo word de formule gepresenteerd:\nSARVI = (1+0.5) (NIR - prb) / ( NIR + prb +0.5)\nWaarvan prb = R – γ (B – R)\nY in prb staat voor het soort aerosol wat tussen de sensor en het oppervlakte aanwezig is. Volgens Rondeaux et al. (1996) is het gerechtvaardigd om y=1 aan te houden wanneer een aerosol model niet aanwezig is. Voor deze soort onderzoeken zal y=1 goed genoeg zijn. Omdat Y=1 is, kan dit uit de formule wegvallen. Dit betekend dat de formule (met prb erin verwerkt) hier op uit komt:\nSARVI = (1+0.5) (NIR – (R-(B-R)) / (NIR + (NIR + (R-(B-R) + 0.5)\nOm de vegetation index toe te voegen als vooraf gedefinieerde expressie, dan moet het als volgt opgeschreven worden:\n(1+0.5) ([NIR] – ([R]-([B]-[R])) / ([NIR] + ([NIR] + ([R]-([B]-[R]) + 0.5)\n \n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Simple Ratio (SR)",
+          "paragraphs" : [
+            {
+              "text": "De Simple Ratio is een manier om vegetatie via Infrarood te visualiseren. Hij meet niet zozeer de stress van planten. Maar er zal een groter kleurverschil zitten tussen niet-vegetatie en vegetatie. Ook zal een kleurverschil ontstaan als planten verschillende maten van gezondheid ervaren (SR—ArCGIS Pro | Documentation, z.d.). De benodigde banden hiervoor zijn: nabij infrarood (NIR) en rood (R) (Αγαπίου et al., 2012). \nZo word de formule gepresenteerd:\nSR = NIR / R\nOm de vegetation index toe te voegen als vooraf gedefinieerde expressie, dan moet het als volgt opgeschreven worden:\n[NIR] / [R]\n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Renormalized Difference Vegetation Index (RDVI)",
+          "paragraphs" : [
+            {
+              "text": "De RDVI maakt gebruik van het verschil tussen nabij infrarood (NIR) en rode (R) golfbanden samen met de NDVI om zo de gezondheid van planten te meten. Deze vegetation index is niet gevoelig van verstoring door bodem reflecties en invloed van de invalshoek van zonlicht. De benodigde banden hiervoor zijn: nabij infrarood (NIR) en rood (R) (Broadband greenness, z.d.).\nZo word de formule gepresenteerd:\nRDVI = (NIR – R) / √(NIR – R)\nOm de vegetation index toe te voegen als vooraf gedefinieerde expressie, dan moet het als volgt opgeschreven worden:\n([NIR] – [R]) / √([NIR] – [R])\n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Green Normalized Difference Vegetation Index (GNDVI)",
+          "paragraphs" : [
+            {
+              "text": "Deze vegetation index lijkt erg op de NDVI. Het grootste verschil is dat de GNDVI voornamelijk het groene spectrum meet. Dit betekend dat de GNDVI gevoeliger is voor Chlorofyl gehalte in planten om de gezondheid van planten te meten. De volgende banden zijn hiervoor nodig: nabij infrarood (NIR) en groen (G).\nZo word de formule gepresenteerd:\nGNDVI = (NIR – G) / (NIR + G)\nOm de vegetation index toe te voegen als vooraf gedefinieerde expressie, dan moet het als volgt opgeschreven worden:\n([NIR] – [G]) / ([NIR] + [G])\n \n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Literatuur",
+          "paragraphs" : [
+            {
+              "text": "PrecisionHawk (z.d.). Multispectral drone-based sensing. \thttps://www.precisionhawk.com/sensors/advanced-sensors-and-data-\tcollection/multispectral "
+            },
+            {
+              "text": "Αγαπίου, Ά., Hadjimitsis, D. G., & Alexakis, D. D. (2012). Evaluation of broadband and narrowband \tvegetation indices for the identification of archaeological crop marks. Remote Sensing, 4(12), \t3892–3919. https://doi.org/10.3390/rs4123892 "
+            },
+            {
+              "text": "Hadjimitsis, D., Papadavid, G., Αγαπίου, Ά., Themistocleous, K., Hadjimitsis, M. G., Retalis, A., \tMichaelides, S., Chrysoulakis, N., Toulios, L., & Clayton, C. R. I. (2010). Atmospheric correction \tfor satellite remotely sensed data intended for agricultural applications: Impact on vegetation \tindices. Natural Hazards and Earth System Sciences, 10(1), 89–95. \thttps://doi.org/10.5194/nhess-10-89-2010 "
+            },
+            {
+              "text": "Rensink, E., Theunissen, E. M., & Feiken, H. (2022). Vanuit de lucht zie je meer: remote sensing in de \tNederlandse archeologie."
+            },
+            {
+              "text": "Pring, L. J. (2016). Soil-based analysis methods to aid the detection of cropmarks over buried \tfeatures."
+            },
+            {
+              "text": "Generate an Orthomosaic using the Orthomosaic wizard—ArcGIS Pro | Documentation. (z.d.). \thttps://pro.arcgis.com/en/pro-app/3.1/help/data/imagery/generate-an-orthomosaics-using-\tthe-orthomosaic-\twizard.htm#:~:text=An%20orthomosaic%20is%20a%20photogrammetrically,produce%20a%2\t0seamless%20mosaic%20dataset."
+            },
+            {
+              "text": "SR—ArCGIS Pro | Documentation. (z.d.). https://pro.arcgis.com/en/pro-app/latest/arcpy/image-\tanalyst/sr.htm#:~:text=The%20Simple%20Ratio%20(SR)%20method,effects%20of%20atmosp\there%20and%20topography. "
+            },
+            {
+              "text": "Rondeaux, G., Steven, M. D., & Baret, F. (1996). Optimization of soil-adjusted vegetation indices. \tRemote Sensing of Environment, 55(2), 95–107. https://doi.org/10.1016/0034-\t4257(95)00186-7 "
+            },
+            {
+              "text": "Broadband greenness. (z.d.). \thttps://www.nv5geospatialsoftware.com/docs/BroadbandGreenness.html#:~:text=)%3A%20\t95%2D107.-\t,Renormalized%20Difference%20Vegetation%20Index%20(RDVI),soil%20and%20sun%20viewi\tng%20geometry. "
+            },
+            {
+              "text": "Hejcman, M., & Smrž, Z. (2010). Cropmarks in stands of cereals, legumes and winter rape indicate \tsub-soil archaeological features in the agricultural landscape of central Europe. \tAgriculture, \tEcosystems & Environment, 138(3–4), 348–354. \thttps://doi.org/10.1016/j.agee.2010.06.004 "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title" : "Luchtfotos",
+      "sub-texts" : [
+        {
+          "sub-title" : "Inleiding",
+          "paragraphs" : [
+            {
+              "text" : "Luchtfotografie is de basis van remote sensing. In elk bureauonderzoek zitten wel luchtfoto’s verwerkt. Deze foto’s vallen allemaal binnen het rood, groen en blauw spectrum. Dit houdt in dat ze met het blote oog gezien kunnen worden. Deze foto’s worden gebruikt om de huidige situatie in kaart te brengen, cropmarks op te sporen en om een overzicht te geven. Luchtfoto’s zijn ook een vorm van remote sensing. Immers kan er zonder bodemroering achterhaald worden of er archeologische waarden aanwezig zijn. "
+            }
+          ]
+        },
+        {
+          "sub-title" : "Wat zijn luchtfoto's?",
+          "paragraphs" : [
+            {
+              "text" : "Voor het nemen van luchtfoto’s kunnen twee verschillende type camera’s gebruikt worden. Dit zijn de analoge en digitale camera’s. Beiden kunnen slechts het zichtbare spectrum vastleggen. Bij een analoge camera wordt op lichtgevoelige film beeldinformatie opgeslagen. Deze dient later ontwikkeld te worden. Deze manier van luchtfoto’s nemen kwam op na de tweede wereldoorlog en waren in het begin alleen zwart en wit. Later zouden deze foto’s ook in kleur beschikbaar zijn. Deze analoge luchtfoto’s werd voornamelijk gebruikt voor het opsporen van nieuwe vindplaatsen. Rond 2000 kwam de digitale camera op. Deze camera legt beeld vast via een lichtgevoelige chip en slaat het op in het geheugen van de camera zelf. Hierdoor werd de analoge camera vervangen door de digitale. Deze camera kon gelijk al foto’s in kleur nemen (Rensink, Theunissen, & Feiken, 2022).  "
+            },
+            {
+              "text" : "Met het nemen van luchtfoto’s zijn er twee verschillende camera standen. Dit zijn oblique en verticaal. Bij verticaal is de lens recht naar beneden gericht, terwijl bij oblique de lens in een hoek staat. Het voordeel van oblique is dat slagschaduw beter zichtbaar is. Zeker als de foto’s zijn genomen vlak na zonsopkomst of net voor zonsondergang. Hierbij is het wel van belang om niet tegen de zon in de foto’s te nemen. Het voordeel van de verticale camera stand is de mogelijkheid om daar orthofoto’s en dus ook orthofotomozaïeken van te kunnen maken (Rensink, Theunissen, & Feiken, 2022)."
+            },
+            {
+              "text" : "Orthofoto’s zijn foto’s die op schaal zijn gecorrigeerd. Hierdoor hebben ze één schaal waardoor ze geschikt worden om afstanden op te meten. Als meerdere orthofoto’s aan elkaar worden geplakt dan ontstaat er een orthomozaiek. Met behulp van orthofoto’s en orthomozaieken kunnen exacte locaties van vindplaatsen in kaart worden gebracht (Rensink, Theunissen, & Feiken, 2021)."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Luchtfotografie en drones",
+          "paragraphs" : [
+            {
+              "text" : "Luchtfoto’s worden al jaren gebruikt binnen de archeologie. Er zijn veel verschillende manieren geweest om deze data te verzamelen. Zo zijn onder andere vliegtuigen luchtballonnen gebruikt om deze foto’s te maken (Verhoeven, 2013). Tot zo’n zes à zeven jaar terug begonnen is met remote sensing via drones. Dit werd gedaan door de universiteit van Amsterdam. Hoewel veel meer bedrijven, instanties en universiteiten beschikking hebben tot drones, worden ze niet vaak toegepast in het archeologische onderzoek (Rensink, Theunissen, & Feiken, 2022)."
+            },
+            {
+              "text" : "Het voordeel van drones voor de remote sensing techniek luchtfoto’s is dat ze vaak kunnen vliegen en overal kunnen vliegen. Hierdoor kunnen er meerdere metingen worden uitgevoerd binnen een onderzoeksgebied. Doordat ze lager kunnen vliegen dan vliegtuigen en luchtballonnen etc. hebben ze als voordeel dat ze gedetailleerde foto’s kunnen maken van het onderzoeksgebied (Rensink, Theunissen, & Feiken, 2022). Een nadeel van drones met betrekking tot luchtfotografie is het kleine oppervlakte dat ze kunnen behandelen, namelijk tot een paar hectaren. Een batterij gaat tussen de vijf en dertig minuten mee. Dit hangt af van de sensor en de weersomstandigheden (bij een harde wind verbruikt de drone meer batterij). Hierdoor is landschappelijk onderzoek niet praktisch met drones, maar uiterst geschikt binnen een beperkt onderzoeksgebied (Verhoeven, 2013)."
+            },
+            {
+              "text" : "Voor low altitude luchtfotografie zijn slechts een paar materialen nodig. Er is natuurlijk een drone nodig met accessoires en een camera. Deze camera heeft geen speciale eisen, maar hoe beter de camera hoe hoger er gevlogen kan worden. Daarnaast zijn ground control points nodig met een GPS. Ground control points (GPC) zijn (meestal) zwart met witte borden die duidelijk zichtbaar zijn op vlieghoogte. Van deze GCP wordt met behulp van de GPS de exacte coördinaten genoteerd. Deze coördinaten zijn bij de uitwerking nodig om te kunnen georefereren.  "
+            },
+            {
+              "text" : "De zichtbaarheid van archeologische sporen in het landschap bepaalt onder andere hoe hoog er gevlogen kan worden. Grotere sporen zijn makkelijker waar te nemen dan kleinere. Om toch de kleinere sporen te kunnen waarnemen is het van belang om een goede grondresolutie te hebben (Rensink, Theunissen, & Feiken, 2022). De grondresolutie (GSD) kan worden berekend met de volgende formule: GSD= (H * Sw) / (Fr * imW) *100. De H staat hier voor vlieghoogte in meter. Sw staat voor de breedte van de sensor in centimeter. Fr is het brandpuntafstand in millimeter en de imW is de breedte van de foto in pixels. Uit deze formule komt dus de grondresolutie. Deze wordt uitgedrukt in cm/pixel en hoe lager de cm/pixel hoe beter de grondresolutie is. Dus bijvoorbeeld een grondresolutie van 1,50 cm/pixel is beter dan een grondresolutie van 2,50 cm/pixel. Maar met een betere grondresolutie zijn er meer foto’s nodig om dezelfde gebied te fotograferen. De breedte van de sensor, brandpunt van de sensor en de breedte van de foto staat allemaal beschreven in de productbeschrijving van de sensor en veranderen niet zolang dezelfde sensor gebruikt wordt. Hierdoor is de enige invloed op de grondresolutie die de dronepiloot heeft de hoogte (Pix4D, z.d.)."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Onderzoeksmethode Cropmarks",
+          "paragraphs" : [
+            {
+              "text" : "De groei van vegetatie is afhankelijk van de voedingstoffen die het opneemt via het water. Om dit te laten plaatsvinden zijn drie dingen belangrijk. Eén, dat er genoeg voedingsstoffen in de grond zitten. Twee, de aanwezigheid van water die de voedingsstoffen overbrengen in de wortels. Drie, wortels die het water bereiken. Bij aanwezigheid van archeologische resten in de bodem, zal de vegetatie die erboven groeit en er direct naast groeit afwijken van de omgeving. Deze afwijking is niet altijd zichtbaar via luchtfoto’s. Wanneer deze afwijkingen wel zichtbaar zijn, zijn deze waar te nemen als verkleuringen (Pring, 2016), verwelking en als hoogteverschil (Rensink, Theunissen, & Feiken, 2022). Deze afwijkingen worden het duidelijkst wanneer de vegetatie onder stress komt te staan zoals bij droogte. Deze afwijkingen noemen we crop marks (Pring, 2016). Een voorbeeld is te zien in de afbeelding hieronder.  ",
+              "image" : "Cropmarks.jpg"
+            },
+            {
+              "text" : "Als er archeologie van een compacte aard of van steen onder het maaiveld aanwezig is, zoals bij fundaties, muren wegen en dergelijke, dan zal dit de wortelloop van de vegetatie daarboven verhinderen. Daarnaast houdt de bodem minder water vast door de toevoeging van deze archeologische waarden (Pring, 2016). Hierdoor zal veerkrachtigheid van de vegetatie afnemen, waardoor deze gevoeliger wordt voor droogte en dus eerder verkleuren en verwelken in tegenstelling tot de omgevende vegetatie. Dit wordt negatieve crop marks genoemd (Rensink, Theunissen, & Feiken, 2022)."
+            },
+            {
+              "text" : "Andersom is het ook mogelijk. Als een greppel wordt gedempt zullen de planten het beter doen. De wortels kunnen diep de grond in groeien. Hierdoor kunnen ze voldoende voedingsstoffen opnemen. Daarnaast wordt water langer vastgehouden in de gedempte grond in vergelijking met de natuurlijke bodem. Ze zijn dus beter bestand tegen de stress die droogte brengt. Hierdoor zullen deze planten hun groene kleur langer behouden dan de planten in de omgeving tijdens droge periodes. Dit fenomeen wordt ook wel positieve vegetatiesporen genoemd (Rensink, Theunissen, & Feiken, 2022)."
+            },
+            {
+              "text" : "Niet elke plant laat duidelijk crop marks achter. Sommige planten zijn slechter bestand tegen droogte dan andere. Zo gaven suikerbiet, aardappel en mais zeer slechte resultaten. Deze waren niet zichtbaar op de akkers. Terwijl crop marks in granen al zichtbaar zijn in de uitloop fase, hierna blijven ze zichtbaar. Gerst is van de granen het best zichtbaar. Met gerst kunnen grote structuren van meerdere vierkante meter tot kleine structuren van enkele vierkante decimeter. Een ander graan waar crop marks goed in zichtbaar in zijn, is tarwe. Dit was voornamelijk te zien in de hoogte van gerst, in de verkleuring en de vertraagde volgroeiing. Hetzelfde was ook te herkennen in haver en rogge. Het verschil met gerst zit voornamelijk in dat gerst beter is in het opsporen van kleinere structuren. Luzerne is een goed gewas om archeologische structuren op te sporen. Dit komt doordat luzerne sterk reageert met het (gebrek aan) vochtigheid in de bodem. Daardoor komt het dat de wortels tot meer dan 2 meter onder het maaiveld reiken, het gewas liever uit de bovenste bodemlaag zijn voedingsstoffen opneemt. In koolzaad zijn nog wel archeologische structuren te herkennen, maar dit is een stuk lastiger. Er wordt meer een ruwe indicatie gegeven dat er archeologie aanwezig is (Hejcman & Smrž, 2010). In Nederland wordt voornamelijk suikerbieten, mais, uien, zomergerst, wintertarwe, aardappelen en koolzaad. Hoewel suikerbieten, mais en aardappelen weinig potentie hebben, hebben juist zomergerst en wintertarwe een goede kans op crop marks (Smit & Jager, 2018)."
+            },
+            {
+              "text" : "Om crop marks waar te nemen, moeten de gewassen ten minste ontkiemd zijn. Wanneer dit gebeurt verschilt natuurlijk per gewas. In de tabel hieronder wordt per gewas aangegeven wanneer de gewassen gezaaid worden, de periode tussen gezaaid en de oogst (groeiperiode) en de oogst. Dit is een indicatie wanneer wat verbouwd wordt, actuele data kan verschillen per jaar en per agrariër. Hieruit valt op te maken dat de beste tijd om crop marks te ontdekken tussen april en augustus is. Tussen deze tijd zijn de meeste gewassen in de groeiperiode, maar staan ze nog op het land (Nederlandse akkerbouw, z.d.).",
+              "image" : "Tabel.jpg"
+            },
+            {
+              "text" : "De bodem heeft ook invloed op de verschijning van crop marks. Bodems waar water niet goed wordt vastgehouden en met een beperkte aanwezigheid van voedingsstoffen zullen eerder crop marks produceren, zoals bij zandgronden. Dit komt doordat het contrast tussen de archeologische laag en omringende lagen het grootst is. Als de bodem al ruime hoeveelheden water en voedingsstoffen bevat, zoals bij kleigronden, ontstaan zelden crop marks. Op lössgronden ontstaan er wel crop marks. Deze crop marks zijn echter minder herkenbaar als gebieden met beperkte toegang tot voedingsstoffen en water. Dit komt door het kleinere contrast tussen de archeologische laag en omringende lagen (Hejcman & Smrž, 2010). Deze onderzoeksmethode werkt het best op akkerland en grasland (Rensink, Theunissen, & Feiken, 2022). "
+            }
+          ]
+        },
+        {
+          "sub-title" : "Valkuilen Cropmarks",
+          "paragraphs" : [
+            {
+              "text" : "Tijdens het bekijken van de luchtfoto’s kan het zijn dat er een verkleuring zichtbaar is. Deze verkleuring is groener of bleker dan de omgeving. Dit is dan natuurlijk een crop mark, maar het hoeft niet zo te zijn dat er archeologische waarden aanwezig zijn. Deze verkleuringen kunnen ook komen vanwege een fout gemaakt tijdens het bemesten. Zo kan het gebeuren dat een stukje van de akker meer bemest wordt dan de omgeving. Hierdoor zal de groene kleur toenemen. Ook zou het kunnen voorkomen dat er agrochemicaliën gebruikt worden. Deze chemicaliën kunnen de verkleuring van de gewassen beïnvloeden. Gewassen zijn hier extra gevoelig voor tot het uitlopen (Hejcman & Smrž, 2010). "
+            },
+            {
+              "text" : "Een andere valkuil zou kunnen zijn dat een structuur niet herkend wordt doordat een gedeelte van de crop mark wegvalt. Dit kan gebeuren als er verschillende gewassen naast elkaar worden geteeld. Niet ieder gewas is even gevoelig voor crop marks. Als er bijvoorbeeld een muur onder zowel onder gerst als aardappel zou lopen, dan zou de crop mark voornamelijk zichtbaar zijn in het gerst gedeelte. Het is daarom ook raadzaam om te kijken wat er naast het onderzoeksgebied groeit (Hejcman & Smrž, 2010)."
+            },
+            {
+              "text" : "Daarnaast wil het natuurlijk niet per se zeggen dat er geen archeologie aanwezig is, als er geen crop marks aanwezig zijn. Dit zou aan vele dingen kunnen liggen. Zo zou de archeologische waarde te diep liggen. Of is er nog niet lang genoeg droog geweest waardoor de verkleuring nog niet heeft plaatsgevonden. Het is daarom ook raadzaam om af te vragen waarom er niks is aangetroffen (Rensink, Theunissen, & Feiken, 2022).  "
+            }
+          ]
+        },
+        {
+          "sub-title" : "Onderzoeksmethode Soil Marks",
+          "paragraphs" : [
+            {
+              "text" : "Een soil mark is een verkleuring van de bouwvoor. Dit ontstaat doordat er een archeologisch spoor naar boven wordt gehaald door middel van een ploeg, afgraving of tijdens het inzaaien van gewassen. Dit kleurverschil kan zowel lichter als donkerder zijn dan de bouwvoor. Door het ploegen en gelijkmaken van de bouwvoor is er nauwelijks tot geen reliëfverschil (Rensink, Theunissen, & Feiken, 2022). Het donkere kleurverschil ontstaat doordat de bodem het water beter kan vasthouden. Dit kan ontstaan doordat de naar het oppervlak gebrachte spoor meer humus bevat dan de omgeving. Een andere oorzaak is het verschil in korrelgrootte. Kleinere korrels kunnen water beter vasthouden. Donkere verkleuringen geven een aanduiding dat hier vroeger een put, greppel etc. heeft gelegen. Als er een muur onder de oppervlakte ligt dan zal de naar bovengehaalde grond lichter zijn. Dit komt doordat er minder water wordt vastgehouden en daardoor is de grond droger en dus lichter. Tevens kan het zijn dat resten van de muur naar boven komen. Hierdoor ontstaat er ook een lichtere kleur. Een voordeel van deze techniek is dat er ook luchtfoto’s genomen kunnen worden als het (licht) bewolkt is. Hierdoor is er minder afhankelijkheid van het weer. Toch is het belangrijk dat de bodem droog is, zodat het contrast duidelijk aanwezig is. Deze onderzoekmethode werkt het best op akkers in de herfst en lente (Doneus, z.d.). In de afbeelding hieronder staat een voorbeeld. ",
+              "image" : "Soilmarks.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Valkuilen Soil Marks",
+          "paragraphs" : [
+            {
+              "text" : "Valkuilen voor deze onderzoeksmethode zijn de diepteligging. Als het archeologische spoor te diep onder het maaiveld ligt zal er tijdens het ploegen, inzaaien of vergraven van de bouwvoor het spoor niet aan het oppervlakte komen. Om kans te hebben op soil marks moet er zicht zijn op de bouwvoor. Als het zicht op de bouwvoor geblokkeerd wordt door bijvoorbeeld gewassen die er groeien kunnen ze wel aanwezig zijn, maar kunnen ze niet worden waargenomen (Rensink, Theunissen, & Feiken, 2022)."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Onderzoeksmethode Shadow Marks",
+          "paragraphs" : [
+            {
+              "text" : "Via luchtfoto’s kunnen ook shadow marks worden aangetroffen. Shadow marks zijn schaduwen die geworpen worden op het achterliggende land. Dit zorgt ervoor dat verhogingen in het landschap herkenbaar worden. Mocht deze techniek gebruikt worden moet er rekening gehouden worden met verschillende factoren om het beste resultaat te krijgen. Zo moet er rekening gehouden worden met de grondresolutie zoals eerder genoteerd, als de grondresolutie te slecht is dan kan er slecht onderscheidt gemaakt worden tussen schaduw en de bodem. Om de kleinste verhogingen waar te nemen is het beste om te vliegen met een lage zonnestand. Dit kan zowel ’s avonds als ’s ochtends gedaan worden. Hoewel ’s winters de beste periode is om deze foto’s te nemen kan het ook tijdens andere periodes. De beste foto’s worden gemaakt wanneer de foto’s tegen het zonlicht in genomen worden. Hierbij moet de richting van de structuur tegen de zon in gaan. Hierdoor wordt de schaduw het duidelijkst (Doneus, z.d.). Voor deze techniek werkt een open landschap het beste, zodat de schaduwen van andere objecten (zoals huizen, bomen etc.) niet de archeologische schaduwen doorkruisen. Hierdoor ontstaat er een duidelijker beeld. Mochten er toch bomen staan dan blijft deze methode mogelijk, al zou het dan moeten worden uitgevoerd wanneer de bomen geen bladeren meer hebben. Deze methodiek werkt op schaduw, reliëfhoogte en lichtval, hierdoor heeft het geen invloed of er te maken is met zand-, klei-, löss-, of veengronden (Rensink, Theunissen, & Feiken, 2022). In de afbeelding hieronder staat een voorbeeld van shadow marks. ",
+              "image" : "Shadowmarks.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Valkuilen Shadow Marks",
+          "paragraphs" : [
+            {
+              "text" : "Een valkuil voor deze methode is het werken op een reliëfrijk maaiveld. Mocht de archeologische waarde maar een kleine reliëf verschil hebben (bijvoorbeeld bij kuilen), dan zal dit waarschijnlijk niet opvallen in het landschap. Net zoals bij crop marks blijft bij shadow marks het risico dat er op de luchtfoto’s niets te zien is. Dit betekent niet dat er geen archeologische waardes in de grond zitten. Mogelijk ligt het te diep, of is de foto uit de verkeerde hoek genomen. Als er geen shadow marks te zien zijn op de luchtfoto dan zal er moeten worden afgevraagd waarom deze niet zichtbaar zijn. Bij shadow marks is het ook belangrijk dat er voldoende licht schijnt om goede schaduwen te werpen op de ondergrond. Hierdoor is het belangrijk dat de zon schijnt en niet constant achter de wolken verdwijnt (Rensink, Theunissen, & Feiken, 2022)."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Onderzoeksmethode Snow/Frost Marks",
+          "paragraphs" : [
+            {
+              "text" : "Een mogelijkheid voor identificeren van archeologische waarden zijn snow/frost marks. Deze kunnen alleen ontstaan wanneer het gesneeuwd of gevroren heeft (Verhoeven, 2013). Wanneer er een kuil, put, gracht etc. opgevuld is, kan deze grond mogelijk meer water vasthouden. Hierdoor is de vulling kouder dan de omliggende grond waardoor er vorst of sneeuw laag in het landschap ontstaan. Als er bijvoorbeeld een stenen muur onder het maaiveld ligt dan zal de warmte sneller verdwijnen uit de stenen muur. Hierdoor wordt de grond rond de muur kouder en ontstaat er net zoals bij de kuilen etc. vorst of sneeuwlaag (Linck, Kluthe & Krause, 2023). Er is nog een andere manier voor het herkennen van archeologische waarden met behulp van sneeuw. Deze methode komt overeen met shadow marks. Als het gesneeuwd heeft en het waait, blijft de sneeuw liggen achter ophogingen. Ook blijft de sneeuw en vorst langer aanwezig in lagergelegen gedeeltes van het gebied. Het nadeel en valkuilen zijn hier dan ook hetzelfde als bij shadow marks. Deze methode kan voornamelijk op open landschappen gebruikt worden. Doordat deze methode afhankelijk is van vorst en/of sneeuw, moet er goed gepland worden. De afhankelijkheid van het weer en temperatuur is groot. Als het niet sneeuwt/vriest of het dooit al voordat de drone in de lucht is, kan er minder tot geen informatie verworven worden (Solecki, 1958). In de afbeelding hieronder is een voorbeeld van snow/frost mark.",
+              "image" : "Frostmark.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Type Archeologie",
+          "paragraphs" : [
+            {
+              "text" : "Het type archeologie dat kan worden ontdekt met luchtfoto’s hangt af van een aantal factoren. Zo is de omvang erg belangrijk. Een grotere omvang is duidelijker in het landschap te herkennen in tegenstelling tot kleine. Voor het herkennen van kleinere vindplaatsen is een betere grondresolutie nodig. Daarnaast moet de omgeving ook geschikt zijn. Als bijvoorbeeld op een akker waar koolzaad geplant staat luchtfoto’s genomen worden zullen kleinere vindplaatsen niet zichtbaar zijn. Terwijl in bijvoorbeeld gerst deze wel zichtbaar zouden zijn (Rensink, Theunissen, & Feiken, 2022)."
+            },
+            {
+              "text" : "Een ander belangrijk kenmerk is de uiterlijke kenmerken. Als vindplaatsen grotere en diepere sporen hebben zijn deze makkelijker te herkennen op luchtfoto’s. Zeker als de methoden van soil marks en crop marks wordt toegepast. Een brede gracht betekent namelijk dat er een brede strook aan beter groeiende gewassen te vinden is. Andersom kan het ook. Als er een brede muur onder de grond ligt dan zal er juist een hele strook slechter groeiende gewassen aangetroffen worden (Rensink, Theunissen, & Feiken, 2022)."
+            },
+            {
+              "text" : "Het derde belangrijke punt is de vorm. Sommige vormen zijn makkelijker te herkennen dan andere. Een perfecte cirkel bijvoorbeeld dan wel alleen als in een groep wordt makkelijk herkent. Deze vorm komt nauwelijks tot niet voor in de natuur. Deze vorm(en) kunnen onder andere grafheuvels, houtskoolmeiler en urnenvelden aangeven. Een andere goed herkenbare vorm zijn rechte hoeken. Deze hoeken komen nauwelijks natuurlijk voor. Een voorbeeld wat dit kan zijn is bijvoorbeeld een celtic field. Rechte lijnen zijn ook goed te herkennen. Zeker als ze horizontaal of verticaal lopen. Diagonale lijnen zijn daarentegen lastiger te herkennen (Rensink, Theunissen, & Feiken, 2022). "
+            },
+            {
+              "text" : "Dus met behulp van luchtfoto’s kunnen voornamelijk grotere vindplaatsen worden opgespoord. Zeker wanneer deze vindplaatsen een vaste vorm hebben. Kleinere vindplaatsen blijven mogelijk met een betere grondresolutie en onder de juiste omstandigheden. Voorbeelden zijn celtic fields, grafheuvels, grachten en loopgraven."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Verwerking Algemeen",
+          "paragraphs" : [
+            {
+              "text" : "Nadat de informatie is ingewonnen is het belangrijk om deze verder te verwerken. Soms is het nodig om de gemaakte foto’s aan te passen omdat op de luchtfoto’s niet gelijk archeologische waarden te zien zijn. Daarnaast wordt er met behulp van verdere bewerkingen antwoord gegeven op de onderzoeksvragen. Om dit te doen kunnen verschillende programma’s gebruikt worden. Voor het gemak is gekozen voor Pix4D en QGIS. Het voordeel van QGIS is dat er plugins geïnstalleerd kunnen worden en het een gratis programma is. Hoewel georefereren heel belangrijk is voor luchtfoto onderzoek, zal hier geen uitleg over komen. Wel zal het hier gaan over hoe orthofoto’s gemaakt worden, en mogelijke fotobewerking zodat archeologische waarden zichtbaar worden."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Verwerking Orthofoto",
+          "paragraphs" : [
+            {
+              "text" : "Voor het creëren van een orthofoto kunnen meerdere programma’s gebruikt worden. In deze uitleg zal er echter uitgegaan worden van Pix4D. Dit programma is eenvoudig om te gebruiken, en er zijn vele mogelijkheden voor het verwerken van data. Hier kan zelfs een Digital Surface Model gemaakt worden. Houdt er wel rekening mee dat de hoeveelheid foto’s de processing tijd beïnvloed. Meer foto’s betekent meer processing tijd. Als de eerste 4 stappen van deze tutorial  worden uitgewerkt, komt daar onder andere een orthofoto uit. Deze orthofoto kan opgeslagen worden als een .jpg bestand. Dit bestand kan dan weer worden toegevoegd in GIS-programma’s zoals bijvoorbeeld QGIS. Als de ground control points goed zijn ingesteld, dan zal de orthofoto automatisch al gegeorefereerd zijn."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Foto's Bewerken",
+          "paragraphs" : [
+            {
+              "text" : "Soms zijn archeologische waarden niet zichtbaar op de foto’s, maar kunnen ze wel zichtbaar gemaakt worden. Dit kan op verschillende manieren. Door het contrast aan te passen in de layer properties in QGIS kunnen bijvoorbeeld crop marks worden aangetroffen. Er zijn hier geen standaard instellingen die succes garanderen, er zal zelf gekeken moeten worden welk contrast percentage het beste werkt. Een andere mogelijkheid om archeologische waarden naar voor te halen is via deze plugin. Met deze plugin wordt een histogram equalizer toegevoegd. Met deze functie kunnen kleuren ‘uit elkaar getrokken’ worden. Dit is vooral handig als kleuren die dicht bij elkaar op het kleurenspectrum zitten, vlak naast elkaar bevinden. Een bijkomend voordeel is dat deze methode ruis verwijderd kan worden uit de foto. De mens kan moeilijk diagonale patronen herkennen (Emaus, 2022). Een simpele oplossing voor dit probleem is om de rotation tool te gebruiken in QGIS. Hierdoor wordt het mogelijk om het canvas te draaien, en zo de diagonale patronen in een horizontale of verticale patronen te veranderen.  "
+            }
+          ]
+        },
+        {
+          "sub-title" : "Literatuurbronnen",
+          "paragraphs" : [
+            {
+              "text" : "Doneus, M. (z.d.). How Do Archaeological Sites Show. Geraadpleegd vanaf 11-11-2023, van https://luftbildarchiv.univie.ac.at/aerial-archaeology/introduction-to-aerial-archaeology/visibility-marks/  "
+            },
+            {
+              "text" : "Emaus, R (2022). Vanuit de lucht zie je meer: Remote sensing in de Nederlandse archeologie. Geraadpleegd vanaf 20-09-2023, van https://www.cultureelerfgoed.nl/binaries/cultureelerfgoed/documenten/publicaties/2023/01/01/remote-sensing-in-de-nederlandse-archeologie/NAR80_Remote-Sensing.pdf "
+            },
+            {
+              "text" : "Hejcman, M, & Smrž, Z. (2010). Cropmarks in stands of cereals, legumes and winter rape indicate sub-soil archaeological features in the agricultural landscape of Central Europe. Geraadpleegd vanaf 28-10-2023, van https://www.sciencedirect.com/science/article/pii/S0167880910001581/pdfft?md5=a32b6fac325de9fe4e4f67a89e4b87c8&pid=1-s2.0-S0167880910001581-main.pdf "
+            },
+            {
+              "text" : "Linck, R, Kluthe, S, & Krause, H. (2023). Investigating the thermal imprint of archaeological sites. Geraadpleegd vanaf 10-11-2023, van https://www.researchgate.net/profile/Roland-Linck/publication/369928011_Investigating_the_thermal_imprint_of_archaeological_sites/links/64354e4d20f25554da255c95/Investigating-the-thermal-imprint-of-archaeological-sites.pdf?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19"
+            },
+            {
+              "text" : "Pix4D. (z.d.). Ground sampling distance (GSD) in photogrammetry. Geraadpleegd vanaf 14-09-2023, van https://support.pix4d.com/hc/en-us/articles/202559809-Ground-sampling-distance-GSD-in-photogrammetry  "
+            },
+            {
+              "text" : "Nederlandse akkerbouw. (z.d.). Akkerbouwkalender. Geraadpleegd vanaf 24-10-2023, van https://www.akkerbouw-van-nu.nl/akkerbouwkalender/#:~:text=Ruwweg%20staan%20er%20van%20eind,wintergraan%20en%20winterveldbonen%20en%20koolzaad  "
+            },
+            {
+              "text" : "Pring, L.J. (2016). Soil-based analysis methods to aid the detechtion of cropmarks over buried features. Geraadpleegd vanaf 23-10-2023, van https://etheses.bham.ac.uk/7069/4/Pring16PhD.pdf   "
+            },
+            {
+              "text" : "Rensink, E, Theunissen, L & Feiken, H. (2021). Archeologische prospectie vanuit de lucht: Remote sensing in de Nederlandse archeologie (landbodems). Geraadpleegd vanaf 19-09-2023, van https://www.researchgate.net/profile/Geert-Verhoeven-2/publication/309858860_Drones_een_nieuwe_kijk_op_archeologische_luchtfotografie/links/5be00078a6fdcc3a8dbedcd4/Drones-een-nieuwe-kijk-op-archeologische-luchtfotografie.pdf?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoicHVibGljYXRpb24ifX0 "
+            },
+            {
+              "text" : "Rensink, E, Theunissen, L & Feiken, H. (2022). Vanuit de lucht zie je meer: Remote sensing in de Nederlandse archeologie. Geraadpleegd vanaf 20-09-2023, van https://www.cultureelerfgoed.nl/binaries/cultureelerfgoed/documenten/publicaties/2023/01/01/remote-sensing-in-de-nederlandse-archeologie/NAR80_Remote-Sensing.pdf"
+            },
+            {
+              "text" : "Smit, B, & Jager, J. (2018). Schets van de akkerbouw in Nederland: Structuur-, landschaps- en milieukenmerken die een relatie hebben tot biodiversiteit. Geraadpleegd vanaf 24-09-2023, van https://edepot.wur.nl/463816#:~:text=De%20belangrijkste%20akkerbouwgewassen%20in%20Nederland,%2C%20aardappelen%2C%20suikerbieten%20en%20groenten  "
+            },
+            {
+              "text" : "Solecki, R.S. (1958). Considerations in the Interpretation of Aerial Views in Archaeology. Geraadpleegd vanaf 20-11-2023, vanaf https://www.asprs.org/wp-content/uploads/pers/1958journal/dec/1958_dec_798-802.pdf  "
+            },
+            {
+              "text" : "Verhoeven, G.J. (2013). Drones: een nieuwe kijk op archeologische luchtfotografie. Archeobrief, 2013(3), 16 – 21. "
+            }
+          ]
+        },
+        {
+          "sub-title" : "Afbeeldingbronnen",
+          "paragraphs" : [
+            {
+              "text" : "Speelman, A. (zomer 2022) Gewasverkleuringen in een maisperceel bij Diepenveen. Op de digitale luchtfoto tekenen zich greppels en andere structuren van mogelijk een middeleeuws kasteel af als donkergroene banen en verkleuringen (crop marks) tussen de dorre, geel gekleurde mais [foto] van https://www.cultureelerfgoed.nl/binaries/cultureelerfgoed/documenten/publicaties/2023/01/01/remote-sensing-in-de-nederlandse-archeologie/NAR80_Remote-Sensing.pdf"
+            },
+            {
+              "text" : "Metz, W.H. (z.d.) 6 In de aangeploegde akkers van het West-Friese Broekerhaven tekenen zich duidelijk boerenerven uit de midden- en late bronstijd af als bodemverkleuringen [foto]. Geraadpleegd van https://www.cultureelerfgoed.nl/binaries/cultureelerfgoed/documenten/publicaties/2023/01/01/remote-sensing-in-de-nederlandse-archeologie/NAR80_Remote-Sensing.pdf"
+            },
+            {
+              "text" : "Doneus, M. (z.d.). [Foto van shadow marks] [foto]. Geraadpleegd van https://luftbildarchiv.univie.ac.at/aerial-archaeology/introduction-to-aerial-archaeology/visibility-marks/"
+            },
+            {
+              "text" : "Linck, R, Kluthe, S, & Krause, H. (8 januari 2023). Oblique thermal (left) and RGB (right) image of approximately the same view acquired on 08.01.2023 after a frosty night. DJI Mavic 2 Enterprise [foto]. Geraadpleegd van https://www.researchgate.net/profile/Roland-Linck/publication/369928011_Investigating_the_thermal_imprint_of_archaeological_sites/links/64354e4d20f25554da255c95/Investigating-the-thermal-imprint-of-archaeological-sites.pdf?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
