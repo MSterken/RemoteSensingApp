@@ -53,8 +53,10 @@ class _AdvicePageState extends State<AdvicePage> {
             //   ]);
             // }
             // )),
-            Row(
+            OverflowBar(
                   children: [
+                    Spacer(
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
@@ -121,7 +123,8 @@ class _AdvicePageState extends State<AdvicePage> {
                                 )
                             ))
                       ),
-                    )
+                    ),
+                    Spacer()
                     ],
                 )
 

@@ -214,13 +214,214 @@
               "text" : "Een multispectrale sensor verzamelt golflengtes van licht (rood, groen en blauw). Wat deze sensoren uniek maakt tegenover gewone camera’s, is dat deze sensoren zowel het zichtbare spectrum als het niet zichtbare spectrum van licht kunnen verzamelen. Deze golflengtes kunnen tussen objecten binnen de verzamelde data vergeleken worden met elkaar om zo verschillen waar te nemen.  Multispectrale sensoren hebben 3 tot 5 banden. Ook bestaan de sensoren uit twee categorieën: Aangepast en multiband (PrecisionHawk, Z.D.). "
             },
             {
-              "text" : ""
+              "text" : "Aangepaste sensoren zijn sensoren waarbij bepaalde filters zijn geplaats. Deze filters zorgen ervoor dat maar een deel van de golflengtes verzamelt worden door de sensor. Een vrij bekende filter zijn degene die één band opofferen om zo een nabij-infrarood (NIR) beeld te krijgen. Een voorbeeld hiervan is een R-G-NIR filter. Dit filter offert de blauwe banden op om zo het NIR beeld te krijgen. Als er maar 1 soort band van licht nodig is voor het doel, dan is dit een geschikte methode om alleen de data te krijgen die nodig is (PrecisionHawk, Z.D.)."
             },
             {
-              "text" : ""
+              "text" : "Multiband sensoren zijn zodanig geproduceerd dat er meerdere sensoren aanwezig zijn op het apparaat die tegelijkertijd alle banden kunnen waarnemen. Het voordeel van deze sensor is dat er maar één dronevlucht nodig is om alle banden te kunnen waarnemen. Ook is er de vrijheid mogelijk bij deze sensor om na de vlucht nog de spectrale banden te combineren om zo het resultaat te krijgen wat gewild is (PrecisionHawk, Z.D.)."
             },
             {
-              "text" : ""
+              "text" : "Niet zichtbaar licht wordt ook uitgezonden bij planten wanneer ze stress ervaren. Deze stress kan onder andere ontstaan door schommelingen in het toegang krijgen tot voedingsstoffen door archeologie. Geroerde grond, zoals grachten, zorgen in sommige gevallen voor dit verschil. Dit soort grond houdt water langer vast, en zorgt voor betere voeding bij planten dan in de directe omgeving. Het tegenovergestelde gebeurt als er bijvoorbeeld een stenen muur in de grond zit. Dit verhindert toegang tot voedingstoffen en zorgt voor hogere stress. Dit wordt geuit namens een verschil in de hoeveelheid groen pigment dat de plant aanmaakt en de hoeveelheid infrarood licht wat de plant uitstraalt. Deze verschillen kunnen aan de hand van multispectrale beelden zichtbaar gemaakt worden (Agapiou et al. 2012, 3892-3898).  \n \n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Wat voor data krijg je?",
+          "paragraphs" : [
+            {
+              "text" : "De soort data die je krijgt kan verschillen aan de hand van de sensor die gebruik is voor het verzamelen van de multispectrale data. Voor de aangepaste sensoren is te zien dat de uitput een JPEG, DNG of JPEG+DNG is. Voor de multiband sensor is te zien dat de uitput kan bestaan uit een RAW TIFF of GEOTIFF. Deze data kan in een GIS programma omgezet worden in een orthomozaïek om de data leesbaar te maken. Hierna kunnen vegetation indices gebruikt worden om de data verder te filteren op plantengezondheid en stress (PrecisionHawk, Z.D.).",
+              "image" : "TABELMULTISPECTRALESENSOREN.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Wat kan je er mee? (wat zie je?)",
+          "paragraphs" : [
+            {
+              "text" : "Met multispectrale sensoren zijn over het algemeen twee fenomenen zichtbaar: archeologie die groei van planten bevordert en archeologie die groei van planten verhindert. Het is vooral het verschil in gezondheid tussen grond waar wel en waar geen archeologie zit die belangrijk zijn voor remote sensing. Archeologie zoals greppels en grachten bevorderen plantengroei door het vasthouden van water en voedingsstoffen. Hiertegenover zorgt archeologie als stenen funderingen, muren en andere vaste objecten er voor dat plantengroei verhindert. De vegetation indices die deze fenomenen op verschillende manieren weergeven zorgen ervoor dat dit verschil in gezondheid zichtbaar gemaakt wordt (Rensink et al., 2022)."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Valkuilen",
+          "paragraphs" : [
+            {
+              "text" : "Voor multispectrale onderzoeken zijn velden met vegetatie nodig. Deze vegetatie stralen delen van het lichtspectrum uit die de multispectrale sensor in beeld brengt. Om deze rede is het belangrijk dat het onderzoekgebied niet vol bebouwd is. Hierbuiten moet het onderzoeksgebied ook vol staan met vegetatie (zie hieronder). Dichte vegetatie zoals bomen is minder geschikt voor het detecteren van archeologie namens multispectrale sensoren (Rensink et al., 2022)."
+            },
+            {
+              "text" : "De vegetatie is een belangrijke factor voor het in kaart brengen van plantenstress. Vegetatie zoals grassen en gewassen (graan, mais, etc.) geven hierin de meest duidelijke beelden. Door het grote oppervlakte wat deze gewassen vaak bedekken komen er geen haperingen in de verhoogde stress wanneer dit fenomeen ontstaat. Ook worden deze soort planten makkelijker beïnvloed door archeologische resten in de bodem (Rensink et al., 2022)."
+            },
+            {
+              "text" : "Na het uitvoeren van een literatuur onderzoek is er geen informatie gevonden over hoe/of geomorfologie impact heeft over het gebruik van multispectrale fotografie voor remote-sensing."
+            },
+            {
+              "text" : "De bodem heeft voornamelijk impact op twee manieren. Ten eerste hebben verschillende bodemsoorten verschillende maten van invloed op planten. De textuur, water vasthoudendheid en verschil in voedingsstoffen bij archeologische grond tegenover de natuurlijke grond is hiervoor belangrijk. Zandgronden tonen namelijk een groot contrast in deze kenmerken tussen de natuurlijke bodem en de archeologie. Op löss gronden is dit contrast minder sterk aanwezig dan op zandgronden. Op klei en veengronden (zware en voedselrijke bodems) is ook een enorm laag contrast tussen de natuurlijke bodem en de archeologie. Dit betekend dat zand- en lössgronden het meest geschikt zijn voor het gebruik van multispectrale analyses (Hejcman & Smrž, 2010)."
+            },
+            {
+              "text" : "De bodemvochtigheid is een grote factor die meespeelt in het zichtbaar maken van verschillen in plantengroei. Dit bepaalt vrij direct de gezondheid en groei van de planten. Als er bijvoorbeeld een gedempte gracht onder het maaiveld aanwezig is. Dan zal dit in droge periodes langer water vasthouden. Dit zorgt voor een verschil in gezondheid tussen de planten die boven deze archeologie groeien en de directe omgeving, en daarbij ook de straling die de planten uitzenden. Dit fenomeen zal voornamelijk in gang gaan na periodes van langere droogte. Dit zijn voornamelijk de zomermaanden bij grasland of akkers met gewassen. Het voorjaar is hiervoor echter een minder geschikte tijd om deze verschillen in plantengezondheid waar te nemen. Om een volledig en goed beeld te krijgen van de plantenstress wordt het aangeraden om in meerdere tijden van het jaar het onderzoek uit te voeren. Hierdoor zijn de verschillen die ook in de verschillende jaargetijden goed te gebruiken om de plantenstress veroorzaakt door archeologie te monitoren (Rensink et al., 2022)."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Soort archeologische site",
+          "paragraphs" : [
+            {
+              "text" : "Omvang\nDe omvang van de archeologische site heeft ook invloed op de zichtbaarheid hiervan. Kleinere sites zijn over het algemeen moeilijker te zien. En grotere sites zijn makkelijker te zien. De resolutie van de sensor die gebruikt wordt is hier ook van belang. Hoe beter de resolutie, hoe kleiner de archeologische restanten die gevonden kunnen worden. Lange lijnelementen zijn ook voordelig voor het detecteren van archeologische restanten namens multispectrale analyses. Voorbeelden hiervan zijn raatakkers, gebieden met grindwinningskuilen en weg- en slootpatronen (Rensink et al., 2022).\n"
+            },
+            {
+              "text" : "Type archeologische restanten\nOok de soort archeologie is belangrijk voor de zichtbaarheid van de vindplaats. Als de vindplaats alleen maar kleine en ondiepe sporen bevat, dan zullen deze minder snel zichtbaar zijn op de multispectrale beelden. Het tegenovergestelde hiervan zijn vindplaatsen die veel lange, brede en/of diepe sporen bevatten. Specifieke voorbeelden hiervan zijn greppels, grachten, sloten, muurresten, natuurstenen funderingen, bakstenenfunderingen, uitbraaksleuven, puinwaaiers, steenzetingen en keien vloeren. Deze sporen zijn daarbuiten ook beter zichtbaar omdat ze een ander materiaal zijn tegenover de natuurlijke bodem. Door deze andere aard zullen de planten die er boven groeien ook een andere toegang tot voedingsstoffen ontvangen (meer of minder) dan de overige natuurlijke bodem. Dit zorgt voor de plantenstress die op multispectrale beelden zichtbaar is. Uit case studies valt op dat bij multispectrale onderzoeken grote structuurcomplexen, uit bijvoorbeeld de late Middeleeuwen en de Nieuwe tijd, meer opvallen dan kleine opeenstaande sporen. Denk hierbij aan: kasteelgrachten, loopgraven en verdedigingslinies (Rensink et al., 2022).\n"
+            },
+            {
+              "text" : "Vorm\nDe vorm van de multispectrale fenomenen is ook erg belangrijk voor het herkennen van archeologie namens multispectrale analyses. Niet natuurlijke vormen die patronen vormen zullen meer opvallen dan op zich staande sporen. De meest opvallende vormen zijn scherpe hoeken (bv. tankgrachten en grachtvullingen), rechte lijnen (bv. verkaveling en oude routes), cirkels (bv. grafheuvels, galgenberg en bomkraters) en grote patronen (bv. grafvelden en raatakkers. Hier moet dus ook op gelet worden tijdens het analyseren van multispectrale beelden (Rensink et al., 2022).\n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Diepteligging",
+          "paragraphs" : [
+            {
+              "text" : "De diepteligging van de archeologische restanten hebben ook invloed op de zichtbaarheid hiervan namens multispectrale analyses. De hoofdregel is dat hoe dieper het ligt hoe minder goed zichtbaar het is. De meeste zichtbare archeologische restanten zijn degene die (dicht) op het oppervlak liggen en niet bedekt zijn door een laag natuurlijk sediment of antropogene afdekkingslagen (Rensink et al., 2022)."
+            },
+            {
+              "text" : "Daarbuiten is het zo dat de verschillen in stress die planten ervaren door de aanwezigheid van archeologie ook afhankelijk zijn van hoe diep de wortels van de planten groeien. Dit is afhankelijk van een aantal dingen, waaronder het soort plant/gewas, de diepte waar water zit en de hardheid van de grond. Wanneer er geen water te vinden is bij planten, dan zullen ze dieper hun wortels laten groeien. Dit betekend ook dat als het water van gedempte grachten ondieper ligt dan het overige water van de bodem, dan zullen de planten boven deze grachten eerder bij het water komen dan in de directe omgeving. Als er iets ondoordringbaars in de weg zit (zoals archeologische restanten), dan kunnen planten eerst horizontaal verder groeien, dit betekend ook dat in dit geval het langer duurt voordat planten bij de voedingstofrijke bodem komen en in de groeiperiode meer stress zullen ervaren. Het grootste probleem wat kan voorkomen is wanneer de maximale worteldiepte van een plant of gewas minder diep in de bodem komt dan de archeologie die in de bodem zit (Pring, 2016). "
+            }
+          ]
+        },
+        {
+          "sub-title" : "Atmosfeer",
+          "paragraphs" : [
+            {
+              "text" : "Wanneer er multispectrale data verzamelt wordt vanuit de lucht (hoe verder hoe meer) dan wordt hiervan een niet direct beeld weergegeven van het uitgezonde licht. Hier zit lucht tussen wat het licht kan vervormen. Daarom kan het gebeuren dat archeologie die zorgt voor multispectrale verschillen in het uitgezonden licht minder goed opgepakt wordt door de sensor. Als er met vegetation indexes gewerkt wordt(zie Bewerken van data) dan zal deze verstoorde data ervoor zorgen dat het gemaakte beeld geen goede representatie is van de werkelijkheid. Dit probleem kan opgelost worden namens een atmosferische correctie van de data. Eén voorbeeld hiervan is de Darkest Pixel methode. Echter lijkt de SARVI vegetation index vrijwel geen last te hebben van atmosferische verstoring. Deze is beide accuraat voor en na een eventuele atmosferische correctie en heeft de voorkeur boven een aparte atmosferische correctie (Hadjimitsis et al., 2010)."
+            }
+          ]
+        },
+        {
+          "sub-title" : "Klimaat",
+          "paragraphs" : [
+            {
+              "text" : "Iets wat het verschil in gezondheid door archeologie ook beter zichtbaar maakt zijn periodes van droogte. Voornamelijk als er in een gebied net een periode van droogte ontstaan, dan zal de vegetatie waar archeologie onder zit eerder reageren op deze verandering van klimaat. Archeologie die plantengroei bevordert zal de planten erboven langer gezond laten, terwijl archeologie die plantengroei belemmert eerder tekens laat zien van droogte. Deze tekens van verschil in gezondheid kunnen door een multispectrale sensor gefotografeerd worden, en met vegetation indices zichtbaar gemaakt worden (Hejcman & Smrž, 2010)."}
+          ]
+        },
+        {
+          "sub-title" : "Jaargetijde",
+          "paragraphs" : [
+            {
+              "text": "Voor multispectrale onderzoeken zijn de jaargetijden voornamelijk belangrijk als het gaat om de groeiseizoenen van de gewassen waar het onderzoek over gedaan wordt. De meeste vegetation indices werken het beste of zelfs alleen wanneer de planten in (het begin van) hun groeiseizoen zitten. Dit komt voornamelijk omdat de processen die de indices visualiseren in deze periode plaatsvinden (Αγαπίου et al., 2012).",
+              "image": "TABELGROEIENDEGEWASSEN.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Methode van uitwerking ",
+          "paragraphs" : [
+            {
+              "text": "Programma voor uitwerking\nVoor analyseren van de data moet eerst een orthomozaïek gemaakt worden. Een orthomozaïek is een collectie van luchtfoto’s die samen worden gevoegd als één grote foto. De extra bonus die hier bijkomt is dat geometrische data en kleurverschillen over elkaar worden getrokken waardoor een naadloze overgang tussen de verschillende foto’s gemaakt word. Dit zorgt ervoor dat er nauwkeurige foto’s gemaakt kunnen worden van onderzoeksgebieden die erg groot zijn (Generate an Orthomosaic using the Orthomosaic wizard—ArcGIS Pro | Documentation, z.d.).\n"
+            },
+            {
+              "text": "Bewerken van data\nOm de orthomozaïek van de multispectrale data beter te kunnen analyseren worden vegetation indices gebruikt. Vegetation indices zijn formules die bedoelt zijn om de spectrale eigenschappen van planten te filteren. Hiermee kan de grote hoeveelheid data die verzameld wordt namens de multispectrale camera gefilterd worden op het deel van het lichtspectrum waar onderzoek naar wordt gedaan. De meest gebruikte indices voor archeologie is de Normalized Difference Vegetation Index (NDVI). Deze vegetation index filtert bijvoorbeeld de infrarood data die uitgestraald wordt door planten wanneer ze stress ervaren. Om deze vegetation indices vaak te kunnen gebruiken is het makkelijk om deze één keer per computer als vooraf bepaalde expressies in te stellen bij de raster calculator in QGIS.\n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Stappenplan QGIS vegetation indices",
+          "paragraphs" : [
+            {
+              "text": "1.\tOpen QGIS en maak een nieuw project aan zoals gewoonlijk en voeg alle dronedata toe;\n2.\tOpen de raster calculator via de zoekfunctie (Ctr.+ k en zoek op “raster calculator”);\n3.\tDan komt het volgende scherm in beeld;\n",
+              "image": "RASTERCALCMENU.jpg"
+            },
+            {
+              "text":"4.\tIn het vak “Expressie”, voer de formule in van de vegetation index zoals aangegeven in de volgende alinea’s. Bijvoorbeeld voor NDVI: ([NIR] - [R]) / ([NIR] + [R]);\n5.\tKlik hierna op “opslaan” bij vooraf gedefinieerde expressies;\n6.\tCheck op het nieuwe pop-up scherm of de formule nog klopt, en bij “naam” de afkorting van de vegetation Index. Zie afbeelding hieronder voor voorbeeld van NDVI;\n",
+              "image":"NIEUWEEXPRESSIEOPSLAAN.jpg"
+            },
+            {
+              "text":"7.\tKlik op ok. Nu is er een nieuwe vooraf gedefinieerde expressie toegevoegd aan QGIS, deze werkt in alle aangemaakte projecten. Als dit dus één keer aangemaakt wordt dan kan er altijd mee gewerkt worden;\n8.\tSoms moet de raster calculator na het opslaan eerst afgesloten worden en opnieuw opgestart worden om de opgeslagen expressie weer te geven;\n9.\tWanneer er nu bij “vooraf gedefinieerde expressies” op de drop-down menu word geklikt, dan zal de toegevoegde expressie in de lijst staan;\n10.\tKlik op de gewenste expressie en klik naast de drop down op “toevoegen”;\n11.\tVoor NDVI komt dan het volgende scherm in beeld;\n",
+              "image":"DATATOEVOEGEN.jpg"
+            },
+            {
+              "text": "12.\tIn de vakken “R” en “NIR” moeten respectievelijk de rode (R) en nabij-infrarode (NIR) banden toegevoegd worden;\n13.\tWanneer dit ingevoerd is zal de formule ook toegevoegd zijn in het vak “Expressie”;\n14.\tScrol naar beneden om bij “output” en geschikte locatie aan te wijzen waar de nieuwe kaart-laag opgeslagen word. Geef het gelijk een passende naam zoals: “NDVI_naamonderzoeksgebied”;\n15.\tKlik hierna op “uitvoeren” en wacht het proces af;\n16.\tNu wordt de nieuwe kaart-laag toegevoegd aan het project en kan het gebruikt worden om te kijken of er archeologische sporen aanwezig zijn in het onderzoeksgebied;\n \n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Vegetation indices",
+          "paragraphs" : [
+            {
+              "text": "Hieronder staan een aantal vegetation indices beschreven, waar ze goed voor zijn en hoe de formule opgebouwd is. Over het algemeen geld dat de vegetation indices het beste werken wanneer de gewassen waarover gevlogen word beginnen met groeien (Αγαπίου et al., 2012) (zie tabel hieronder). ",
+              "image": "TABELGROEIENDEGEWASSEN.jpg"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Normalized Difference Vegetation Index (NDVI)",
+          "paragraphs" : [
+            {
+              "text": "Zoals eerder besproken berekend NDVI de hoeveelheid infrarood straling die planten uitstralen die ontstaan door stress. Dit is de meest gebruikte en bekende vegetation index. In QGIS is zelfs de NDVI al een bestaande vooraf gedefinieerde expressie die standaard toegevoegd is aan het programma. Voor het berekenen van de NDVI zijn de volgende banden nodig: nabij infrarood (NIR) en rood (R) (Αγαπίου et al., 2012).\nZo word de formule gepresenteerd:\nNDVI = (NIR – R) / (NIR + R)\nOm de vegetation index toe te voegen als vooraf gedefinieerde expressie, dan moet het als volgt opgeschreven worden (hij staat echter al geïnstalleerd in QGIS):\n([NIR] - [R]) / ([NIR] + [R])\n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Soil-Adjusted Vegetation Index (SARVI)",
+          "paragraphs" : [
+            {
+              "text": "De SARVI is een vegetation index die net als de NDVI plantengroei en stress kan waarnemen. Deze vegetation index heeft echter een extra functie. Het kan nog beter de verstoringen van de atmosfeer en bodem weg filteren uit de multispectrale data. Om dit te doen wordt de NDVI formule uitgebreid (met onder andere een blauwe band). De SARVI is nog steeds het meest effectief in het begin van de groeiperiode van gewassen, echter is volgens het onderzoek van  Αγαπίου et al. (2012) deze vegetation index ook erg bruikbaar tijdens het volledige groeiseizoen van gewassen. De benodigde banden zijn: nabij infrarood (NIR), rood (R) en blauw (B) (Αγαπίου et al., 2012). \nZo word de formule gepresenteerd:\nSARVI = (1+0.5) (NIR - prb) / ( NIR + prb +0.5)\nWaarvan prb = R – γ (B – R)\nY in prb staat voor het soort aerosol wat tussen de sensor en het oppervlakte aanwezig is. Volgens Rondeaux et al. (1996) is het gerechtvaardigd om y=1 aan te houden wanneer een aerosol model niet aanwezig is. Voor deze soort onderzoeken zal y=1 goed genoeg zijn. Omdat Y=1 is, kan dit uit de formule wegvallen. Dit betekend dat de formule (met prb erin verwerkt) hier op uit komt:\nSARVI = (1+0.5) (NIR – (R-(B-R)) / (NIR + (NIR + (R-(B-R) + 0.5)\nOm de vegetation index toe te voegen als vooraf gedefinieerde expressie, dan moet het als volgt opgeschreven worden:\n(1+0.5) ([NIR] – ([R]-([B]-[R])) / ([NIR] + ([NIR] + ([R]-([B]-[R]) + 0.5)\n \n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Simple Ratio (SR)",
+          "paragraphs" : [
+            {
+              "text": "De Simple Ratio is een manier om vegetatie via Infrarood te visualiseren. Hij meet niet zozeer de stress van planten. Maar er zal een groter kleurverschil zitten tussen niet-vegetatie en vegetatie. Ook zal een kleurverschil ontstaan als planten verschillende maten van gezondheid ervaren (SR—ArCGIS Pro | Documentation, z.d.). De benodigde banden hiervoor zijn: nabij infrarood (NIR) en rood (R) (Αγαπίου et al., 2012). \nZo word de formule gepresenteerd:\nSR = NIR / R\nOm de vegetation index toe te voegen als vooraf gedefinieerde expressie, dan moet het als volgt opgeschreven worden:\n[NIR] / [R]\n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Renormalized Difference Vegetation Index (RDVI)",
+          "paragraphs" : [
+            {
+              "text": "De RDVI maakt gebruik van het verschil tussen nabij infrarood (NIR) en rode (R) golfbanden samen met de NDVI om zo de gezondheid van planten te meten. Deze vegetation index is niet gevoelig van verstoring door bodem reflecties en invloed van de invalshoek van zonlicht. De benodigde banden hiervoor zijn: nabij infrarood (NIR) en rood (R) (Broadband greenness, z.d.).\nZo word de formule gepresenteerd:\nRDVI = (NIR – R) / √(NIR – R)\nOm de vegetation index toe te voegen als vooraf gedefinieerde expressie, dan moet het als volgt opgeschreven worden:\n([NIR] – [R]) / √([NIR] – [R])\n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Green Normalized Difference Vegetation Index (GNDVI)",
+          "paragraphs" : [
+            {
+              "text": "Deze vegetation index lijkt erg op de NDVI. Het grootste verschil is dat de GNDVI voornamelijk het groene spectrum meet. Dit betekend dat de GNDVI gevoeliger is voor Chlorofyl gehalte in planten om de gezondheid van planten te meten. De volgende banden zijn hiervoor nodig: nabij infrarood (NIR) en groen (G).\nZo word de formule gepresenteerd:\nGNDVI = (NIR – G) / (NIR + G)\nOm de vegetation index toe te voegen als vooraf gedefinieerde expressie, dan moet het als volgt opgeschreven worden:\n([NIR] – [G]) / ([NIR] + [G])\n \n"
+            }
+          ]
+        },
+        {
+          "sub-title" : "Literatuur",
+          "paragraphs" : [
+            {
+              "text": "PrecisionHawk (z.d.). Multispectral drone-based sensing. \thttps://www.precisionhawk.com/sensors/advanced-sensors-and-data-\tcollection/multispectral "
+            },
+            {
+              "text": "Αγαπίου, Ά., Hadjimitsis, D. G., & Alexakis, D. D. (2012). Evaluation of broadband and narrowband \tvegetation indices for the identification of archaeological crop marks. Remote Sensing, 4(12), \t3892–3919. https://doi.org/10.3390/rs4123892 "
+            },
+            {
+              "text": "Hadjimitsis, D., Papadavid, G., Αγαπίου, Ά., Themistocleous, K., Hadjimitsis, M. G., Retalis, A., \tMichaelides, S., Chrysoulakis, N., Toulios, L., & Clayton, C. R. I. (2010). Atmospheric correction \tfor satellite remotely sensed data intended for agricultural applications: Impact on vegetation \tindices. Natural Hazards and Earth System Sciences, 10(1), 89–95. \thttps://doi.org/10.5194/nhess-10-89-2010 "
+            },
+            {
+              "text": "Rensink, E., Theunissen, E. M., & Feiken, H. (2022). Vanuit de lucht zie je meer: remote sensing in de \tNederlandse archeologie."
+            },
+            {
+              "text": "Pring, L. J. (2016). Soil-based analysis methods to aid the detection of cropmarks over buried \tfeatures."
+            },
+            {
+              "text": "Generate an Orthomosaic using the Orthomosaic wizard—ArcGIS Pro | Documentation. (z.d.). \thttps://pro.arcgis.com/en/pro-app/3.1/help/data/imagery/generate-an-orthomosaics-using-\tthe-orthomosaic-\twizard.htm#:~:text=An%20orthomosaic%20is%20a%20photogrammetrically,produce%20a%2\t0seamless%20mosaic%20dataset."
+            },
+            {
+              "text": "SR—ArCGIS Pro | Documentation. (z.d.). https://pro.arcgis.com/en/pro-app/latest/arcpy/image-\tanalyst/sr.htm#:~:text=The%20Simple%20Ratio%20(SR)%20method,effects%20of%20atmosp\there%20and%20topography. "
+            },
+            {
+              "text": "Rondeaux, G., Steven, M. D., & Baret, F. (1996). Optimization of soil-adjusted vegetation indices. \tRemote Sensing of Environment, 55(2), 95–107. https://doi.org/10.1016/0034-\t4257(95)00186-7 "
+            },
+            {
+              "text": "Broadband greenness. (z.d.). \thttps://www.nv5geospatialsoftware.com/docs/BroadbandGreenness.html#:~:text=)%3A%20\t95%2D107.-\t,Renormalized%20Difference%20Vegetation%20Index%20(RDVI),soil%20and%20sun%20viewi\tng%20geometry. "
+            },
+            {
+              "text": "Hejcman, M., & Smrž, Z. (2010). Cropmarks in stands of cereals, legumes and winter rape indicate \tsub-soil archaeological features in the agricultural landscape of central Europe. \tAgriculture, \tEcosystems & Environment, 138(3–4), 348–354. \thttps://doi.org/10.1016/j.agee.2010.06.004 "
             }
           ]
         }
